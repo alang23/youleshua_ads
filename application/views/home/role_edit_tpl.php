@@ -50,7 +50,7 @@
                                     <input id="role_name" name="role_name" class="form-control" type='text' aria-required="true" placeholder="角色名称" value="<?=$role_name?>" />
                                 </div>
                             </div>
-                             <div class="form-group">
+<!--                              <div class="form-group">
                                 <label class="col-sm-3 control-label">权限等级一:</label>
                                 <div class="col-sm-8">
                                 <?php foreach($list_role_one as $k=>$v){?>
@@ -58,17 +58,28 @@
                                 <?php }?>
                                 </div>
                                 
-                            </div>   
+                            </div>    -->
+
+                             <?php foreach($list_role_one as $rlk=>$rlv){?>
+                             <?php
+                                $_my_role = $list_role_two[$rlv['id']];
+                             ?>
                              <div class="form-group">
-                                <label class="col-sm-3 control-label">权限等级二:</label>
+                                <label class="col-sm-3 control-label">
+<input id="tag_name_one" name="list_tag_name_one[]" type='checkbox' aria-required="true" value="<?=$rlv['tag_name']?>-<?=$v['name']?>" <?php if(in_array($rlv['tag_name'], $_temp)){?> checked <?php }else{?> <?php }?>/>&nbsp;<?=$rlv['name']?>
+                                :</label>
+                                     <!--  <input id="tag_name_one" name="list_tag_name_one[]" type='checkbox' aria-required="true" value="<?=$rlv['tag_name']?>-<?=$v['name']?>" <?php if(in_array($rlv['tag_name'], $_temp)){?> checked <?php }else{?> <?php }?>/>&nbsp;<?=$rlv['name']?>&nbsp;&nbsp;&nbsp; -->
+                              
                                 <div class="col-sm-8">
-                                <?php foreach($list_role_two as $k=>$v){?>
+                                <?php foreach($_my_role as $k=>$v){?>
                                     <input id="tag_name_two" name="list_tag_name_two[]" type='checkbox' aria-required="true" value="<?=$v['tag_name']?>-<?=$v['name']?>" <?php if(in_array($v['tag_name'], $_temp)){?> checked <?php }else{?> <?php }?>/>&nbsp;<?=$v['name']?><br />
                                 <?php }?>
                                 </div>
                                
                                 <input type="hidden" name="id" id = "id" value="<?=$id?>" >
-                            </div>                           
+                            </div>    
+                            <?php } ?>
+
                             <div class="form-group">
                                 <div class="col-sm-4 col-sm-offset-3">
                                     <button class="btn btn-primary" type="submit">提交</button>

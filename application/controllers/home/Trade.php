@@ -8,9 +8,11 @@ class Trade extends Zrjoboa
 	{
 		parent::__construct();
 		$this->load->model('Trade_mdl','trade');
+		$this->load->model('Trade_xiaoer_mdl','trade_xiaoer');
 		$this->load->library('My_excel','my_excel');
 		$this->load->model('Deal_mdl','deal');
 		$this->load->model('Account_mdl','admin');
+		$this->load->model('Logistics_mdl','logis');
 
 	}
 
@@ -430,23 +432,6 @@ class Trade extends Zrjoboa
 				        $arr[$column] = $sheet->getCellByColumnAndRow($column, $row)->getValue();
 				    }
 
-						/*
-						$add['order_sn'] = $arr[0];
-						$add['jigou'] = $arr[1];
-						$add['jigou_no'] = $arr[2];
-						$add['mer_no'] = $arr[3];
-						$add['mer_name'] = $arr[4];
-						$add['dev_no'] = $arr[5];
-						$add['trade_date'] = $arr[10];
-						$add['trade_time'] = strtotime($arr[10]);
-						$add['amount'] = $arr[7];
-						$add['pay_fee'] = $arr[8];
-						$add['pay_type'] = $arr[9];
-						$add['card_type'] = $arr[11];
-						$add['p_sn'] = $arr[12];
-						$add['addtime'] = time();
-						$add['m_type'] = $m_type;
-						*/
 						$add['order_sn'] = $arr[1];
 						$add['jigou'] = $arr[2];
 						$add['jigou_no'] = $arr[3];
@@ -465,9 +450,22 @@ class Trade extends Zrjoboa
 						if(!empty($arr[1]) && !empty($arr[15])){
 
 							try {
+
 								if($this->trade->add($add)){
 									$add_count +=1;
 								}
+
+								//小额
+								// if($add['amount'] < 14){
+								// 	$logis_info = array();
+								// 	$logis_info = $this->get_logis($add['p_sn']);
+								// 	$add['realname'] = isset($logis_info['realname']) ? $logis_info['realname'] : '未知';
+								// 	$add['phone'] = isset($logis_info['phone']) ? $logis_info['phone'] : '未知';
+								// 	$add['address'] = isset($logis_info['address']) ? $logis_info['address'] : '未知';
+								// 	$add['uid'] = isset($logis_info['uid']) ? $logis_info['uid'] : '0';
+								// 	$add['admin_name'] = isset($logis_info['admin_name']) ? $logis_info['admin_name'] : '未知';
+								// 	$this->trade_xiaoer->add($add);
+								// }
 								
 							}catch(Exception $e){
 								print $e->getMessage();
@@ -475,6 +473,8 @@ class Trade extends Zrjoboa
 							}
 							
 						}
+
+
 
 						
 				}
@@ -865,6 +865,112 @@ class Trade extends Zrjoboa
 
         $this->tpl('home/trade_fenxi_tpl',$data);
 
+	}
+
+	public function shaixuan()
+	{
+
+		$userinfo = $this->userinfo;
+		$page = isset($_GET['page']) ? $_GET['page'] : 0;
+        $page = ($page && is_numeric($page)) ? intval($page) : 1;
+        $show_time = $this->input->get('show_time');		
+		$end_time = $this->input->get('end_time');
+
+        $p_sn = isset($_GET['p_sn']) ? $_GET['p_sn'] : '';
+
+        $data['p_sn'] = $p_sn;
+        $data['show_time'] = $show_time;
+        $data['end_time'] = $end_time;	
+
+        $countwhere = array();
+        $where = array();
+
+        if(!empty($p_sn)){
+        	$countwhere['p_sn'] = $p_sn;
+        	$where['where']['p_sn'] = $p_sn;
+
+        }
+
+         //搜索条件
+        if(!empty($show_time)){
+        	$s_time = strtotime($show_time);
+        	$where['where']['trade_time >'] = $s_time;
+        	$countwhere['trade_time >'] = $s_time;
+        	if (!empty($end_time)) {
+        		$e_time = strtotime($end_time);
+        		$where['where']['trade_time <'] = $e_time;
+        		$countwhere['trade_time <'] = $e_time;
+        	}
+        }
+
+        $limit = 20;
+        $offset = ($page - 1) * $limit;
+        $pagination = '';
+
+                
+        $count = $this->trade_xiaoer->get_count($countwhere);
+        $data['count'] = $count;
+
+        $pageconfig['base_url'] = base_url('/home/trade/shaixuan?show_time='.$show_time.'&end_time='.$end_time.'&p_sn='.$p_sn);
+        $pageconfig['count'] = $count;
+        $pageconfig['limit'] = $limit;
+        $data['page'] = home_page($pageconfig);
+
+		$list = array();
+		$where['page'] = true;
+        $where['limit'] = $limit;
+        $where['offset'] = $offset;
+        $where['order'] = array('key'=>'id','value'=>'desc');
+
+
+		$list = $this->trade_xiaoer->getList($where);	
+		$data['list'] = $list;
+
+
+		$this->tpl('home/trade_shaixuan_tpl',$data);
+
+	}
+
+	//添加备注
+	public function remarks()
+	{
+		$id = $this->input->post('id');
+		$remarks = $this->input->post('remarks');
+		if(!empty($id)){
+			$update_config['id'] = $id;
+			$update_data['remarks'] = $remarks;
+			if($this->trade_xiaoer->update($update_config,$update_data)){
+				$msg = array(
+					'code'=>'0',
+					'msg'=>'添加成功'
+					);
+
+			}else{
+				$msg = array(
+					'code'=>'1',
+					'msg'=>'无任何修改'
+					);
+			}
+		}else{
+				$msg = array(
+					'code'=>'2',
+					'msg'=>'缺少参数'
+					);
+		}
+
+		echo json_encode($msg);
+		exit;
+		
+	}
+
+	//查物流
+	public function get_logis($dev_sn)
+	{
+		$where['where']['dev_sn'] = $dev_sn;
+		$info = array();
+		$info = $this->logis->get_one_by_where($where);
+
+		return $info;
 	}
 
 

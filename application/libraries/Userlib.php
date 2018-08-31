@@ -85,7 +85,6 @@ class Userlib
 		$_role = array();
 		
 		$_role_where['where'] = array('role_id'=>$token['role']);
-		//self::$_ci->load->model('role_tag_mdl','role_tag');
 		self::$_ci->load->model('Role_author_mdl','role_author');
 		$_role = self::$_ci->role_author->getList($_role_where);
 		

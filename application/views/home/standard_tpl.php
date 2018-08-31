@@ -216,16 +216,9 @@
                                         <li class="footable-page"><input type="text"  name="page"  value="<?=$pagenum?>" style="width: 50px;" /></li>
                                         <li><input type="button" class="input-btn" onclick="document.pageform.submit();" value="跳转>" /></li>
 
-                                   <!--          <li class="footable-page-arrow">
-                                            <a data-page="first" href="#first">«</a></li>
-                                            <li class="footable-page-arrow"><a data-page="prev" href="#prev">‹</a></li>
-                                            <li class="footable-page active"><a data-page="0" href="#">1</a></li>
-                                            <li class="footable-page"><a data-page="1" href="#">2</a></li>
-                                            <li class="footable-page-arrow"><a data-page="next" href="#next">›</a></li>
-                                            <li class="footable-page-arrow"><a data-page="last" href="#last">»</a></li> -->
+                       
                                             <?=$page?>
-                                        <!--     <li><input type="text" class="input" name="page" value="<?=$pagenum?>" width="30px" /></li>
-              <li><input type="button" class="input-btn" onclick="document.pageform.submit();" value="跳转>" /></li> -->
+                   
                                         </ul>
                                     </td>
                                 </tr>

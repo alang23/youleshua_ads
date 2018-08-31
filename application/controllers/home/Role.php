@@ -138,7 +138,6 @@ class Role extends Zrjoboa
 			$update_config = array('id'=>$id);
 			$update_data = array('role_name'=>$role_name);
 			$this->role->update($update_config,$update_data);
-			//$where['where'] = array('role_name'=>$role_name);
 
 
 			if(!empty($role_name) && !empty($list_tag_name_one)){		
@@ -149,7 +148,6 @@ class Role extends Zrjoboa
 
 				for($i=0;$i<count($list_tag_name_one);$i++){
 					$_tag = explode('-', $list_tag_name_one[$i]);
-					//$role_tag = $list_tag_name_one[$i];
 					$add['role_id'] = $id;
 					$add['role_name'] = $_tag[1];
 					$add['role_tag'] = $_tag[0];
@@ -159,9 +157,7 @@ class Role extends Zrjoboa
 			}
 
 
-			if(!empty($role_name) && !empty($list_tag_name_two)){
-				//$list_tag_name_two = array();
-				//$list_tag_name_two = explode(',', $role_list_two);						
+			if(!empty($role_name) && !empty($list_tag_name_two)){						
 
 				$del_config_two['role_id'] = $id;	
 				$del_config_two['Level'] = '2';		
@@ -178,7 +174,7 @@ class Role extends Zrjoboa
 					$this->role_author->add($add);
 				}				
 			}
-		header("Location:".base_url()."/home/role/index?");
+			header("Location:".base_url()."/home/role/index?");
 
 		}else{
 
@@ -206,8 +202,11 @@ class Role extends Zrjoboa
 			$list_role_two = array();
 			$where_two['where']['Level'] = '2';
 			$where_two['order'] = array('key'=>'id','value'=>'ASC');
-			$list_role_two = $this->role_tag->getList($where_two);
-
+			$_list_role_two = $this->role_tag->getList($where_two);
+			foreach($_list_role_two as $llrk => $llrv){
+				$list_role_two[$llrv['parent_id']][] = $llrv;
+			}
+			
 			$data['list_role_one'] = $list_role_one;
 			$data['list_role_two'] = $list_role_two;
 

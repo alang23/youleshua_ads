@@ -18,6 +18,7 @@ class Test extends BaseController
 		$this->load->model('Ads_mdl','ads');
 		$this->load->model('Statistics_mdl','statistics');
 		$this->load->model('User_channel_mdl','user_channel');
+		$this->load->model('Machines_mdl','machines');
 
 
 	}
@@ -261,35 +262,90 @@ class Test extends BaseController
 		return $info;
 	}
 
-/*
-	public function xiub()
+	public function imports()
 	{
-		$id_99 = array('96','97','98','99','100');
-		$where['where']['addtime >='] = '1531130036';
-		$where['where']['addtime<='] = '1531147018';
-		$where['where']['channel_id'] = '10003';
-		$list = $this->business->getList($where);
 
-		$i = 0;
-		foreach($list as $k => $v){
+				$files = dirname().'uploads'.'/excel';
+                $dir = FCPATH.$files.'/machines.xls';
 
-			if(in_array($v['frm'], $id_99)){
-				$ad_name = $v['ad_name'].'(99)';
-			}else{
-				$ad_name = $v['ad_name'].'(18)';
-			}
+				//$result = $this->my_excel->imports($dir);			
+                require_once FCPATH.'/application/libraries/phpexcel/PHPExcel.php';
 
-			$update_config['id'] = $v['id'];
-			$update_data['ad_name'] = $ad_name;
-			if($this->business->update($update_config,$update_data)){
-				$i++;
-			}
-		}
+				if (!file_exists($dir)) {
+				    die('no file!');
+				}
+				$extension = strtolower( pathinfo($dir, PATHINFO_EXTENSION) );
 
-		echo $i;
+				if ($extension =='xlsx') {
+				    $objReader = new PHPExcel_Reader_Excel2007();
+				    $objExcel = $objReader ->load($dir);
+				} else if ($extension =='xls') {
+				    $objReader = new PHPExcel_Reader_Excel5();
+				    $objExcel = $objReader ->load($dir);
+				} else if ($extension=='csv') {
+				    $PHPReader = new PHPExcel_Reader_CSV();
+
+				    //默认输入字符集
+				    $PHPReader->setInputEncoding('GBK');
+
+				    //默认的分隔符
+				    $PHPReader->setDelimiter(',');
+
+				    //载入文件
+				    $objExcel = $PHPReader->load($dir);
+				}
+				
+				$sheet = $objExcel->getSheet(0); // 读取第一個工作表
+				$highestRow = $sheet->getHighestRow(); // 取得总行数
+				$colsNum = $sheet->getHighestColumn(); // 取得总列数
+				$highestColumm= PHPExcel_Cell::columnIndexFromString($colsNum); //字母列转换为数字列 
+
+				$arr = array();
+				$tmp = array();
+				$result = array();
+				$add_count = 0;
+				for ($row = 2; $row <= $highestRow; $row++){//行数是以第1行开始
+				    for ($column = 0; $column < $highestColumm; $column++) {//列数是以第0列开始
+				        $columnName = PHPExcel_Cell::stringFromColumnIndex($column);
+				        $arr[$column] = $sheet->getCellByColumnAndRow($column, $row)->getValue();
+				        $ret = $this->get_machines($arr[$column]);
+				        if(!empty($arr[$column])){
+					        echo $arr[$column].','.$this->get_type($ret['types']);
+					        echo '<br/>';
+				        }
+
+				    }
+				}
 	}
 
-*/
+
+	public function get_machines($dev_sn)
+	{
+		$info = array();
+		$where['where']['dev_sn'] = $dev_sn;
+		$info = $this->machines->get_one_by_where($where);
+
+		return $info;
+	}
+
+	public function get_type($type)
+	{
+		$str = '';
+		switch($type)
+		{
+			case 1:
+				$str = '力活';
+				break;
+			case 2:
+				$str = '创展';
+				break;
+			default:
+				$str = '未知';
+				break;
+		}
+
+		return $str;
+	}
 
 
 

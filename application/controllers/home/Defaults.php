@@ -29,10 +29,9 @@ class Defaults extends Zrjoboa
 			$list[] = $v['role_tag'];
 		}
 		$data['list'] = $list;
-
-		// $this->tpl('home/defaults_tpl',$data);
-		// exit;
 		
+		// print_r($list);
+		// exit;
 		$ismobile = isMobile();
 		if(!$ismobile){
 

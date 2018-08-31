@@ -77,6 +77,15 @@ class User extends Zrjoboa
 
 		$list = $this->admin->getList($where);	
 		$data['list'] = $list;
+
+		$role_name = array();
+		$_role = array();
+		$role_name = $this->role->getList();
+		foreach($role_name as $rlk => $rlv){
+			$_role[$rlv['id']] = $rlv['role_name'];
+		}
+		$data['role'] = $_role;
+		
 		$this->tpl('home/user_tpl',$data);
 	}
 

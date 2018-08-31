@@ -72,6 +72,13 @@ class Dclick extends BaseController
 			}
 		}
 
+		if($pos_id == '15'){
+			$url = 'http://app.1chuanqi.com/shoukuanhe/index';
+			$url = $url.'?frm='.$aid.'&pos_id='.$pos_id.'&b_no=10003&pid='.$pid.$param_str;
+			redirect($url);
+			exit;
+		}
+
 		if($aid == '73'){
 			$url = "http://xinyongka.51huanka.com/lihuo/index?a_code=lhwx";
 			redirect($url);
@@ -133,7 +140,7 @@ class Dclick extends BaseController
 		}
 
 		//只分给汇邦张总这个帐号
-		$zhangzong_id = array('114');
+		$zhangzong_id = array('113','114','20','115');
 		if(in_array($aid,$zhangzong_id)){
 			$url = 'http://app.1chuanqi.com/defaults2/index';
 			$url = $url.'?frm='.$aid.'&pos_id='.$pos_id.'&b_no=10029&pid='.$pid.$param_str;
@@ -173,6 +180,7 @@ class Dclick extends BaseController
 			$queue_info = $this->queues->get_one_by_where($queue_where);
 			$channel_arr = explode('|',$queue_info['info']);
 			
+			/*
 			$share_id = array('13','18','19');
 			if(!in_array($aid,$share_id)){
 				foreach($channel_arr as $kkk => $vvv){
@@ -181,6 +189,7 @@ class Dclick extends BaseController
 					}
 				}
 			}
+			*/
 			
 
 			//百度控制
@@ -289,6 +298,12 @@ class Dclick extends BaseController
 				$param_str .= '&kwid='.$kwid.'&ctvid='.$ctvid.'&pid='.$pid;
 				
 			}
+		}
+
+		if($pos_id == '15'){
+			$url = 'http://app.1chuanqi.com/shoukuanhe/index?frm='.$aid.'&pos_id='.$pos_id.'&b_no=10003&pid='.$pid.$param_str;
+			redirect($url);
+			exit;
 		}
 
 

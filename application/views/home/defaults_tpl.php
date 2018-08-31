@@ -128,6 +128,8 @@
 
                             <li><a class="J_menuItem" href="<?=base_url()?>home/trade/index">交易数据</a>
                             </li>
+                            <li><a class="J_menuItem" href="<?=base_url()?>home/trade/shaixuan">交易金额</a>
+                            </li>
                               <li><a class="J_menuItem" href="<?=base_url()?>home/trade/do_search">交易查询</a>
                             </li>
                             <?php
@@ -242,15 +244,26 @@
                         <?php 
                             if(!empty(in_array('import_logistics', $list))){
                         ?>
-                        <!--     <li><a class="J_menuItem" href="<?=base_url()?>home/Logistics/imports">导入(拉卡拉)</a>
-                           <li><a class="J_menuItem" href="<?=base_url()?>home/Logistics/imports_ks">导入(快刷)</a>
-                           </li> -->
+                 
                         <?php } ?>
                         </ul>
                     </li>
                     <?php }?>
 
-
+                    <li>
+                        <a href="javascript:void(0);">
+                        <i class="fa fa-envelope"></i> 
+                        <span class="nav-label">运营数据</span>
+                        <span class="fa arrow"></span>
+                        </a>
+                        <ul class="nav nav-second-level">
+                      
+                            <li><a class="J_menuItem" href="<?=base_url()?>home/trade/shaixuan">小额刷卡</a>
+                            </li>
+                                                                  
+                        </ul>
+                    </li>
+                  
 
                     <?php 
                         if(!empty(in_array('setting_manager', $list))){

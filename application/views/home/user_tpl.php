@@ -112,7 +112,7 @@
                                     <td><?=$v['username']?></td>
                                     <td><?=$v['realname']?></td> 
                                     <td><?=$v['phone']?></td> 
-                                    <td><?=$v['role']?></td>
+                                    <td><?=$role[$v['role']]?></td>
                                     <td><?=$v['remark']?></td>
                                     <td><?=work_type($v['enabled'])?></td>
                                      <!-- <td><?=$v['count_num']?></td> -->
