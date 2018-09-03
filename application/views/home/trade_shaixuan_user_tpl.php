@@ -53,20 +53,7 @@
                             <div class="col-sm-2 m-b-xs">
                                      <input type="text" name="p_sn" id="p_sn" style="width: 180px" class="input-sm form-control input-s-sm inline" placeholder="CBC码" value="<?=$p_sn?>">
                             </div>
-                              <div class="col-sm-2 m-b-xs">
-                                <select class="input-sm form-control input-s-sm inline" name="user_id">
-                                    <option value="0">客服</option>
-                                    <?php
-                                        foreach($admin as $admin_k => $admin_v){
-                                    ?>
-
-                                    <option value="<?=$admin_v['id']?>" <?php if($user_id == $admin_v['id']){ ?> selected <?php } ?>><?=$admin_v['realname']?></option>
-
-                                    <?php
-                                        }
-                                    ?>
-                                </select>
-                            </div>
+                          
                              <div class="col-sm-1">                              
                                   <button class="btn btn-sm btn-primary" type="submit"> 搜索</button>                                   
                             </div>
@@ -74,12 +61,7 @@
                             <div class="col-sm-4 m-b-xs">
                        
 
-                       <!--         <div class="btn-group">
-                                    <button class="btn btn-sm btn-primary" onclick="form.action='<?=base_url()?>home/trade/export';form.submit();"> 
-                                    <i class="fa fa-download"></i>
-                                    导出
-                                    </button> 
-                               </div> -->
+                    
 
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-w-sm btn-white" onclick="location.reload();"><i class="fa fa-refresh"></i> 刷新</button> 

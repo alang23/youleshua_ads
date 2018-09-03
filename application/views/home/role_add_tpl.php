@@ -31,15 +31,7 @@
                             <a class="dropdown-toggle" data-toggle="dropdown" href="form_basic.html#">
                                 <i class="fa fa-wrench"></i>
                             </a>
-                  <!--           <ul class="dropdown-menu dropdown-user">
-                                <li><a href="form_basic.html#">选项1</a>
-                                </li>
-                                <li><a href="form_basic.html#">选项2</a>
-                                </li>
-                            </ul> -->
-                         <!--    <a class="close-link">
-                                <i class="fa fa-times"></i>
-                            </a> -->
+    
                         </div>
                     </div>
                     <div class="ibox-content">
@@ -50,25 +42,23 @@
                                     <input id="role_name" name="role_name" class="form-control" type='text' aria-required="true" placeholder="角色名称" />
                                 </div>
                             </div>
-                             <div class="form-group">
-                                <label class="col-sm-3 control-label">一级权限:</label>
-                                <div class="col-sm-8">
-                                <?php foreach($list_role_one as $k=>$v){?>
-                                    <input id="tag_name_one" name="tag_name_one" type='checkbox' aria-required="true" value="<?=$v['tag_name']?>" />&nbsp;<?=$v['name']?>&nbsp;&nbsp;&nbsp;
-                                <?php }?>
-                                </div>
-                                <input type="hidden" name="role_list_one" id = "role_list_one" value="" >
-                                <input type="hidden" name="role_list_two" id = "role_list_two" value="" >
-                            </div>  
+
+                             <?php foreach($list_role_one as $rlk=>$rlv){?>
+                            <?php
+                                $_my_role = $list_role_two[$rlv['id']];
+                             ?>
                               <div class="form-group">
-                                <label class="col-sm-3 control-label">二级权限:</label>
+                                <label class="col-sm-3 control-label">
+                                <input id="tag_name_one" name="tag_name_one[]" type='checkbox' aria-required="true" value="<?=$rlv['tag_name']?>-<?=$rlv['name']?>" />&nbsp;<?=$rlv['name']?>&nbsp;&nbsp;&nbsp;
+                                </label>
                                 <div class="col-sm-8">
-                                <?php foreach($list_role_two as $k=>$v){?>
-                                    <input id="tag_name_two" name="tag_name_two" type='checkbox' aria-required="true" value="<?=$v['tag_name']?>" />&nbsp;<?=$v['name']?><br />
+                                <?php foreach($_my_role as $k=>$v){?>
+                                    <input id="tag_name_two" name="tag_name_two[]" type='checkbox' aria-required="true" value="<?=$v['tag_name']?>-<?=$v['name']?>" />&nbsp;<?=$v['name']?><br />
                                 <?php }?>
                                 </div>
-                                <input type="hidden" name="role_list" id = "role_list" value="" >
-                            </div>                                
+                            </div>  
+
+                             <?php } ?>                              
                             <div class="form-group">
                                 <div class="col-sm-4 col-sm-offset-3">
                                     <button class="btn btn-primary" type="button" onclick="window.location='<?=base_url()?>home/role'"">返回</button>

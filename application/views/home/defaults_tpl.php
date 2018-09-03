@@ -241,11 +241,7 @@
 
 
 
-                        <?php 
-                            if(!empty(in_array('import_logistics', $list))){
-                        ?>
-                 
-                        <?php } ?>
+                     
                         </ul>
                     </li>
                     <?php }?>
@@ -257,10 +253,19 @@
                         <span class="fa arrow"></span>
                         </a>
                         <ul class="nav nav-second-level">
-                      
+                        <?php 
+                            if(in_array('xiaoer_admin', $list)){
+                        ?>
                             <li><a class="J_menuItem" href="<?=base_url()?>home/trade/shaixuan">小额刷卡</a>
                             </li>
-                                                                  
+                        <?php } ?>
+
+                        <?php 
+                            if(in_array('xiaoer_user', $list)){
+                        ?>
+                            <li><a class="J_menuItem" href="<?=base_url()?>home/trade/shaixuan_user">小额刷卡</a>
+                            </li>   
+                        <?php } ?>                             
                         </ul>
                     </li>
                   

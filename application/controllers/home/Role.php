@@ -57,54 +57,54 @@ class Role extends Zrjoboa
 
 
 	public function add(){
+
 		$check_role = $this->userlib->check_role('user_add');
 
 		$role_name = $this->input->post('role_name');
-		$role_list_one = $this->input->post('role_list_one');
-		$role_list_two = $this->input->post('role_list_two');
+		$role_list_one = $this->input->post('tag_name_one');
+		$role_list_two = $this->input->post('tag_name_two');
+
 
 		if(!empty($_POST)){
-
+			
 			$role_add['role_name'] = $role_name;
 			$this->role->add($role_add);
-			$where['where'] = array('role_name'=>$role_name);
-			$info = $this->role->get_one_by_where($where);
-			$role_id = $info['id'];
+			$role_id = $this->role->insert_id();
+			
+			if(!empty($role_list_one)){
 
-		if(!empty($role_list_one)){
-			$list_tag_name_one = array();
-			$list_tag_name_one = explode(',', $role_list_one);
-
-			if(!empty($role_name) && !empty($list_tag_name_one)){
-
-				for($i=0;$i<count($list_tag_name_one);$i++){
-						$role_list = $list_tag_name_one[$i];
-						$add['role_id'] = $role_id;
-						$add['role_name'] = $role_name;
-						$add['role_tag'] = $role_list;
-						$add['Level'] = '1';
-						$this->role_author->add($add);
+				$len = count($role_list_one);
+				for($i=0;$i<$len;$i++){
+					$_tag = explode('-', $role_list_one[$i]);
+					
+					$add['role_id'] = $role_id;
+					$add['role_name'] = $_tag[1];
+					$add['role_tag'] = $_tag[0];
+					$add['Level'] = '1';
+					if(!$this->role_author->add($add))
+					{
+						exit('error');
 					}
+				}
+				
 			}
-		}
+		
+			if(!empty($role_list_two)){
 
-		if(!empty($role_list_two)){
-			$list_tag_name_two = array();
-			$list_tag_name_two = explode(',', $role_list_two);
-
-			if(!empty($role_name) && !empty($list_tag_name_two)){
-
-				for($i=0;$i<count($list_tag_name_two);$i++){
-						$role_list_two = $list_tag_name_two[$i];
-						$add['role_id'] = $role_id;
-						$add['role_name'] = $role_name;
-						$add['role_tag'] = $role_list_two;
-						$add['Level'] = '2';
-						$this->role_author->add($add);
+				for($i=0;$i<count($role_list_two);$i++){
+					$_tag = explode('-', $role_list_two[$i]);
+					$add['role_id'] = $role_id;
+					$add['role_name'] = $_tag[1];
+					$add['role_tag'] = $_tag[0];
+					$add['Level'] = '2';
+					if(!$this->role_author->add($add))
+					{
+						exit('error');
 					}
+				}
 			}
-		}
-		header("Location:".base_url()."/home/role/index?");
+
+			header("Location:".base_url()."/home/role/index?");
 	
 		}else{
 
@@ -113,8 +113,13 @@ class Role extends Zrjoboa
 			$list_role_one = $this->role_tag->getList($where);
 
 			//二级权限
-			$where2['where']['Level'] = '2';
-			$list_role_two = $this->role_tag->getList($where2);
+			$list_role_two = array();
+			$where_two['where']['Level'] = '2';
+			$where_two['order'] = array('key'=>'id','value'=>'ASC');
+			$_list_role_two = $this->role_tag->getList($where_two);
+			foreach($_list_role_two as $llrk => $llrv){
+				$list_role_two[$llrv['parent_id']][] = $llrv;
+			}
 
 			$data['list_role_one'] = $list_role_one;
 			$data['list_role_two'] = $list_role_two;
@@ -181,6 +186,7 @@ class Role extends Zrjoboa
 			$id = $this->input->get('id');
 			$where['where'] = array('a.role_id'=>$id);
 			$info = $this->role->get_list_by_join($where);
+
 			//var_dump($info);
 			$_temp = array();
 			foreach ($info as $k => $v) {

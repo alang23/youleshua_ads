@@ -31,12 +31,7 @@
                             <a class="dropdown-toggle" data-toggle="dropdown" href="form_basic.html#">
                                 <i class="fa fa-wrench"></i>
                             </a>
-                  <!--           <ul class="dropdown-menu dropdown-user">
-                                <li><a href="form_basic.html#">选项1</a>
-                                </li>
-                                <li><a href="form_basic.html#">选项2</a>
-                                </li>
-                            </ul> -->
+              
                             <a class="close-link">
                                 <i class="fa fa-times"></i>
                             </a>
@@ -68,7 +63,7 @@
                                 <label class="col-sm-3 control-label">
 <input id="tag_name_one" name="list_tag_name_one[]" type='checkbox' aria-required="true" value="<?=$rlv['tag_name']?>-<?=$v['name']?>" <?php if(in_array($rlv['tag_name'], $_temp)){?> checked <?php }else{?> <?php }?>/>&nbsp;<?=$rlv['name']?>
                                 :</label>
-                                     <!--  <input id="tag_name_one" name="list_tag_name_one[]" type='checkbox' aria-required="true" value="<?=$rlv['tag_name']?>-<?=$v['name']?>" <?php if(in_array($rlv['tag_name'], $_temp)){?> checked <?php }else{?> <?php }?>/>&nbsp;<?=$rlv['name']?>&nbsp;&nbsp;&nbsp; -->
+                                
                               
                                 <div class="col-sm-8">
                                 <?php foreach($_my_role as $k=>$v){?>

@@ -1,0 +1,1538 @@
+<body onunload="closeEidtBetModeB4Unload();unloadCommon();">
+    <script language="javascript">
+function receiveMessage(event) {
+ var trustedOrigins = '//is.hkjc.com;//special.hkjc.com'.split(';');
+var i = trustedOrigins.length;
+ while (i--) {
+ if (trustedOrigins[i] === event.origin) {
+eval(event.data);}}}
+if (!window.addEventListener) window.attachEvent('onmessage', receiveMessage);
+else window.addEventListener('message', receiveMessage, false);
+</script>
+
+    <table width="776" cellspacing="0" cellpadding="0" border="0">
+        <tbody><tr>
+            <td>
+                    <div id="topNav" style="z-index: 5; position: absolute; left: 233px; top: 62px; width: 530px;"><div class="tContainer"><div class="tDropdown" onmouseover="tMenuHover(true, 0);" onmouseout="tMenuHover(false, 0);" style="width:132.5px" onclick="tMenuClick(0);">登記/ 申請事項</div><div class="tDropdown"><img src="/info/include/menu/images/stroke.gif" width="1px"></div><div class="tDropdown" onmouseover="tMenuHover(true, 1);" onmouseout="tMenuHover(false, 1);" style="width:132.5px" onclick="tMenuClick(1);">投注途徑</div><div class="tDropdown"><img src="/info/include/menu/images/stroke.gif" width="1px"></div><div class="tDropdown" onmouseover="tMenuHover(true, 2);" onmouseout="tMenuHover(false, 2);" style="width:132.5px" onclick="tMenuClick(2);">投注資料</div><div class="tDropdown"><img src="/info/include/menu/images/stroke.gif" width="1px"></div><div class="tDropdown" onmouseover="tMenuHover(true, 3);" onmouseout="tMenuHover(false, 3);" style="width:132.5px" onclick="tMenuClick(3);">網上客戶中心 <span style="text-align:center;color:#ffffff;background:rgb(230,0,0);margin:0;padding:0 1px;font-size:10px;line-height:12px;width:13px;display:inline-block;border-radius:2px;">新</span></div></div><div id="tMenuDD" class="tContainer tDisplayNone tDropdownTable"><div id="tMenuDDSub0" class="tDropdownCell tMenuBorderLeft" style="width:132.5px"><div class="tDropdownItem" onfocusout="tMenuCloseOnFocusOut();" onclick="tSubMenuClick('//special.hkjc.com/infomenu/ch/register/start.asp', '1', 'menu_staticSite');">投注入門</div><div class="tDropdownItem" onfocusout="tMenuCloseOnFocusOut();" onclick="tSubMenuClick('//special.hkjc.com/infomenu/ch/register/applybet.asp', '1', 'menu_staticSite');">申請投注戶口</div><div class="tDropdownItem" onfocusout="tMenuCloseOnFocusOut();" onclick="tSubMenuClick('//special.hkjc.com/infomenu/ch/register/regonline.asp', '1', 'menu_staticSite');">註冊登入名稱/登記網上投注服務</div><div class="tDropdownItem" onfocusout="tMenuCloseOnFocusOut();" onclick="tSubMenuClick('//special.hkjc.com/infomenu/ch/register/applyeft.asp', '1', 'menu_staticSite');">申請香港賽馬會電子轉賬服務</div><div class="tDropdownItem" onfocusout="tMenuCloseOnFocusOut();" onclick="tSubMenuClick('//special.hkjc.com/infomenu/ch/register/download.asp', '1', 'menu_staticSite');">下載表格</div></div><div class="tMenuStroke"></div><div id="tMenuDDSub1" class="tDropdownCell" style="width:132.5px"><div class="tDropdownItem" onfocusout="tMenuCloseOnFocusOut();" onclick="tSubMenuClick('//special.hkjc.com/infomenu/ch/channel/overview.asp', '1', 'menu_staticSite');">概覽</div><div class="tDropdownItem" onmouseover="menuTxtOver(1, 1, 1, 0);" onmouseout="menuTxtOver(1, 1, 0, 0);" onfocusout="tMenuCloseOnFocusOut();" onclick="tSubMenuClick('//special.hkjc.com/infomenu/ch/channel/ewin/index.asp', '1', 'menu_staticSite');">網上投注服務「投注區」</div><div class="tDropdownItem" onmouseover="menuTxtOver(1, 2, 1, 0);" onmouseout="menuTxtOver(1, 2, 0, 0);" onfocusout="tMenuCloseOnFocusOut();" onclick="tSubMenuClick('//special.hkjc.com/infomenu/ch/channel/telebet/index.asp', '1', 'menu_staticSite');">電話投注</div><div class="tDropdownItem" onmouseover="menuTxtOver(1, 3, 1, 0);" onmouseout="menuTxtOver(1, 3, 0, 0);" onfocusout="tMenuCloseOnFocusOut();" onclick="tSubMenuClick('//special.hkjc.com/infomenu/ch/channel/1886/index.asp', '1', 'menu_staticSite');">1886電話投注自動服務系統</div><div class="tDropdownItem" onmouseover="menuTxtOver(1, 4, 1, 0);" onmouseout="menuTxtOver(1, 4, 0, 0);" onfocusout="tMenuCloseOnFocusOut();" onclick="tSubMenuClick('//special.hkjc.com/infomenu/ch/channel/mbsn/index.asp', '1', 'menu_staticSite');">流動投注服務</div><div class="tDropdownItem" onmouseover="menuTxtOver(1, 5, 1, 0);" onmouseout="menuTxtOver(1, 5, 0, 0);" onfocusout="tMenuCloseOnFocusOut();" onclick="tSubMenuClick('//racingtouch.hkjc.com/ch/intro.aspx', '1', 'menu_staticSite');">Racing Touch流動應用程式</div><div class="tDropdownItem" onmouseover="menuTxtOver(1, 6, 1, 0);" onmouseout="menuTxtOver(1, 6, 0, 0);" onfocusout="tMenuCloseOnFocusOut();" onclick="tSubMenuClick('//special.hkjc.com/infomenu/ch/channel/ocb/index.asp', '1', 'menu_staticSite');">場外投注處</div><div class="tDropdownItem" onmouseover="menuTxtOver(1, 7, 1, 0);" onmouseout="menuTxtOver(1, 7, 0, 0);" onfocusout="tMenuCloseOnFocusOut();" onclick="tSubMenuClick('//special.hkjc.com/infomenu/ch/channel/racecourse/index.asp', '1', 'menu_staticSite');">馬場</div></div><div class="tMenuStroke"></div><div id="tMenuDDSub2" class="tDropdownCell" style="width:132.5px"><div class="tDropdownItem" onfocusout="tMenuCloseOnFocusOut();" onclick="tSubMenuClick('//special.hkjc.com/racing/info/ch/betting/guide_qualifications_pari.asp', '2', 'menu_newWindow');">賽馬</div><div class="tDropdownItem" onfocusout="tMenuCloseOnFocusOut();" onclick="tSubMenuClick('//is.hkjc.com/football/info/ch/betting/bettypes.asp', '2', 'menu_newWindow');">足智彩</div><div class="tDropdownItem" onfocusout="tMenuCloseOnFocusOut();" onclick="tSubMenuClick('//special.hkjc.com/root/marksix/info/ch/mark6/multiple_banker.asp', '2', 'menu_newWindow');">六合彩</div><div class="tDropdownItem" onfocusout="tMenuCloseOnFocusOut();" onclick="tSubMenuClick('//special.hkjc.com/infomenu/ch/info/investments.asp', '1', 'menu_staticSite');">投注金額及派彩</div><div class="tDropdownItem" onfocusout="tMenuCloseOnFocusOut();" onclick="tSubMenuClick('//is.hkjc.com/fund_transfer_mobile/ch/index_detect.html', '1', 'menu_newWindow');">關於轉賬</div><div class="tDropdownItem" onfocusout="tMenuCloseOnFocusOut();" onclick="tSubMenuClick('//special.hkjc.com/infomenu/ch/info/change.asp', '1', 'menu_newWindow');">關於個人資料更改</div><div class="tDropdownItem" onfocusout="tMenuCloseOnFocusOut();" onclick="tSubMenuClick('//special.hkjc.com/infomenu/ch/info/password.asp', '1', 'menu_newWindow');">關於密碼重設</div><div class="tDropdownItem" onfocusout="tMenuCloseOnFocusOut();" onclick="tSubMenuClick('//special.hkjc.com/infomenu/ch/info/hotline.asp', '1', 'menu_newWindow');">聯絡途徑</div></div><div class="tMenuStroke"></div><div id="tMenuDDSub3" class="tDropdownCell tMenuBorderRight" style="width:132.5px"></div><div class="tMenuBox" style="position:absolute; right:2px; width:314px; height:126px; display:none" id="menuBox"></div></div></div>        
+                    
+                    <script type="text/javascript" src="/info/include/js/xml2json.min.js?CV=L302R1f"></script>
+<script language="JavaScript">
+ var int_language_chi = 1;
+ var int_language_eng = 0;
+ var int_time_interval = 1;
+ function func_check_readstate(){
+   try {
+     if (!(top.betSlipFrame == undefined || top.showMode == "0" || top.betSlipFrame.isLogon() == 1))
+     {
+       if (parent.betSlipFrame.document.readyState == 'complete') {
+         parent.betSlipFrame.chgLang(int_language_chi);
+       }
+       else {
+         var timer_id = setTimeout('func_check_readstate()', int_time_interval * 1000 );
+       }
+     }
+   } catch(e) {
+     var timer_id = setTimeout('func_check_readstate()', int_time_interval * 1000 );
+   }
+ };
+ func_check_readstate();
+</script>
+<link type="text/css" rel="stylesheet" href="/info/include/css/ch/top_menu.css">
+<div class="fMenuTABLE">
+  <div class="fMenuTR">
+    <div class="fMenuRow"><img id="machineInfo" src="/info/include/images/spacer.gif?CV=L302R1f" alt="" title="72" width="10" height="10"></div>
+    <div class="fMenuRowLang"><a href="javascript:changeLang('%2fracing%2fpages%2fodds_wp.aspx%3flang%3den%26date%3d2018-09-02%26venue%3dst%26raceno%3d10',1);" class="topMenu"><nobr>English</nobr></a></div>
+    <div class="fMenuRowHome"><a href="javascript:NewNormalWindow('//www.hkjc.com/home/chinese/index.asp','','','','yes','yes')" class="topMenu"><nobr>主 頁</nobr></a></div>
+    <div id="fMenuRC" onclick="NewNormalWindow('//entertainment.hkjc.com/entertainment/chinese/index.aspx','','','','yes','yes');"></div>
+    <div class="fMenuRow"><img src="/info/include/images/topmenu_line_v.gif?CV=L302R1f" width="1" height="11"></div>
+    <div id="fMenuHR" onclick="NewNormalWindow('//racing.hkjc.com/racing/chinese/index.aspx','','','','yes','yes');"></div>
+    <div class="fMenuRow"><img src="/info/include/images/topmenu_line_v.gif?CV=L302R1f" width="1" height="11"></div>
+    <div id="fMenuFB" onclick="NewNormalWindow('//football.hkjc.com/football/chinese/index.aspx','','','','yes','yes');"></div>
+    <div class="fMenuRow"><img src="/info/include/images/topmenu_line_v.gif?CV=L302R1f" width="1" height="11"></div>
+    <div id="fMenuMEM" onclick="NewNormalWindow('//member.hkjc.com/member/chinese/index.asp','','','','yes','yes');"></div>
+    <div class="fMenuRow"><img src="/info/include/images/topmenu_line_v.gif?CV=L302R1f" width="1" height="11"></div>
+    <div id="fMenuCHA" onclick="NewNormalWindow('//charities.hkjc.com/charities/chinese/index.aspx','','','','yes','yes');"></div>
+    <div class="fMenuRow"><img src="/info/include/images/topmenu_line_v.gif?CV=L302R1f" width="1" height="11"></div>
+    <div id="fMenuABOUT" onclick="NewNormalWindow('//corporate.hkjc.com/corporate/chinese/index.aspx','','','','yes','yes');"></div>
+  </div>
+</div>
+
+<div class="secMenu">
+  <div class="secMenuTR">
+    <div class="secTable">
+      <div id="secMenuHR" title="賽馬" onclick="location.href = '/racing/index.aspx?lang=ch'"></div>
+      <div id="secMenuFB" title="足智彩" onclick="location.href = '/football/index.aspx?lang=ch'"></div>
+      <div id="secMenuM6" title="六合彩" onclick="location.href = '/marksix/index.aspx?lang=ch'"></div>
+      <div id="secMenu3in1" title="EWin" onclick="location.href = '/index.aspx?lang=ch'"></div> 
+      <div class="date" id="server_datetime">02/09/18 15:36 (日)</div>
+    </div>
+  </div>
+  <div class="secMenuLine"></div>
+</div>
+
+<script type="text/javascript">
+  serverDateObj = new Date(2018, 8, 2, 15, 23, 22);
+  window.setTimeout("serverOddsRefresh()", 60000);
+  function serverOddsRefresh() {
+    serverDateObj.setMinutes(serverDateObj.getMinutes() + 1);
+    document.getElementById("server_datetime").innerHTML = formatServerOdds(serverDateObj) ;
+    window.setTimeout("serverOddsRefresh()", 60000);
+  }
+  function formatServerOdds(d) {
+    dowArray = new Array('日', '一', '二', '三', '四', '五', '六');
+    return addZero(d.getDate()) + "/" + addZero((d.getMonth() + 1)) + "/" + addZero(d.getFullYear()) + " " + addZero(d.getHours()) + ":" + addZero(d.getMinutes())+' ('+dowArray[d.getDay()] + ')';
+  }
+  function addZero(tstr) {
+    return ("0"+tstr).substr((tstr+"").length-1, 2)
+  }
+  
+  var machineId = '72' + ('' == 'sl' ? 's' : '');
+  document.getElementById('machineInfo').title = machineId;
+</script>
+
+                    
+                    <div id="hr_promo_top_div" class="topBanner">
+  <iframe scrolling="no" name="hr_promo_top" src="" id="hr_promo_top" width="764" height="0" frameborder="0"></iframe>
+</div>
+
+                    
+                    <script type="text/javascript">
+    var msgHolders = [2];
+</script>
+<script type="text/javascript" src="/info/include/JCBWCommon/js/common.js?CV=L302R1f"></script>
+<script type="text/javascript" src="/info/include/JCBWCommon/js/json2.js?CV=L302R1f"></script>
+<script type="text/javascript">
+if (window.addEventListener) {
+window.addEventListener("load", xsellInit, false);
+} else if (window.attachEvent) {
+window.attachEvent("onload", xsellInit);}
+</script>
+<div id="2" style="DISPLAY:none"></div>
+
+                    
+                    <iframe scrolling="no" allowtransparency="true" id="homeSNFrame" name="homeSNFrame" src="" width="100%" height="0" frameborder="0">&nbsp;</iframe>
+<script type="text/javascript">
+ function LoadImportantNote(){
+ document.getElementById('homeSNFrame').src = "";} 
+ /*
+ if (window.addEventListener) {
+    window.addEventListener("load", LoadImportantNote, false);
+ }
+ else if (window.attachEvent) {
+    window.attachEvent("onload", LoadImportantNote);
+ }
+ else {
+    document.addEventListener("load", LoadImportantNote, false);
+ }
+ */
+ $(document).ready(function() {LoadImportantNote();});
+</script>
+
+                    
+                    <link type="text/css" rel="stylesheet" href="/racing/info/css/pd_menu.css">
+<script type="text/javascript" src="/info/include/js/pd_odds_menu.js?CV=L302R1f"></script>
+<script type="text/javascript">
+  var oMenuLang = 'C';
+  var oMenuPD = 'HR';
+  var oMenuLPD = 'racing';
+  var oMenuIconPath = '/ContentServer/jcbw/images/';
+  var oMenuCacheVersion = '?CV=L302R1f';
+  var oMenuData = {"pMenu":[{"nE":"Entrylist","nC":"報名表","uE":"//www.hkjc.com/english/racing/entry.asp","uC":"//www.hkjc.com/chinese/racing/entry.asp","at":"width=680,height=440,left=20,top=20,scrollbars=yes,resizable=yes","pu":"1","child":null},{"nE":"Race Card","nC":"排位表","uE":"//www.hkjc.com/english/racing/startersr1_e.asp","uC":"//www.hkjc.com/chinese/racing/startersr1_c.asp","at":"width=680,height=440,left=20,top=20,scrollbars=yes,resizable=yes","pu":"1","child":null},{"nE":"Fixture","nC":"賽期表","uE":"//www.hkjc.com/english/racing/fixture.asp","uC":"//www.hkjc.com/chinese/racing/fixture.asp","at":"width=680,height=440,left=20,top=20,scrollbars=yes,resizable=yes","pu":"1","child":null},{"nE":"Ref. Info","nC":"參考資料","uE":"//www.hkjc.com/english/racing/change.asp","uC":"//www.hkjc.com/chinese/racing/change.asp","at":"width=680,height=440,left=20,top=20,scrollbars=yes,resizable=yes","pu":"1","child":[{"nE":"Changes","nC":"更易事項","uE":"//www.hkjc.com/english/racing/change.asp","uC":"//www.hkjc.com/chinese/racing/change.asp","at":"width=653,height=780,left=0,top=0,scrollbars=yes,resizable=yes","pu":"1","child":null}]},{"nE":"Jockey Challenge Info","nC":"騎師王資料","uE":"/racing/pages/odds_jkc.aspx?lang=en","uC":"/racing/pages/odds_jkc.aspx?lang=ch","at":"","pu":"0","child":[{"nE":"JKC Standings","nC":"騎師王積分","uE":"//special.hkjc.com/redir/jkcstanding.asp?l=en","uC":"//special.hkjc.com/redir/jkcstanding.asp?l=ch","at":"width=425,height=500,left=0,top=0,scrollbars=yes,resizable=yes","pu":"1","child":null},{"nE":"Jockey Challenge Odds Chart","nC":"騎師王賠率走勢圖","uE":"//racing.hkjc.com/racing/english/racing-info/jkc-odds-chart.aspx","uC":"//racing.hkjc.com/racing/chinese/racing-info/jkc-odds-chart.aspx","at":"width=425,height=500,left=0,top=0,scrollbars=yes,resizable=yes","pu":"1","child":null},{"nE":"Jockey Challenge Statistics","nC":"騎師王統計","uE":"//www.hkjc.com/english/racing/jkcstat.asp","uC":"//www.hkjc.com/chinese/racing/jkcstat.asp","at":"width=653,height=780,left=0,top=0,scrollbars=yes,resizable=yes","pu":"1","child":null},{"nE":"Jockeys' Rides","nC":"騎師分場表","uE":"//www.hkjc.com/english/racing/jockeybooking.asp","uC":"//www.hkjc.com/chinese/racing/jockeybooking.asp","at":"width=680,height=440,left=20,top=20,scrollbars=yes,resizable=yes","pu":"1","child":null},{"nE":"JKC Introduction","nC":"騎師王簡介","uE":"//special.hkjc.com/racing/info/en/betting/guide_qualifications_fixed.asp","uC":"//special.hkjc.com/racing/info/ch/betting/guide_qualifications_fixed.asp","at":"width=680,height=440,left=20,top=20,scrollbars=yes,resizable=yes","pu":"1","child":null}]},{"nE":"Results & Dividend","nC":"賽果及派彩","uE":"/racing/pages/results.aspx?lang=en","uC":"/racing/pages/results.aspx?lang=ch","at":"","pu":"0","child":[{"nE":"Current Raceday Results & Dividend","nC":"即日賽果及派彩","uE":"/racing/pages/results.aspx?lang=en","uC":"/racing/pages/results.aspx?lang=ch","at":"","pu":"0","child":null},{"nE":"All Results & Dividend","nC":"所有賽果及派彩","uE":"//www.hkjc.com/english/racing/results.asp","uC":"//www.hkjc.com/chinese/racing/results.asp","at":"width=680,height=440,left=20,top=20,scrollbars=yes,resizable=yes","pu":"1","child":null},{"nE":"Rebate Calculator","nC":"回扣計算機","uE":"//gadget.hkjc.com/rebatecalculator/cal.aspx?lang=en","uC":"//gadget.hkjc.com/rebatecalculator/cal.aspx?lang=ch","at":"width=680,height=600,left=20,top=20,scrollbars=yes,resizable=yes","pu":"1","child":null}]},{"nE":"Tools","nC":"分析工具","uE":"//www.hkjc.com/english/tipsindex/tips_index.asp","uC":"//www.hkjc.com/chinese/tipsindex/tips_index.asp","at":"width=680,height=440,left=20,top=20,scrollbars=yes,resizable=yes","pu":"1","child":[{"nE":"Raceday Focus","nC":"賽日頭條","uE":"//www.hkjc.com/english/racinginfo/raceday_focus_1.asp","uC":"//www.hkjc.com/chinese/racinginfo/raceday_focus_1.asp","at":"width=680,height=440,left=20,top=20,scrollbars=yes,resizable=yes","pu":"1","child":null},{"nE":"Intro to New Horses","nC":"初出馬介紹","uE":"//www.hkjc.com/english/racinginfo/newhorse.asp","uC":"//www.hkjc.com/chinese/racinginfo/newhorse.asp","at":"width=680,height=440,left=20,top=20,scrollbars=yes,resizable=yes","pu":"1","child":null},{"nE":"Last Run Reminder","nC":"上仗備忘","uE":"//racing.hkjc.com/racing/english/racing-info/last-run-reminder.aspx","uC":"//racing.hkjc.com/racing/chinese/racing-info/last-run-reminder.aspx","at":"width=680,height=440,left=20,top=20,scrollbars=yes,resizable=yes","pu":"1","child":null},{"nE":"Race Simulator","nC":"模擬賽馬","uE":"//special.hkjc.com/promo/en/2012-race-simulator/main.asp","uC":"//special.hkjc.com/promo/ch/2012-race-simulator/main.asp","at":"width=680,height=440,left=20,top=20,scrollbars=yes,resizable=yes","pu":"1","child":null},{"nE":"Stats Centre","nC":"賽日數據","uE":"//racing.hkjc.com/racing/english/stats-centre/index.aspx","uC":"//racing.hkjc.com/racing/chinese/stats-centre/index.aspx","at":"width=680,height=440,left=20,top=20,scrollbars=yes,resizable=yes","pu":"1","child":null},{"nE":"Tips Index","nC":"貼士指數","uE":"//www.hkjc.com/english/tipsindex/tips_index.asp","uC":"//www.hkjc.com/chinese/tipsindex/tips_index.asp","at":"width=680,height=440,left=20,top=20,scrollbars=yes,resizable=yes","pu":"1","child":null},{"nE":"SpeedPRO","nC":"速勢能量","uE":"//www.hkjc.com/english/formguide/1.html","uC":"//www.hkjc.com/chinese/formguide/1.html","at":"width=680,height=440,left=20,top=20,scrollbars=yes,resizable=yes","pu":"1","child":null},{"nE":"All Up Calculator","nC":"過關計算機","uE":"//www.hkjc.com/english/oddscalc/oddscalc.asp","uC":"//www.hkjc.com/chinese/oddscalc/oddscalc.asp","at":"width=770,height=550,left=20,top=20,scrollbars=yes,resizable=yes","pu":"1","child":null}]},{"nE":"Pools / Bet Types","nC":"投注彩池 / 種類","uE":"#","uC":"#","at":"","pu":"0","child":[{"nE":"Pari-mutuel Pools","nC":"平分彩金彩池","uE":"//special.hkjc.com/root2/racing/info/en/betting/guide_qualifications_pari.asp","uC":"//special.hkjc.com/root2/racing/info/ch/betting/guide_qualifications_pari.asp","at":"width=680,height=440,left=20,top=20,scrollbars=yes,resizable=yes","pu":"1","child":null},{"nE":"Fixed Odds Bet Types","nC":"固定賠率投注種類","uE":"//special.hkjc.com/root2/racing/info/en/betting/guide_qualifications_fixed.asp","uC":"//special.hkjc.com/root2/racing/info/ch/betting/guide_qualifications_fixed.asp","at":"width=680,height=440,left=20,top=20,scrollbars=yes,resizable=yes","pu":"1","child":null},{"nE":"Flexi Bet Info","nC":"靈活玩簡介","uE":"//special.hkjc.com/racing/info/en/betting/guide-flexibet-index.asp","uC":"//special.hkjc.com/racing/info/ch/betting/guide-flexibet-index.asp","at":"width=785,height=600,left=20,top=20,scrollbars=yes,resizable=yes","pu":"1","child":null},{"nE":"Chance Table","nC":"注數表","uE":"//special.hkjc.com/root2/racing/info/en/betting/guide_chance.asp","uC":"//special.hkjc.com/root2/racing/info/ch/betting/guide_chance.asp","at":"width=680,height=440,left=20,top=20,scrollbars=yes,resizable=yes","pu":"1","child":null}]},{"nE":"Rebate","nC":"回扣","uE":"//special.hkjc.com/root2/racing/info/en/betting/guide_rebate.asp","uC":"//special.hkjc.com/root2/racing/info/ch/betting/guide_rebate.asp","at":"width=680,height=440,left=20,top=20,scrollbars=yes,resizable=yes","pu":"1","child":[{"nE":"Rebate","nC":"回扣","uE":"//special.hkjc.com/root2/racing/info/en/betting/guide_rebate.asp","uC":"//special.hkjc.com/root2/racing/info/ch/betting/guide_rebate.asp","at":"width=680,height=440,left=20,top=20,scrollbars=yes,resizable=yes","pu":"1","child":null},{"nE":"Rebate Calculator","nC":"回扣計算機","uE":"//gadget.hkjc.com/rebatecalculator/cal.aspx?lang=en","uC":"//gadget.hkjc.com/rebatecalculator/cal.aspx?lang=ch","at":"width=680,height=600,left=20,top=20,scrollbars=yes,resizable=yes","pu":"1","child":null}]}],"oMenu":[{"nE":"Odds","nC":"賠率","uE":"","uC":"","ta":"","icon":"","iconE":"","iconC":"","type":"LABEL","dv":"","child":null},{"nE":"All Up / Cross Pool All Up","nC":"過關 / 混合過關","uE":"/racing/pages/odds_cross_alup.aspx?lang=en","uC":"/racing/pages/odds_cross_alup.aspx?lang=ch","ta":"","icon":"","iconE":"","iconC":"","type":"ODDS_CROSS_ALUP.ASPX","dv":"","child":null},{"nE":"Win / Place","nC":"獨贏 / 位置","uE":"/racing/pages/odds_wp.aspx?lang=en","uC":"/racing/pages/odds_wp.aspx?lang=ch","ta":"","icon":"","iconE":"","iconC":"","type":"ODDS_WP.ASPX,ODDS_WP_ALUP.ASPX","dv":"","child":null},{"nE":"Quinella / Quinella Place","nC":"連贏 / 位置Q","uE":"/racing/pages/odds_wpq.aspx?lang=en","uC":"/racing/pages/odds_wpq.aspx?lang=ch","ta":"","icon":"","iconE":"","iconC":"","type":"ODDS_WPQ.ASPX,ODDS_WPQ_ALUP.ASPX","dv":"","child":null},{"nE":"3 PICK 1 (Composite Win)","nC":"3揀1 (組合獨贏)","uE":"","uC":"","ta":"","icon":"","iconE":"","iconC":"","type":"CWA","dv":"2018-09-12HV","child":[{"nE":"Single","nC":"單場","uE":"/racing/pages/odds_cwa.aspx?lang=en","uC":"/racing/pages/odds_cwa.aspx?lang=ch","ta":null,"icon":"","iconE":"","iconC":"","type":"ODDS_CWA.ASPX","dv":null,"child":null},{"nE":"All Up - Individual Race View","nC":"過關 - 個別場次版","uE":"/racing/pages/odds_cwin_alup.aspx?lang=en","uC":"/racing/pages/odds_cwin_alup.aspx?lang=ch","ta":null,"icon":"","iconE":"","iconC":"","type":"ODDS_CWIN_ALUP","dv":null,"child":null},{"nE":"All Up – All Races View","nC":"過關 - 所有場次版","uE":"/racing/pages/odds_cwin_all_alup.aspx?lang=en","uC":"/racing/pages/odds_cwin_all_alup.aspx?lang=ch","ta":null,"icon":"","iconE":"","iconC":"","type":"ODDS_CWIN_ALL_ALUP","dv":null,"child":null}]},{"nE":"3 PICK 1 (Composite Win)","nC":"3揀1 (組合獨贏)","uE":"","uC":"","ta":"","icon":"","iconE":"","iconC":"","type":"CWA","dv":"2018-09-09ST","child":[{"nE":"Single","nC":"單場","uE":"/racing/pages/odds_cwa.aspx?lang=en","uC":"/racing/pages/odds_cwa.aspx?lang=ch","ta":null,"icon":"","iconE":"","iconC":"","type":"ODDS_CWA.ASPX","dv":null,"child":null},{"nE":"All Up - Individual Race View","nC":"過關 - 個別場次版","uE":"/racing/pages/odds_cwin_alup.aspx?lang=en","uC":"/racing/pages/odds_cwin_alup.aspx?lang=ch","ta":null,"icon":"","iconE":"","iconC":"","type":"ODDS_CWIN_ALUP","dv":null,"child":null},{"nE":"All Up – All Races View","nC":"過關 - 所有場次版","uE":"/racing/pages/odds_cwin_all_alup.aspx?lang=en","uC":"/racing/pages/odds_cwin_all_alup.aspx?lang=ch","ta":null,"icon":"","iconE":"","iconC":"","type":"ODDS_CWIN_ALL_ALUP","dv":null,"child":null}]},{"nE":"3 PICK 1 (Composite Win)","nC":"3揀1 (組合獨贏)","uE":"","uC":"","ta":"","icon":"","iconE":"","iconC":"","type":"CWA","dv":"2018-09-05HV","child":[{"nE":"Single","nC":"單場","uE":"/racing/pages/odds_cwa.aspx?lang=en","uC":"/racing/pages/odds_cwa.aspx?lang=ch","ta":null,"icon":"","iconE":"","iconC":"","type":"ODDS_CWA.ASPX","dv":null,"child":null},{"nE":"All Up - Individual Race View","nC":"過關 - 個別場次版","uE":"/racing/pages/odds_cwin_alup.aspx?lang=en","uC":"/racing/pages/odds_cwin_alup.aspx?lang=ch","ta":null,"icon":"","iconE":"","iconC":"","type":"ODDS_CWIN_ALUP","dv":null,"child":null},{"nE":"All Up – All Races View","nC":"過關 - 所有場次版","uE":"/racing/pages/odds_cwin_all_alup.aspx?lang=en","uC":"/racing/pages/odds_cwin_all_alup.aspx?lang=ch","ta":null,"icon":"","iconE":"","iconC":"","type":"ODDS_CWIN_ALL_ALUP","dv":null,"child":null}]},{"nE":"3 Pick 1 (Composite Win)","nC":"3揀1 (組合獨贏)","uE":"","uC":"","ta":"","icon":"","iconE":"","iconC":"","type":"CWA","dv":"2018-09-02ST","child":[{"nE":"Single","nC":"單場","uE":"/racing/pages/odds_cwa.aspx?lang=en","uC":"/racing/pages/odds_cwa.aspx?lang=ch","ta":null,"icon":"","iconE":"","iconC":"","type":"ODDS_CWA.ASPX","dv":null,"child":null},{"nE":"All Up - Individual Race View","nC":"過關 - 個別場次版","uE":"/racing/pages/odds_cwin_alup.aspx?lang=en","uC":"/racing/pages/odds_cwin_alup.aspx?lang=ch","ta":null,"icon":"","iconE":"","iconC":"","type":"ODDS_CWIN_ALUP","dv":null,"child":null},{"nE":"All Up – All Races View","nC":"過關 - 所有場次版","uE":"/racing/pages/odds_cwin_all_alup.aspx?lang=en","uC":"/racing/pages/odds_cwin_all_alup.aspx?lang=ch","ta":null,"icon":"","iconE":"","iconC":"","type":"ODDS_CWIN_ALL_ALUP","dv":null,"child":null}]},{"nE":"3 PICK 1 (Composite Win)","nC":"3揀1 (組合獨贏)","uE":"","uC":"","ta":"","icon":"","iconE":"","iconC":"","type":"CWA","dv":"2018-07-15ST","child":[{"nE":"Single","nC":"單場","uE":"/racing/pages/odds_cwa.aspx?lang=en","uC":"/racing/pages/odds_cwa.aspx?lang=ch","ta":null,"icon":"","iconE":"","iconC":"","type":"ODDS_CWA.ASPX","dv":null,"child":null},{"nE":"All Up - Individual Race View","nC":"過關 - 個別場次版","uE":"/racing/pages/odds_cwin_alup.aspx?lang=en","uC":"/racing/pages/odds_cwin_alup.aspx?lang=ch","ta":null,"icon":"","iconE":"","iconC":"","type":"ODDS_CWIN_ALUP","dv":null,"child":null},{"nE":"All Up – All Races View","nC":"過關 - 所有場次版","uE":"/racing/pages/odds_cwin_all_alup.aspx?lang=en","uC":"/racing/pages/odds_cwin_all_alup.aspx?lang=ch","ta":null,"icon":"","iconE":"","iconC":"","type":"ODDS_CWIN_ALL_ALUP","dv":null,"child":null}]},{"nE":"Tierce","nC":"三重彩","uE":"/racing/pages/odds_tce.aspx?lang=en","uC":"/racing/pages/odds_tce.aspx?lang=ch","ta":"","icon":"","iconE":"","iconC":"","type":"ODDS_TCE.ASPX","dv":"","child":null},{"nE":"Trio","nC":"單T","uE":"/racing/pages/odds_tri.aspx?lang=en","uC":"/racing/pages/odds_tri.aspx?lang=ch","ta":"","icon":"","iconE":"","iconC":"","type":"ODDS_TRI.ASPX,ODDS_TRI_ALUP.ASPX","dv":"","child":null},{"nE":"First 4","nC":"四連環","uE":"/racing/pages/odds_ff.aspx?lang=en","uC":"/racing/pages/odds_ff.aspx?lang=ch","ta":"","icon":"jackpot.gif","iconE":"Jackpot","iconC":"多寶","type":"ODDS_FF.ASPX","dv":";2018-09-02ST","child":null},{"nE":"Quartet","nC":"四重彩","uE":"/racing/pages/odds_qtt.aspx?lang=en","uC":"/racing/pages/odds_qtt.aspx?lang=ch","ta":"","icon":"jackpot.gif","iconE":"Jackpot","iconC":"多寶","type":"ODDS_QTT.ASPX","dv":";2018-09-02ST","child":null},{"nE":"Double","nC":"孖寶","uE":"/racing/pages/odds_dbl.aspx?lang=en","uC":"/racing/pages/odds_dbl.aspx?lang=ch","ta":"","icon":"","iconE":"","iconC":"","type":"ODDS_DBL.ASPX","dv":"","child":null},{"nE":"Treble","nC":"三寶","uE":"/racing/pages/odds_tbl.aspx?lang=en","uC":"/racing/pages/odds_tbl.aspx?lang=ch","ta":"","icon":"","iconE":"","iconC":"","type":"ODDS_TBL.ASPX","dv":"","child":null},{"nE":"Double Trio","nC":"孖T","uE":"/racing/pages/odds_dt.aspx?lang=en","uC":"/racing/pages/odds_dt.aspx?lang=ch","ta":"","icon":"","iconE":"","iconC":"","type":"ODDS_DT.ASPX","dv":"","child":null},{"nE":"Triple Trio","nC":"三T","uE":"/racing/pages/odds_tt.aspx?lang=en","uC":"/racing/pages/odds_tt.aspx?lang=ch","ta":"","icon":"","iconE":"","iconC":"","type":"ODDS_TT.ASPX","dv":"","child":null},{"nE":"Six Up","nC":"六環彩","uE":"/racing/pages/odds_6up.aspx?lang=en","uC":"/racing/pages/odds_6up.aspx?lang=ch","ta":"","icon":"","iconE":"","iconC":"","type":"ODDS_6UP.ASPX","dv":"","child":null},{"nE":"Jockey Challenge","nC":"騎師王","uE":"/racing/pages/odds_jkc.aspx?lang=en","uC":"/racing/pages/odds_jkc.aspx?lang=ch","ta":"","icon":"","iconE":"","iconC":"","type":"ODDS_JKC.ASPX","dv":"","child":null},{"nE":"Special Composite Win:","nC":"特別組合獨贏項目:","uE":"","uC":"","ta":"","icon":"","iconE":"","iconC":"","type":"CWB_CWC","dv":"2018-09-02ST","child":[{"nE":"Winning Trainer ","nC":"勝出練馬師 ","uE":"/racing/pages/odds_cwb.aspx?lang=en","uC":"/racing/pages/odds_cwb.aspx?lang=ch","ta":null,"icon":"","iconE":"","iconC":"","type":"CWB","dv":null,"child":null}]},{"nE":"Jockey Trainer Combo","nC":"騎練配對","uE":"/racing/pages/odds_jtcombo.aspx?lang=en","uC":"/racing/pages/odds_jtcombo.aspx?lang=ch","ta":"","icon":"","iconE":"","iconC":"","type":"JTCOMBO.ASPX","dv":"","child":null},{"nE":"Progressive Win Odds","nC":"獨贏賠率走勢","uE":"/racing/pages/odds_pwin.aspx?lang=en","uC":"/racing/pages/odds_pwin.aspx?lang=ch","ta":"","icon":"","iconE":"","iconC":"","type":"PWIN.ASPX","dv":"","child":null},{"nE":"Pool Investment","nC":"投注額","uE":"/racing/pages/odds_turnover.aspx?lang=en","uC":"/racing/pages/odds_turnover.aspx?lang=ch","ta":"","icon":"","iconE":"","iconC":"","type":"TURNOVER.ASPX","dv":"","child":null}]};
+ 
+  $(document).ready(function(){
+    loadProductMenu();
+    resizePMenu();
+  });
+</script>
+<div id="thirdMenu" class="pMenuTABLE"><div class="pContainer"><div class="pDropdown" onclick="menuItemClick(0,-1);" style="width: 61.6438px;">報名表</div><div class="pDropdown" style="width: 1.71233px;"><img src="/racing/info/images/tool_line_v.gif?CV=L302R1f" px="" width="1px" height="14"></div><div class="pDropdown" onclick="menuItemClick(1,-1);" style="width: 61.6438px;">排位表</div><div class="pDropdown" style="width: 1.71233px;"><img src="/racing/info/images/tool_line_v.gif?CV=L302R1f" px="" width="1px" height="14"></div><div class="pDropdown" onclick="menuItemClick(2,-1);" style="width: 61.6438px;">賽期表</div><div class="pDropdown" style="width: 1.71233px;"><img src="/racing/info/images/tool_line_v.gif?CV=L302R1f" px="" width="1px" height="14"></div><div class="pDropdown" style="width: 82.1918px;"><div class="pDropbtn" onclick="pMenuClick(3);">參考資料</div><div class="pDropdownTable" id="pMenu3"><div class="pDropdownRow" onclick="menuItemClick(3,0);"><div class="oMenuTD1"><img src="/info/racing/info/images/arrow.gif?CV=L302R1f" width="4px" height="5px"></div><div class="pDropdownCell2">更易事項</div></div></div></div><div class="pDropdown" style="width: 1.71233px;"><img src="/racing/info/images/tool_line_v.gif?CV=L302R1f" px="" width="1px" height="14"></div><div class="pDropdown" style="width: 102.74px;"><div class="pDropbtn" onclick="pMenuClick(4);">騎師王資料</div><div class="pDropdownTable" id="pMenu4"><div class="pDropdownRow" onclick="menuItemClick(4,0);"><div class="oMenuTD1"><img src="/info/racing/info/images/arrow.gif?CV=L302R1f" width="4px" height="5px"></div><div class="pDropdownCell2">騎師王積分</div></div><div class="pDropdownRow" onclick="menuItemClick(4,1);"><div class="oMenuTD1"><img src="/info/racing/info/images/arrow.gif?CV=L302R1f" width="4px" height="5px"></div><div class="pDropdownCell2">騎師王賠率走勢圖</div></div><div class="pDropdownRow" onclick="menuItemClick(4,2);"><div class="oMenuTD1"><img src="/info/racing/info/images/arrow.gif?CV=L302R1f" width="4px" height="5px"></div><div class="pDropdownCell2">騎師王統計</div></div><div class="pDropdownRow" onclick="menuItemClick(4,3);"><div class="oMenuTD1"><img src="/info/racing/info/images/arrow.gif?CV=L302R1f" width="4px" height="5px"></div><div class="pDropdownCell2">騎師分場表</div></div><div class="pDropdownRow" onclick="menuItemClick(4,4);"><div class="oMenuTD1"><img src="/info/racing/info/images/arrow.gif?CV=L302R1f" width="4px" height="5px"></div><div class="pDropdownCell2">騎師王簡介</div></div></div></div><div class="pDropdown" style="width: 1.71233px;"><img src="/racing/info/images/tool_line_v.gif?CV=L302R1f" px="" width="1px" height="14"></div><div class="pDropdown" style="width: 102.74px;"><div class="pDropbtn" onclick="pMenuClick(5);">賽果及派彩</div><div class="pDropdownTable" id="pMenu5"><div class="pDropdownRow" onclick="menuItemClick(5,0);"><div class="oMenuTD1"><img src="/info/racing/info/images/arrow.gif?CV=L302R1f" width="4px" height="5px"></div><div class="pDropdownCell2">即日賽果及派彩</div></div><div class="pDropdownRow" onclick="menuItemClick(5,1);"><div class="oMenuTD1"><img src="/info/racing/info/images/arrow.gif?CV=L302R1f" width="4px" height="5px"></div><div class="pDropdownCell2">所有賽果及派彩</div></div><div class="pDropdownRow" onclick="menuItemClick(5,2);"><div class="oMenuTD1"><img src="/info/racing/info/images/arrow.gif?CV=L302R1f" width="4px" height="5px"></div><div class="pDropdownCell2">回扣計算機</div></div></div></div><div class="pDropdown" style="width: 1.71233px;"><img src="/racing/info/images/tool_line_v.gif?CV=L302R1f" px="" width="1px" height="14"></div><div class="pDropdown" style="width: 82.1918px;"><div class="pDropbtn" onclick="pMenuClick(6);">分析工具</div><div class="pDropdownTable" id="pMenu6"><div class="pDropdownRow" onclick="menuItemClick(6,0);"><div class="oMenuTD1"><img src="/info/racing/info/images/arrow.gif?CV=L302R1f" width="4px" height="5px"></div><div class="pDropdownCell2">賽日頭條</div></div><div class="pDropdownRow" onclick="menuItemClick(6,1);"><div class="oMenuTD1"><img src="/info/racing/info/images/arrow.gif?CV=L302R1f" width="4px" height="5px"></div><div class="pDropdownCell2">初出馬介紹</div></div><div class="pDropdownRow" onclick="menuItemClick(6,2);"><div class="oMenuTD1"><img src="/info/racing/info/images/arrow.gif?CV=L302R1f" width="4px" height="5px"></div><div class="pDropdownCell2">上仗備忘</div></div><div class="pDropdownRow" onclick="menuItemClick(6,3);"><div class="oMenuTD1"><img src="/info/racing/info/images/arrow.gif?CV=L302R1f" width="4px" height="5px"></div><div class="pDropdownCell2">模擬賽馬</div></div><div class="pDropdownRow" onclick="menuItemClick(6,4);"><div class="oMenuTD1"><img src="/info/racing/info/images/arrow.gif?CV=L302R1f" width="4px" height="5px"></div><div class="pDropdownCell2">賽日數據</div></div><div class="pDropdownRow" onclick="menuItemClick(6,5);"><div class="oMenuTD1"><img src="/info/racing/info/images/arrow.gif?CV=L302R1f" width="4px" height="5px"></div><div class="pDropdownCell2">貼士指數</div></div><div class="pDropdownRow" onclick="menuItemClick(6,6);"><div class="oMenuTD1"><img src="/info/racing/info/images/arrow.gif?CV=L302R1f" width="4px" height="5px"></div><div class="pDropdownCell2">速勢能量</div></div><div class="pDropdownRow" onclick="menuItemClick(6,7);"><div class="oMenuTD1"><img src="/info/racing/info/images/arrow.gif?CV=L302R1f" width="4px" height="5px"></div><div class="pDropdownCell2">過關計算機</div></div></div></div><div class="pDropdown" style="width: 1.71233px;"><img src="/racing/info/images/tool_line_v.gif?CV=L302R1f" px="" width="1px" height="14"></div><div class="pDropdown" style="width: 140.411px;"><div class="pDropbtn" onclick="pMenuClick(7);">投注彩池 / 種類</div><div class="pDropdownTable" id="pMenu7"><div class="pDropdownRow" onclick="menuItemClick(7,0);"><div class="oMenuTD1"><img src="/info/racing/info/images/arrow.gif?CV=L302R1f" width="4px" height="5px"></div><div class="pDropdownCell2">平分彩金彩池</div></div><div class="pDropdownRow" onclick="menuItemClick(7,1);"><div class="oMenuTD1"><img src="/info/racing/info/images/arrow.gif?CV=L302R1f" width="4px" height="5px"></div><div class="pDropdownCell2">固定賠率投注種類</div></div><div class="pDropdownRow" onclick="menuItemClick(7,2);"><div class="oMenuTD1"><img src="/info/racing/info/images/arrow.gif?CV=L302R1f" width="4px" height="5px"></div><div class="pDropdownCell2">靈活玩簡介</div></div><div class="pDropdownRow" onclick="menuItemClick(7,3);"><div class="oMenuTD1"><img src="/info/racing/info/images/arrow.gif?CV=L302R1f" width="4px" height="5px"></div><div class="pDropdownCell2">注數表</div></div></div></div><div class="pDropdown" style="width: 1.71233px;"><img src="/racing/info/images/tool_line_v.gif?CV=L302R1f" px="" width="1px" height="14"></div><div class="pDropdown" style="width: 41.0959px;"><div class="pDropbtn" onclick="pMenuClick(8);">回扣</div><div class="pDropdownTable" id="pMenu8" style="left: 612px;"><div class="pDropdownRow" onclick="menuItemClick(8,0);"><div class="oMenuTD1"><img src="/info/racing/info/images/arrow.gif?CV=L302R1f" width="4px" height="5px"></div><div class="pDropdownCell2">回扣</div></div><div class="pDropdownRow" onclick="menuItemClick(8,1);"><div class="oMenuTD1"><img src="/info/racing/info/images/arrow.gif?CV=L302R1f" width="4px" height="5px"></div><div class="pDropdownCell2">回扣計算機</div></div></div></div></div></div>
+           
+                    <table id="OddsTable" width="776" cellspacing="0" cellpadding="0" border="0">
+                    <tbody><tr>
+                        <td>
+                            <img src="/info/include/images/spacer.gif" width="1" height="1">
+                        </td>
+                        <td bgcolor="#ffffff">
+                            <img src="/info/include/images/spacer.gif" width="1" height="7">
+                        </td>
+                        <td>
+                            <img src="/info/include/images/spacer.gif" width="1" height="1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="shadowLeft" width="6">
+                            <img src="/info/include/images/spacer.gif" width="6" height="1">
+                        </td>
+                        <td width="764" bgcolor="#ffffff">
+                            <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                                <tbody><tr valign="top">
+                                    <td>
+                                        <div style="padding-right: 4px; padding-left: 0px; padding-bottom: 0px; padding-top: 0px">
+                                            
+                                            <link type="text/css" rel="stylesheet" href="/racing/info/css/odds_menu.css">
+<div id="oddsMenu"><div id="oMenuTABLE"><div class="oMenuTitle title">賠率</div><div class="oMenuTR"><div class="oMenuTD1"><img src="/info/racing/info/images/arrow.gif?CV=L302R1f" width="4px" height="5px"></div><div class="oMenuTD2" onclick="location.href='/racing/pages/odds_cross_alup.aspx?lang=ch&amp;date=2018-09-02&amp;venue=ST&amp;raceno=10'" id="oMenuODDS_CROSS_ALUP.ASPX">過關 / 混合過關</div></div><div class="oMenuTR oMenuHighlight"><div class="oMenuTD1"><img src="/info/racing/info/images/arrow.gif?CV=L302R1f" width="4px" height="5px"></div><div class="oMenuTD2" onclick="location.href='/racing/pages/odds_wp.aspx?lang=ch&amp;date=2018-09-02&amp;venue=ST&amp;raceno=10'" id="oMenuODDS_WP.ASPX,ODDS_WP_ALUP.ASPX">獨贏 / 位置</div></div><div class="oMenuTR"><div class="oMenuTD1"><img src="/info/racing/info/images/arrow.gif?CV=L302R1f" width="4px" height="5px"></div><div class="oMenuTD2" onclick="location.href='/racing/pages/odds_wpq.aspx?lang=ch&amp;date=2018-09-02&amp;venue=ST&amp;raceno=10'" id="oMenuODDS_WPQ.ASPX,ODDS_WPQ_ALUP.ASPX">連贏 / 位置Q</div></div><div class="oMenuTR"><div class="oMenuTD1"><img src="/info/racing/info/images/arrow.gif?CV=L302R1f" width="4px" height="5px"></div><div id="oMenuCWA" class="oMenuTD2NoHover">3揀1 (組合獨贏)</div></div><div class="oMenuTR"><div class="oMenuChildTD1">•</div><div class="oMenuChildTD2" onclick="location.href='/racing/pages/odds_cwa.aspx?lang=ch&amp;date=2018-09-02&amp;venue=ST&amp;raceno=10'">單場</div></div><div class="oMenuTR"><div class="oMenuChildTD1">•</div><div class="oMenuChildTD2" onclick="location.href='/racing/pages/odds_cwin_alup.aspx?lang=ch&amp;date=2018-09-02&amp;venue=ST&amp;raceno=10'">過關 - 個別場次版</div></div><div class="oMenuTR"><div class="oMenuChildTD1">•</div><div class="oMenuChildTD2" onclick="location.href='/racing/pages/odds_cwin_all_alup.aspx?lang=ch&amp;date=2018-09-02&amp;venue=ST&amp;raceno=10'">過關 - 所有場次版</div></div><div class="oMenuTR"><div class="oMenuTD1"><img src="/info/racing/info/images/arrow.gif?CV=L302R1f" width="4px" height="5px"></div><div class="oMenuTD2" onclick="location.href='/racing/pages/odds_tce.aspx?lang=ch&amp;date=2018-09-02&amp;venue=ST&amp;raceno=10'" id="oMenuODDS_TCE.ASPX">三重彩</div></div><div class="oMenuTR"><div class="oMenuTD1"><img src="/info/racing/info/images/arrow.gif?CV=L302R1f" width="4px" height="5px"></div><div class="oMenuTD2" onclick="location.href='/racing/pages/odds_tri.aspx?lang=ch&amp;date=2018-09-02&amp;venue=ST&amp;raceno=10'" id="oMenuODDS_TRI.ASPX,ODDS_TRI_ALUP.ASPX">單T</div></div><div class="oMenuTR"><div class="oMenuTD1"><img src="/info/racing/info/images/arrow.gif?CV=L302R1f" width="4px" height="5px"></div><div class="oMenuTD2" onclick="location.href='/racing/pages/odds_ff.aspx?lang=ch&amp;date=2018-09-02&amp;venue=ST&amp;raceno=10'" id="oMenuODDS_FF.ASPX">四連環&nbsp;<img src="/ContentServer/jcbw/images/C_jackpot.gif?CV=L302R1f" title="多寶"></div></div><div class="oMenuTR"><div class="oMenuTD1"><img src="/info/racing/info/images/arrow.gif?CV=L302R1f" width="4px" height="5px"></div><div class="oMenuTD2" onclick="location.href='/racing/pages/odds_qtt.aspx?lang=ch&amp;date=2018-09-02&amp;venue=ST&amp;raceno=10'" id="oMenuODDS_QTT.ASPX">四重彩&nbsp;<img src="/ContentServer/jcbw/images/C_jackpot.gif?CV=L302R1f" title="多寶"></div></div><div class="oMenuTR"><div class="oMenuTD1"><img src="/info/racing/info/images/arrow.gif?CV=L302R1f" width="4px" height="5px"></div><div class="oMenuTD2" onclick="location.href='/racing/pages/odds_dbl.aspx?lang=ch&amp;date=2018-09-02&amp;venue=ST&amp;raceno=10'" id="oMenuODDS_DBL.ASPX">孖寶</div></div><div class="oMenuTR"><div class="oMenuTD1"><img src="/info/racing/info/images/arrow.gif?CV=L302R1f" width="4px" height="5px"></div><div class="oMenuTD2" onclick="location.href='/racing/pages/odds_tbl.aspx?lang=ch&amp;date=2018-09-02&amp;venue=ST&amp;raceno=10'" id="oMenuODDS_TBL.ASPX">三寶</div></div><div class="oMenuTR"><div class="oMenuTD1"><img src="/info/racing/info/images/arrow.gif?CV=L302R1f" width="4px" height="5px"></div><div class="oMenuTD2" onclick="location.href='/racing/pages/odds_dt.aspx?lang=ch&amp;date=2018-09-02&amp;venue=ST&amp;raceno=10'" id="oMenuODDS_DT.ASPX">孖T</div></div><div class="oMenuTR"><div class="oMenuTD1"><img src="/info/racing/info/images/arrow.gif?CV=L302R1f" width="4px" height="5px"></div><div class="oMenuTD2" onclick="location.href='/racing/pages/odds_tt.aspx?lang=ch&amp;date=2018-09-02&amp;venue=ST&amp;raceno=10'" id="oMenuODDS_TT.ASPX">三T</div></div><div class="oMenuTR"><div class="oMenuTD1"><img src="/info/racing/info/images/arrow.gif?CV=L302R1f" width="4px" height="5px"></div><div class="oMenuTD2" onclick="location.href='/racing/pages/odds_6up.aspx?lang=ch&amp;date=2018-09-02&amp;venue=ST&amp;raceno=10'" id="oMenuODDS_6UP.ASPX">六環彩</div></div><div class="oMenuTR"><div class="oMenuTD1"><img src="/info/racing/info/images/arrow.gif?CV=L302R1f" width="4px" height="5px"></div><div class="oMenuTD2" onclick="location.href='/racing/pages/odds_jkc.aspx?lang=ch&amp;date=2018-09-02&amp;venue=ST&amp;raceno=10'" id="oMenuODDS_JKC.ASPX">騎師王</div></div><div class="oMenuTR"><div class="oMenuTD1"><img src="/info/racing/info/images/arrow.gif?CV=L302R1f" width="4px" height="5px"></div><div id="oMenuCWB_CWC" class="oMenuTD2NoHover">特別組合獨贏項目:</div></div><div class="oMenuTR"><div class="oMenuChildTD1">•</div><div class="oMenuChildTD2" onclick="location.href='/racing/pages/odds_cwb.aspx?lang=ch&amp;date=2018-09-02&amp;venue=ST&amp;raceno=10'">勝出練馬師 </div></div><div class="oMenuTR"><div class="oMenuTD1"><img src="/info/racing/info/images/arrow.gif?CV=L302R1f" width="4px" height="5px"></div><div class="oMenuTD2" onclick="location.href='/racing/pages/odds_jtcombo.aspx?lang=ch&amp;date=2018-09-02&amp;venue=ST&amp;raceno=10'" id="oMenuJTCOMBO.ASPX">騎練配對</div></div><div class="oMenuTR"><div class="oMenuTD1"><img src="/info/racing/info/images/arrow.gif?CV=L302R1f" width="4px" height="5px"></div><div class="oMenuTD2" onclick="location.href='/racing/pages/odds_pwin.aspx?lang=ch&amp;date=2018-09-02&amp;venue=ST&amp;raceno=10'" id="oMenuPWIN.ASPX">獨贏賠率走勢</div></div><div class="oMenuTR"><div class="oMenuTD1"><img src="/info/racing/info/images/arrow.gif?CV=L302R1f" width="4px" height="5px"></div><div class="oMenuTD2" onclick="location.href='/racing/pages/odds_turnover.aspx?lang=ch&amp;date=2018-09-02&amp;venue=ST&amp;raceno=10'" id="oMenuTURNOVER.ASPX">投注額</div></div></div></div>
+<script type="text/javascript">
+  var oMenuPara = 'date=2018-09-02&venue=ST&raceno=10';
+  var oMenuDV = '2018-09-02ST';
+  var currentUrl = location.href.toLowerCase();
+ 
+  $(document).ready(function(){
+    loadOddsMenu();
+  });
+</script>
+
+                                        </div>
+                                    </td>
+                                    <td style="padding-right: 7px" class="content" width="635">         
+                                        
+<table id="info_bar" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff">
+    <tbody><tr>
+        <td colspan="2">
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        /*
+        if (isOverseaMeeting) {
+            $('#tdMeetingInfoRight').width("240px");
+            if (pageName != null) {
+                if (pageName == "RACECARD" || pageName == "XPOOL")
+                    $('#tdMeetingInfoRight').width("0px");
+                else if (pageName == "F-F" || pageName == "D-T" || pageName == "T-T" || pageName == "TBL" || pageName == "PWIN" || pageName == "JTCOMBO")
+                    $('#tdMeetingInfoRight').width("200px");
+                else if (pageName == "TO")
+                    $('#tdMeetingInfoRight').width("160px");
+                else if (pageName == "DBL")
+                    $('#tdMeetingInfoRight').width("290px");
+            }
+        } else {
+            $('#tdMeetingInfoRight').width("290px");
+        }
+        */
+        //ajust height for non ie browser
+        if (!$.browser.msie || ($.browser.msie && parseInt($.browser.version, 10) >= 10)) {
+            //more than one line in tr
+            if ($("#trMeetingInfo").height() > 25/* && !(isOverseaMeeting && pageName != null && pageName == "F-F")*/) {
+                $("#divMeetingInfo").css({ "padding-bottom": "4px" });
+            }
+        }
+    });
+
+    function autoRefreshButtonState(isAMSConnected) {
+        //alert("isAMSConnected:" + isAMSConnected + "\n" + $("#trMeetingInfo a[onclick='refreshFunc()']").length);
+        if (isAMSConnected)
+            $("#trMeetingInfo a[name='refresh-pull']").hide();
+        else
+            $("#trMeetingInfo a[name='refresh-pull']").show();
+    }
+</script>
+<div class="topTitleBar" id="divMeetingInfo">
+    <table style="padding-top: 4px; padding-bottom: 4px" width="100%" cellspacing="0" cellpadding="0" border="0">
+        <tbody><tr id="trMeetingInfo">
+            <td>
+                <img src="/info/include/images/spacer.gif" width="1px" height="22px">
+            </td>
+            <td>
+                <table cellspacing="0" cellpadding="0" border="0">
+                    <tbody><tr>
+                        <td style="padding-right: 10px" width="1px">
+                            <img src="/info/include/images/stroke_yellow.gif?CV=L302R1f">
+                        </td>
+                        <td class="titleWhite" nowrap="">  
+                            
+                                <span id="lblPageName">獨贏 / 位置</span>
+                                
+                            
+                        </td>
+                        <td class="titleWhite">
+                            <a href="javascript:goBettingGuide('ch');"><img src="/info/include/images/icon_help.gif?CVL302R1f" title="投注指南" hspace="5" border="0" align="absMiddle"></a>
+                        </td>
+                        <td class="white" style="PADDING-LEFT:5px"><nobr>02/09/2018,&nbsp;星期日,&nbsp;</nobr><nobr>沙田</nobr></td>
+                        <td class="white" style="PADDING-LEFT:5px"><input id="allupCheckbox" class="checkbox" onclick="switchAllUpPage();" type="checkbox"></td><td class="white" nowrap=""><label for="allupCheckbox">過關</label></td>
+                    </tr>
+                </tbody></table>
+            </td>
+            
+            <td id="tdMeetingInfoRight" width="290px" align="right">
+                <table cellspacing="0" cellpadding="0" border="0">
+                    <tbody><tr>
+                        <td class="white"><nobr>更新時間:</nobr> <span id="oddsRefreshTime">15:32</span></td><td class="white" style="PADDING-RIGHT:0px; PADDING-LEFT:10px; PADDING-BOTTOM:0px; PADDING-TOP:0px"><a href="#" onclick="refreshFunc()" class="white" name="refresh-pull">更新賠率</a></td><td><a name="refresh-pull" href="#" onclick="refreshFunc()"><img src="/info/include/images/icon_refresh.gif?CVL302R1f" title="更新賠率" hspace="5" border="0"></a></td>
+                        <td id="oddsTypeDropdown" style="PADDING-RIGHT:2px; PADDING-LEFT:5px; PADDING-BOTTOM:0px; PADDING-TOP:0px" align="right"><select id="oddsDataDropDown" class="select1" style="font-size:10px;width:95px" onchange="changeDataType(this.value)"><option value="" selected="">即時賠率</option><option value="pre">隔夜賠率</option></select></td>
+                        
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+</td>
+    </tr>
+    <tr>
+        <td colspan="2">
+<div class="racebg">
+<table cellspacing="0" cellpadding="0" border="0">
+    <tbody><tr>
+        
+        <td style="padding-right:3px;">場次</td>
+        <td class="raceButton" style="PADDING-LEFT:3px"><a href="/racing/pages/odds_wp.aspx?lang=CH&amp;date=2018-09-02&amp;venue=ST&amp;raceno=1" onmouseout="MM_swapImgRestore();" onmouseover="MM_swapImage('race_num_1', '', '/racing/info/images/num_1_on.gif?CV=L302R1f',1);"><img id="raceSelBtn1" src="/racing/info/images/num_1.gif?CV=L302R1f" title="第1場" border="0"></a></td><td class="raceButton" style="PADDING-LEFT:3px"><a href="/racing/pages/odds_wp.aspx?lang=CH&amp;date=2018-09-02&amp;venue=ST&amp;raceno=2" onmouseout="MM_swapImgRestore();" onmouseover="MM_swapImage('race_num_2', '', '/racing/info/images/num_2_on.gif?CV=L302R1f',1);"><img id="raceSelBtn2" src="/racing/info/images/num_2.gif?CV=L302R1f" title="第2場" border="0"></a></td><td class="raceButton" style="PADDING-LEFT:3px"><a href="/racing/pages/odds_wp.aspx?lang=CH&amp;date=2018-09-02&amp;venue=ST&amp;raceno=3" onmouseout="MM_swapImgRestore();" onmouseover="MM_swapImage('race_num_3', '', '/racing/info/images/num_3_on.gif?CV=L302R1f',1);"><img id="raceSelBtn3" src="/racing/info/images/num_3.gif?CV=L302R1f" title="第3場" border="0"></a></td><td class="raceButton" style="PADDING-LEFT:3px"><a href="/racing/pages/odds_wp.aspx?lang=CH&amp;date=2018-09-02&amp;venue=ST&amp;raceno=4" onmouseout="MM_swapImgRestore();" onmouseover="MM_swapImage('race_num_4', '', '/racing/info/images/num_4_on.gif?CV=L302R1f',1);"><img id="raceSelBtn4" src="/racing/info/images/num_4.gif?CV=L302R1f" title="第4場" border="0"></a></td><td class="raceButton" style="PADDING-LEFT:3px"><a href="/racing/pages/odds_wp.aspx?lang=CH&amp;date=2018-09-02&amp;venue=ST&amp;raceno=5" onmouseout="MM_swapImgRestore();" onmouseover="MM_swapImage('race_num_5', '', '/racing/info/images/num_5_on.gif?CV=L302R1f',1);"><img id="raceSelBtn5" src="/racing/info/images/num_5.gif?CV=L302R1f" title="第5場" border="0"></a></td><td class="raceButton" style="PADDING-LEFT:3px"><a href="/racing/pages/odds_wp.aspx?lang=CH&amp;date=2018-09-02&amp;venue=ST&amp;raceno=6" onmouseout="MM_swapImgRestore();" onmouseover="MM_swapImage('race_num_6', '', '/racing/info/images/num_6_on.gif?CV=L302R1f',1);"><img id="raceSelBtn6" src="/racing/info/images/num_6.gif?CV=L302R1f" title="第6場" border="0"></a></td><td class="raceButton" style="PADDING-LEFT:3px"><a href="/racing/pages/odds_wp.aspx?lang=CH&amp;date=2018-09-02&amp;venue=ST&amp;raceno=7" onmouseout="MM_swapImgRestore();" onmouseover="MM_swapImage('race_num_7', '', '/racing/info/images/num_7_on.gif?CV=L302R1f',1);"><img id="raceSelBtn7" src="/racing/info/images/num_7.gif?CV=L302R1f" title="第7場" border="0"></a></td><td class="raceButton" style="PADDING-LEFT:3px"><a href="/racing/pages/odds_wp.aspx?lang=CH&amp;date=2018-09-02&amp;venue=ST&amp;raceno=8" onmouseout="MM_swapImgRestore();" onmouseover="MM_swapImage('race_num_8', '', '/racing/info/images/num_8_on.gif?CV=L302R1f',1);"><img id="raceSelBtn8" src="/racing/info/images/num_8.gif?CV=L302R1f" title="第8場" border="0"></a></td><td class="raceButton" style="PADDING-LEFT:3px"><a href="/racing/pages/odds_wp.aspx?lang=CH&amp;date=2018-09-02&amp;venue=ST&amp;raceno=9" onmouseout="MM_swapImgRestore();" onmouseover="MM_swapImage('race_num_9', '', '/racing/info/images/num_9_on.gif?CV=L302R1f',1);"><img id="raceSelBtn9" src="/racing/info/images/num_9.gif?CV=L302R1f" title="第9場" border="0"></a></td><td class="raceButton" style="PADDING-LEFT:3px"><a href="/racing/pages/odds_wp.aspx?lang=CH&amp;date=2018-09-02&amp;venue=ST&amp;raceno=10" onmouseout="MM_swapImgRestore();" onmouseover="MM_swapImage('race_num_10', '', '/racing/info/images/num_10_on.gif?CV=L302R1f',1);"><img id="raceSelBtn10" src="/racing/info/images/num_10_on.gif?CV=L302R1f" title="第10場" border="0"></a></td>
+        <td><span id="webcast" style="padding-left:29px;"></span></td>
+    </tr>
+</tbody></table>
+
+<script type="text/javascript">
+function showWebCast() {
+    var buf = new StringBuffer();
+    if (typeof top.betSlipFrame != 'undefined' && typeof top.betSlipFrame.haveWebcastPermission == 'function' &&
+            top.betSlipFrame.haveWebcastPermission()) {
+
+        buf.append("<a href='javascript:top.betSlipFrame.openWebcastPopup();'>");
+        buf.append("<img alt='賽馬直播' title='賽馬直播' src='/racing/info/images/webcast.gif?CV=L302R1f' height='18' width='20' border='0' />");
+        buf.append("</a>");
+
+    } else {
+        buf.append("");
+    }
+    document.getElementById('webcast').innerHTML = buf.toString();
+}
+
+showWebCast();
+//setInterval('showWebCast()', 1000);
+</script>
+
+</div>
+</td>
+    </tr>
+    <tr>
+        <td colspan="2">
+<table style="PADDING-RIGHT:5px;PADDING-LEFT:0px;PADDING-BOTTOM:3px;PADDING-TOP:3px" width="100%" cellspacing="0" cellpadding="0" border="0">
+    <tbody><tr>
+        <td class="content" width="1%" nowrap=""><strong>第10場</strong></td><td style="PADDING-RIGHT:10px; PADDING-LEFT:20px; PADDING-BOTTOM:0px; PADDING-TOP:0px" width="1%"><img src="/info/include/images/stroke_black.gif?CV=L302R1f"></td><td class="content">亞厘畢讓賽, <nobr>02/09/2018</nobr>, <nobr>17:45</nobr>, <nobr>第二班</nobr>, <nobr>草地</nobr>, <nobr>"B" </nobr>, <nobr>1400米</nobr>, 好地</td>
+        <td align="right">
+            
+            <a href="javascript:;" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('raceInfobtn_addslip','','/info/include/images/ch/btn_addslip_on.gif?CVL302R1f',1)"><img src="/info/include/images/ch/btn_addslip.gif?CV=L302R1f" id="raceInfobtn_addslip" onclick="processBet('betslip');xsell_event(10);" title="加入注項" border="0" align="absMiddle"></a>
+        </td>
+    </tr>
+</tbody></table>
+</td>
+    </tr>
+</tbody></table>
+
+
+<div id="oddsContentMain">
+    <table width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff">
+        <tbody><tr>
+            <td id="wp_bet_cal_top" colspan="2">
+<table style="BORDER-RIGHT:#999999 1px solid; BORDER-TOP:#999999 1px solid; BORDER-LEFT:#999999 1px solid; BORDER-BOTTOM:#999999 1px solid" width="100%" cellspacing="0" cellpadding="0" border="0">
+    <tbody><tr>
+        <td style="PADDING-RIGHT:5px; PADDING-LEFT:7px; PADDING-BOTTOM:4px; PADDING-TOP:5px">
+            <table style="CURSOR:pointer" width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tbody><tr>
+                    <td title="按此開關" onclick="openRow('betAmountCalTopcal1', 'betAmountCalTopbtn_open1', '/info/include/images/');" width="15"><img src="/info/include/images/btn_open.gif?CV=L302R1f" id="betAmountCalTopbtn_open1" border="0"></td>
+                    <td title="按此開關" class="brown" style="PADDING-RIGHT:0px; PADDING-LEFT:10px; PADDING-BOTTOM:0px; PADDING-TOP:0px" onclick="openRow('betAmountCalTopcal1', 'betAmountCalTopbtn_open1', '/info/include/images/');" width="160"><strong class="content">投注計算機</strong></td>
+                    <td style="PADDING-RIGHT:5px; PADDING-LEFT:0px; PADDING-BOTTOM:0px; PADDING-TOP:0px" align="right"><span title="每注金額方式 - 指示每注的投注金額">每注金額 $</span></td>
+                    <td style="PADDING-RIGHT:16px; PADDING-LEFT:0px; PADDING-BOTTOM:0px; PADDING-TOP:0px" align="right">
+                        <input style="padding-right:0px;" id="betAmountCalTopUnitBetInput" name="betAmountCalTopUnitBetInput" class="inputField1" maxlength="7" onkeyup="copyBetAmountInput('betAmountCalTop');" type="text">
+                    </td>
+                    <td style="PADDING-LEFT:0px;" width="148" nowrap="" align="left"><span onclick="openRow('betAmountCalTopcal1', 'betAmountCalTopbtn_open1', '/info/include/images/', true);"><a href="javascript:;" onmouseout="Mobile_MM_swapImgRestore()" onmouseover="Mobile_MM_swapImage('betAmountCalTopbtn_reset','','/info/include/images/ch/btn_reset_on.gif?CVL302R1f',1)"><img src="http://bet.hkjc.com/info/include/images/ch/btn_reset.gif?CV=L302R1f" id="betAmountCalTopbtn_reset" onclick="betCalReset('-');" title="重設" style="display: inline;" border="0" align="absMiddle"></a> <a href="javascript:;" onmouseout="Mobile_MM_swapImgRestore()" onmouseover="Mobile_MM_swapImage('betAmountCalTopbtn_calculate','','/info/include/images/ch/btn_calculate_on.gif?CVL302R1f',1)"><img src="http://bet.hkjc.com/info/include/images/ch/btn_calculate.gif?CV=L302R1f" id="betAmountCalTopbtn_calculate" onclick="processBet('betAmountCalTop');" title="計算" style="display: inline;" border="0" align="absMiddle"></a></span><img style="cursor: default; display: none;" src="/info/include/images/ch/btn_reset_off.gif?CV=L302R1f" id="betAmountCalTopbtn_reset_off" onclick="" title="重設" border="0" align="absMiddle"> <img style="cursor: default; display: none;" src="/info/include/images/ch/btn_calculate_off.gif?CV=L302R1f" id="betAmountCalTopbtn_calculate_off" onclick="" title="計算" border="0" align="absMiddle"></td>
+                </tr>
+            </tbody></table>
+        </td>
+    </tr>
+    <tr>
+        <td width="100%">
+            <table id="betAmountCalTopcal1" style="DISPLAY:none" width="100%" cellspacing="2" cellpadding="0" border="0">
+                <tbody><tr>
+                    <td class="grayBar2" style="PADDING-BOTTOM:5px; PADDING-TOP:5px" align="center">注數</td>
+                    <td id="template_ctl00_betAmountCalTop_tdUnitBet" class="grayBar2" align="center">每注金額</td>
+
+                    <td class="grayBar2" align="center">總投注金額</td>
+                </tr>
+                <tr>
+                    <td class="content" style="PADDING-BOTTOM:5px; PADDING-TOP:5px" align="center"><span id="betAmountCalTopNoOfBet">-</span></td>
+                    <td class="content" align="center"><span id="betAmountCalTopUnitBet">-</span></td>
+                    <td class="content" align="center"><span id="betAmountCalTopTotal">-</span></td>
+                </tr>
+            </tbody></table>
+        </td>
+    </tr>
+</tbody></table>
+<script type="text/javascript">
+
+  document.getElementById('betAmountCalTopUnitBetInput').value = getBetslipSettingsBetUnit('-');
+
+  // Q308
+  selectBetMethod('unitbet');
+</script>
+</td>
+        </tr>
+        <tr>
+            <td colspan="2" style="PADDING-BOTTOM:4px;PADDING-TOP:2px">
+                <div id="detailWPTable"><table width="100%" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="tableContentHead" nowrap="" align="center">馬號</td><td class="tableContentHead" nowrap="" align="center">綵衣</td><td class="tableContentHead" width="15%" nowrap="">馬名</td><td class="tableContentHead" nowrap="" align="center">檔位 </td><td class="tableContentHead" nowrap="" align="center">負磅</td><td class="tableContentHead" width="12%" nowrap="">騎師</td><td class="tableContentHead" width="12%" nowrap="">練馬師</td><td id="lblWin" class="tableContentHead" nowrap="" align="center">獨贏</td><td id="lblPla" class="tableContentHead" nowrap="" align="center">位置</td><td id="lblWip" class="tableContentHead" nowrap="" align="center">獨贏及位置</td></tr><tr height="22px"><td class="tableContent2 info_cell" rowspan="1" valign="middle" align="center">1</td><td class="tableContent2 info_cell" id="wpColorCellA061" align="center"><img title="A061" id="wpTableImgA061" src="http://bet.hkjc.com/content/images/raceColor/A061.gif?CV=L302R1f" width="17" height="22"></td><td class="tableContent2 info_cell"><a href="javascript:WACommonTagging('horse');goHorseRecord2('//www.hkjc.com/chinese', 'A061');"><span class="hkscsfontfamily">大籐王</span></a></td><td class="tableContent2 info_cell" align="center">13</td><td class="tableContent2 info_cell" align="center">133</td><td class="tableContent2 info_cell"><a href="javascript:WACommonTagging('jockey');goJockeyRecord2('//www.hkjc.com/chinese', 'CAN');"><span class="hkscsfontfamily">郭能</span></a></td><td class="tableContent2 info_cell"><a href="javascript:WACommonTagging('trainer');goTrainerRecord2('//www.hkjc.com/chinese', 'GR');"><span class="hkscsfontfamily">高伯新</span></a></td><td id="winCell1" class="tableContent2" rowspan="1" style="background-color: rgb(255, 244, 176);" valign="middle"><input style="vertical-align:middle" class="checkbox" onclick="wpLegClick(10, 1, 'WIN');" checked="" type="checkbox"><img src="/info/include/images/spacer.gif" width="10px"><a class="wpTdColor" style="color:#FFFFFF;background-color:#C80000" href="javascript:processQuickBet('WIN', '10', 1)">2.8</a></td><td id="plaCell1" class="tableContent2" rowspan="1" style="background-color: rgb(255, 244, 176);" valign="middle"><input style="vertical-align:middle" class="checkbox" onclick="wpLegClick(10, 1, 'PLA');" checked="" type="checkbox"><img src="/info/include/images/spacer.gif" width="10px"><a class="wpTdColor" style="color:#FFFFFF;background-color:#C80000" href="javascript:processQuickBet('PLA', '10', 1)">1.4</a></td><td id="wipCell1" class="tableContent2" rowspan="1" style="background-color: rgb(255, 244, 176);" valign="middle" align="center"><input class="checkbox" onclick="wpLegClick(10, 1, 'W-P');" checked="" type="checkbox"></td></tr><tr height="22px"><td class="tableContent1 info_cell" rowspan="1" valign="middle" align="center">2</td><td class="tableContent1 info_cell" id="wpColorCellT286" align="center"><img title="T286" id="wpTableImgT286" src="http://bet.hkjc.com/content/images/raceColor/T286.gif?CV=L302R1f" width="17" height="22"></td><td class="tableContent1 info_cell"><a href="javascript:WACommonTagging('horse');goHorseRecord2('//www.hkjc.com/chinese', 'T286');"><span class="hkscsfontfamily">龍船鼓響</span></a></td><td class="tableContent1 info_cell" align="center">7</td><td class="tableContent1 info_cell" align="center">130</td><td class="tableContent1 info_cell"><a href="javascript:WACommonTagging('jockey');goJockeyRecord2('//www.hkjc.com/chinese', 'SCC');"><span class="hkscsfontfamily">史卓豐</span></a></td><td class="tableContent1 info_cell"><a href="javascript:WACommonTagging('trainer');goTrainerRecord2('//www.hkjc.com/chinese', 'YPF');"><span class="hkscsfontfamily">姚本輝</span></a></td><td id="winCell2" class="tableContent1" rowspan="1" valign="middle"><input style="vertical-align:middle" class="checkbox" onclick="wpLegClick(10, 2, 'WIN');" type="checkbox"><img src="/info/include/images/spacer.gif" width="10px"><a class="wpTdColor" style="color:#000000;background-color:" href="javascript:processQuickBet('WIN', '10', 2)">9.2</a></td><td id="plaCell2" class="tableContent1" rowspan="1" valign="middle"><input style="vertical-align:middle" class="checkbox" onclick="wpLegClick(10, 2, 'PLA');" type="checkbox"><img src="/info/include/images/spacer.gif" width="10px"><a class="wpTdColor" style="color:#000000;background-color:" href="javascript:processQuickBet('PLA', '10', 2)">2.6</a></td><td id="wipCell2" class="tableContent1" rowspan="1" valign="middle" align="center"><input class="checkbox" onclick="wpLegClick(10, 2, 'W-P');" type="checkbox"></td></tr><tr height="22px"><td class="tableContent2 info_cell" rowspan="1" valign="middle" align="center">3</td><td class="tableContent2 info_cell" id="wpColorCellB088" align="center"><img title="B088" id="wpTableImgB088" src="http://bet.hkjc.com/content/images/raceColor/B088.gif?CV=L302R1f" width="17" height="22"></td><td class="tableContent2 info_cell"><a href="javascript:WACommonTagging('horse');goHorseRecord2('//www.hkjc.com/chinese', 'B088');"><span class="hkscsfontfamily">喜裝寶</span></a></td><td class="tableContent2 info_cell" align="center">2</td><td class="tableContent2 info_cell" align="center">127</td><td class="tableContent2 info_cell"><a href="javascript:WACommonTagging('jockey');goJockeyRecord2('//www.hkjc.com/chinese', 'TEK');"><span class="hkscsfontfamily">田泰安</span></a></td><td class="tableContent2 info_cell"><a href="javascript:WACommonTagging('trainer');goTrainerRecord2('//www.hkjc.com/chinese', 'JM');"><span class="hkscsfontfamily">約翰摩亞</span></a></td><td id="winCell3" class="tableContent2" rowspan="1" style="background-color: rgb(255, 244, 176);" valign="middle"><input style="vertical-align:middle" class="checkbox" onclick="wpLegClick(10, 3, 'WIN');" checked="" type="checkbox"><img src="/info/include/images/spacer.gif" width="10px"><a class="wpTdColor" style="color:#000000;background-color:" href="javascript:processQuickBet('WIN', '10', 3)">5.7</a></td><td id="plaCell3" class="tableContent2" rowspan="1" style="background-color: rgb(255, 244, 176);" valign="middle"><input style="vertical-align:middle" class="checkbox" onclick="wpLegClick(10, 3, 'PLA');" checked="" type="checkbox"><img src="/info/include/images/spacer.gif" width="10px"><a class="wpTdColor" style="color:#000000;background-color:" href="javascript:processQuickBet('PLA', '10', 3)">2.6</a></td><td id="wipCell3" class="tableContent2" rowspan="1" valign="middle" align="center"><input class="checkbox" onclick="wpLegClick(10, 3, 'W-P');" type="checkbox"></td></tr><tr height="22px"><td class="tableContent1 info_cell" rowspan="1" valign="middle" align="center">4</td><td class="tableContent1 info_cell" id="wpColorCellV290" align="center"><img title="V290" id="wpTableImgV290" src="http://bet.hkjc.com/content/images/raceColor/V290.gif?CV=L302R1f" width="17" height="22"></td><td class="tableContent1 info_cell"><a href="javascript:WACommonTagging('horse');goHorseRecord2('//www.hkjc.com/chinese', 'V290');"><span class="hkscsfontfamily">獅子驄</span></a></td><td class="tableContent1 info_cell" align="center">11</td><td class="tableContent1 info_cell" align="center">122</td><td class="tableContent1 info_cell"><a href="javascript:WACommonTagging('jockey');goJockeyRecord2('//www.hkjc.com/chinese', 'NGA');"><span class="hkscsfontfamily">吳嘉晉</span></a></td><td class="tableContent1 info_cell"><a href="javascript:WACommonTagging('trainer');goTrainerRecord2('//www.hkjc.com/chinese', 'TYS');"><span class="hkscsfontfamily">徐雨石</span></a></td><td id="winCell4" class="tableContent1" rowspan="1" valign="middle"><input style="vertical-align:middle" class="checkbox" onclick="wpLegClick(10, 4, 'WIN');" type="checkbox"><img src="/info/include/images/spacer.gif" width="10px"><a class="wpTdColor" style="color:#000000;background-color:" href="javascript:processQuickBet('WIN', '10', 4)">56</a></td><td id="plaCell4" class="tableContent1" rowspan="1" style="background-color: rgb(255, 244, 176);" valign="middle"><input style="vertical-align:middle" class="checkbox" onclick="wpLegClick(10, 4, 'PLA');" checked="" type="checkbox"><img src="/info/include/images/spacer.gif" width="10px"><a class="wpTdColor" style="color:#000000;background-color:" href="javascript:processQuickBet('PLA', '10', 4)">10</a></td><td id="wipCell4" class="tableContent1" rowspan="1" valign="middle" align="center"><input class="checkbox" onclick="wpLegClick(10, 4, 'W-P');" type="checkbox"></td></tr><tr height="22px"><td class="tableContent2 info_cell" rowspan="1" valign="middle" align="center">5</td><td class="tableContent2 info_cell" id="wpColorCellT400" align="center"><img title="T400" id="wpTableImgT400" src="http://bet.hkjc.com/content/images/raceColor/T400.gif?CV=L302R1f" width="17" height="22"></td><td class="tableContent2 info_cell"><a href="javascript:WACommonTagging('horse');goHorseRecord2('//www.hkjc.com/chinese', 'T400');"><span class="hkscsfontfamily">皇龍大將</span></a></td><td class="tableContent2 info_cell" align="center">3</td><td class="tableContent2 info_cell" align="center">121</td><td class="tableContent2 info_cell"><a href="javascript:WACommonTagging('jockey');goJockeyRecord2('//www.hkjc.com/chinese', 'LDE');"><span class="hkscsfontfamily">梁家俊</span></a></td><td class="tableContent2 info_cell"><a href="javascript:WACommonTagging('trainer');goTrainerRecord2('//www.hkjc.com/chinese', 'TYS');"><span class="hkscsfontfamily">徐雨石</span></a></td><td id="winCell5" class="tableContent2" rowspan="1" valign="middle"><input style="vertical-align:middle" class="checkbox" onclick="wpLegClick(10, 5, 'WIN');" type="checkbox"><img src="/info/include/images/spacer.gif" width="10px"><a class="wpTdColor" style="color:#000000;background-color:" href="javascript:processQuickBet('WIN', '10', 5)">12</a></td><td id="plaCell5" class="tableContent2" rowspan="1" style="background-color: rgb(255, 244, 176);" valign="middle"><input style="vertical-align:middle" class="checkbox" onclick="wpLegClick(10, 5, 'PLA');" checked="" type="checkbox"><img src="/info/include/images/spacer.gif" width="10px"><a class="wpTdColor" style="color:#000000;background-color:" href="javascript:processQuickBet('PLA', '10', 5)">2.6</a></td><td id="wipCell5" class="tableContent2" rowspan="1" valign="middle" align="center"><input class="checkbox" onclick="wpLegClick(10, 5, 'W-P');" type="checkbox"></td></tr><tr height="22px"><td class="tableContent1 info_cell" rowspan="1" valign="middle" align="center">6</td><td class="tableContent1 info_cell" id="wpColorCellB405" align="center"><img title="B405" id="wpTableImgB405" src="http://bet.hkjc.com/content/images/raceColor/B405.gif?CV=L302R1f" width="17" height="22"></td><td class="tableContent1 info_cell"><a href="javascript:WACommonTagging('horse');goHorseRecord2('//www.hkjc.com/chinese', 'B405');"><span class="hkscsfontfamily">協霸神駒</span></a></td><td class="tableContent1 info_cell" align="center">4</td><td class="tableContent1 info_cell" align="center">120</td><td class="tableContent1 info_cell"><a href="javascript:WACommonTagging('jockey');goJockeyRecord2('//www.hkjc.com/chinese', 'RU');"><span class="hkscsfontfamily">李寶利</span></a></td><td class="tableContent1 info_cell"><a href="javascript:WACommonTagging('trainer');goTrainerRecord2('//www.hkjc.com/chinese', 'SCS');"><span class="hkscsfontfamily">沈集成</span></a></td><td id="winCell6" class="tableContent1" rowspan="1" valign="middle"><input style="vertical-align:middle" class="checkbox" onclick="wpLegClick(10, 6, 'WIN');" type="checkbox"><img src="/info/include/images/spacer.gif" width="10px"><a class="wpTdColor" style="color:#000000;background-color:" href="javascript:processQuickBet('WIN', '10', 6)">23</a></td><td id="plaCell6" class="tableContent1" rowspan="1" valign="middle"><input style="vertical-align:middle" class="checkbox" onclick="wpLegClick(10, 6, 'PLA');" type="checkbox"><img src="/info/include/images/spacer.gif" width="10px"><a class="wpTdColor" style="color:#000000;background-color:" href="javascript:processQuickBet('PLA', '10', 6)">6.3</a></td><td id="wipCell6" class="tableContent1" rowspan="1" valign="middle" align="center"><input class="checkbox" onclick="wpLegClick(10, 6, 'W-P');" type="checkbox"></td></tr><tr height="22px"><td class="tableContent2 info_cell" rowspan="1" valign="middle" align="center">7</td><td class="tableContent2 info_cell" id="wpColorCellB409" align="center"><img title="B409" id="wpTableImgB409" src="http://bet.hkjc.com/content/images/raceColor/B409.gif?CV=L302R1f" width="17" height="22"></td><td class="tableContent2 info_cell"><a href="javascript:WACommonTagging('horse');goHorseRecord2('//www.hkjc.com/chinese', 'B409');"><span class="hkscsfontfamily">美麗精神</span></a></td><td class="tableContent2 info_cell" align="center">6</td><td class="tableContent2 info_cell" align="center">119</td><td class="tableContent2 info_cell"><a href="javascript:WACommonTagging('jockey');goJockeyRecord2('//www.hkjc.com/chinese', 'PZ');"><span class="hkscsfontfamily">潘頓</span></a></td><td class="tableContent2 info_cell"><a href="javascript:WACommonTagging('trainer');goTrainerRecord2('//www.hkjc.com/chinese', 'CAS');"><span class="hkscsfontfamily">告東尼</span></a></td><td id="winCell7" class="tableContent2" rowspan="1" valign="middle"><input style="vertical-align:middle" class="checkbox" onclick="wpLegClick(10, 7, 'WIN');" type="checkbox"><img src="/info/include/images/spacer.gif" width="10px"><a class="wpTdColor" style="color:#000000;background-color:" href="javascript:processQuickBet('WIN', '10', 7)">22</a></td><td id="plaCell7" class="tableContent2" rowspan="1" valign="middle"><input style="vertical-align:middle" class="checkbox" onclick="wpLegClick(10, 7, 'PLA');" type="checkbox"><img src="/info/include/images/spacer.gif" width="10px"><a class="wpTdColor" style="color:#000000;background-color:" href="javascript:processQuickBet('PLA', '10', 7)">6.5</a></td><td id="wipCell7" class="tableContent2" rowspan="1" valign="middle" align="center"><input class="checkbox" onclick="wpLegClick(10, 7, 'W-P');" type="checkbox"></td></tr><tr height="22px"><td class="tableContent1 info_cell" rowspan="1" valign="middle" align="center">8</td><td class="tableContent1 info_cell" id="wpColorCellT406" align="center"><img title="T406" id="wpTableImgT406" src="http://bet.hkjc.com/content/images/raceColor/T406.gif?CV=L302R1f" width="17" height="22"></td><td class="tableContent1 info_cell"><a href="javascript:WACommonTagging('horse');goHorseRecord2('//www.hkjc.com/chinese', 'T406');"><span class="hkscsfontfamily">加州再豫</span></a></td><td class="tableContent1 info_cell" align="center">1</td><td class="tableContent1 info_cell" align="center">119</td><td class="tableContent1 info_cell"><a href="javascript:WACommonTagging('jockey');goJockeyRecord2('//www.hkjc.com/chinese', 'PMF');"><span class="hkscsfontfamily">潘明輝</span></a></td><td class="tableContent1 info_cell"><a href="javascript:WACommonTagging('trainer');goTrainerRecord2('//www.hkjc.com/chinese', 'CAS');"><span class="hkscsfontfamily">告東尼</span></a></td><td id="winCell8" class="tableContent1" rowspan="1" valign="middle"><input style="vertical-align:middle" class="checkbox" onclick="wpLegClick(10, 8, 'WIN');" type="checkbox"><img src="/info/include/images/spacer.gif" width="10px"><a class="wpTdColor" style="color:#000000;background-color:" href="javascript:processQuickBet('WIN', '10', 8)">14</a></td><td id="plaCell8" class="tableContent1" rowspan="1" valign="middle"><input style="vertical-align:middle" class="checkbox" onclick="wpLegClick(10, 8, 'PLA');" type="checkbox"><img src="/info/include/images/spacer.gif" width="10px"><a class="wpTdColor" style="color:#000000;background-color:" href="javascript:processQuickBet('PLA', '10', 8)">3.9</a></td><td id="wipCell8" class="tableContent1" rowspan="1" valign="middle" align="center"><input class="checkbox" onclick="wpLegClick(10, 8, 'W-P');" type="checkbox"></td></tr><tr height="22px"><td class="tableContent2 info_cell" rowspan="1" valign="middle" align="center">9</td><td class="tableContent2 info_cell" id="wpColorCellA041" align="center"><img title="A041" id="wpTableImgA041" src="http://bet.hkjc.com/content/images/raceColor/A041.gif?CV=L302R1f" width="17" height="22"></td><td class="tableContent2 info_cell"><a href="javascript:WACommonTagging('horse');goHorseRecord2('//www.hkjc.com/chinese', 'A041');"><span class="hkscsfontfamily">綫路勇駒</span></a></td><td class="tableContent2 info_cell" align="center">8</td><td class="tableContent2 info_cell" align="center">117</td><td class="tableContent2 info_cell"><a href="javascript:WACommonTagging('jockey');goJockeyRecord2('//www.hkjc.com/chinese', 'HCY');"><span class="hkscsfontfamily">何澤堯</span></a></td><td class="tableContent2 info_cell"><a href="javascript:WACommonTagging('trainer');goTrainerRecord2('//www.hkjc.com/chinese', 'CAS');"><span class="hkscsfontfamily">告東尼</span></a></td><td id="winCell9" class="tableContent2" rowspan="1" valign="middle"><input style="vertical-align:middle" class="checkbox" onclick="wpLegClick(10, 9, 'WIN');" type="checkbox"><img src="/info/include/images/spacer.gif" width="10px"><a class="wpTdColor" style="color:#000000;background-color:" href="javascript:processQuickBet('WIN', '10', 9)">27</a></td><td id="plaCell9" class="tableContent2" rowspan="1" valign="middle"><input style="vertical-align:middle" class="checkbox" onclick="wpLegClick(10, 9, 'PLA');" type="checkbox"><img src="/info/include/images/spacer.gif" width="10px"><a class="wpTdColor" style="color:#000000;background-color:" href="javascript:processQuickBet('PLA', '10', 9)">6.6</a></td><td id="wipCell9" class="tableContent2" rowspan="1" valign="middle" align="center"><input class="checkbox" onclick="wpLegClick(10, 9, 'W-P');" type="checkbox"></td></tr><tr height="22px"><td class="tableContent1 info_cell" rowspan="1" valign="middle" align="center">10</td><td class="tableContent1 info_cell" id="wpColorCellV040" align="center"><img title="V040" id="wpTableImgV040" src="http://bet.hkjc.com/content/images/raceColor/V040.gif?CV=L302R1f" width="17" height="22"></td><td class="tableContent1 info_cell"><a href="javascript:WACommonTagging('horse');goHorseRecord2('//www.hkjc.com/chinese', 'V040');"><span class="hkscsfontfamily">世界紀錄</span></a></td><td class="tableContent1 info_cell" align="center">10</td><td class="tableContent1 info_cell" align="center">117</td><td class="tableContent1 info_cell"><a href="javascript:WACommonTagging('jockey');goJockeyRecord2('//www.hkjc.com/chinese', 'VNG');"><span class="hkscsfontfamily">利敬國</span></a></td><td class="tableContent1 info_cell"><a href="javascript:WACommonTagging('trainer');goTrainerRecord2('//www.hkjc.com/chinese', 'MA');"><span class="hkscsfontfamily">苗禮德</span></a></td><td id="winCell10" class="tableContent1" rowspan="1" valign="middle"><input style="vertical-align:middle" class="checkbox" onclick="wpLegClick(10, 10, 'WIN');" type="checkbox"><img src="/info/include/images/spacer.gif" width="10px"><a class="wpTdColor" style="color:#000000;background-color:" href="javascript:processQuickBet('WIN', '10', 10)">20</a></td><td id="plaCell10" class="tableContent1" rowspan="1" valign="middle"><input style="vertical-align:middle" class="checkbox" onclick="wpLegClick(10, 10, 'PLA');" type="checkbox"><img src="/info/include/images/spacer.gif" width="10px"><a class="wpTdColor" style="color:#000000;background-color:" href="javascript:processQuickBet('PLA', '10', 10)">5.1</a></td><td id="wipCell10" class="tableContent1" rowspan="1" valign="middle" align="center"><input class="checkbox" onclick="wpLegClick(10, 10, 'W-P');" type="checkbox"></td></tr><tr height="22px"><td class="tableContent2 info_cell" rowspan="1" valign="middle" align="center">11</td><td class="tableContent2 info_cell" id="wpColorCellT374" align="center"><img title="T374" id="wpTableImgT374" src="http://bet.hkjc.com/content/images/raceColor/T374.gif?CV=L302R1f" width="17" height="22"></td><td class="tableContent2 info_cell"><a href="javascript:WACommonTagging('horse');goHorseRecord2('//www.hkjc.com/chinese', 'T374');"><span class="hkscsfontfamily">越影</span></a></td><td class="tableContent2 info_cell" align="center">9</td><td class="tableContent2 info_cell" align="center">116</td><td class="tableContent2 info_cell"><a href="javascript:WACommonTagging('jockey');goJockeyRecord2('//www.hkjc.com/chinese', 'CML');"><span class="hkscsfontfamily">蔡明紹</span></a></td><td class="tableContent2 info_cell"><a href="javascript:WACommonTagging('trainer');goTrainerRecord2('//www.hkjc.com/chinese', 'FC');"><span class="hkscsfontfamily">方嘉柏</span></a></td><td id="winCell11" class="tableContent2" rowspan="1" valign="middle"><input style="vertical-align:middle" class="checkbox" onclick="wpLegClick(10, 11, 'WIN');" type="checkbox"><img src="/info/include/images/spacer.gif" width="10px"><a class="wpTdColor" style="color:#000000;background-color:" href="javascript:processQuickBet('WIN', '10', 11)">44</a></td><td id="plaCell11" class="tableContent2" rowspan="1" valign="middle"><input style="vertical-align:middle" class="checkbox" onclick="wpLegClick(10, 11, 'PLA');" type="checkbox"><img src="/info/include/images/spacer.gif" width="10px"><a class="wpTdColor" style="color:#000000;background-color:" href="javascript:processQuickBet('PLA', '10', 11)">7.9</a></td><td id="wipCell11" class="tableContent2" rowspan="1" valign="middle" align="center"><input class="checkbox" onclick="wpLegClick(10, 11, 'W-P');" type="checkbox"></td></tr><tr height="22px"><td class="tableContent1 info_cell" rowspan="1" valign="middle" align="center">12</td><td class="tableContent1 info_cell" id="wpColorCellV181" align="center"><img title="V181" id="wpTableImgV181" src="http://bet.hkjc.com/content/images/raceColor/V181.gif?CV=L302R1f" width="17" height="22"></td><td class="tableContent1 info_cell"><a href="javascript:WACommonTagging('horse');goHorseRecord2('//www.hkjc.com/chinese', 'V181');"><span class="hkscsfontfamily">勁精神</span></a></td><td class="tableContent1 info_cell" align="center">12</td><td class="tableContent1 info_cell" align="center">116</td><td class="tableContent1 info_cell"><a href="javascript:WACommonTagging('jockey');goJockeyRecord2('//www.hkjc.com/chinese', 'WJH');"><span class="hkscsfontfamily">黃皓楠</span></a></td><td class="tableContent1 info_cell"><a href="javascript:WACommonTagging('trainer');goTrainerRecord2('//www.hkjc.com/chinese', 'CAS');"><span class="hkscsfontfamily">告東尼</span></a></td><td id="winCell12" class="tableContent1" rowspan="1" valign="middle"><input style="vertical-align:middle" class="checkbox" onclick="wpLegClick(10, 12, 'WIN');" type="checkbox"><img src="/info/include/images/spacer.gif" width="10px"><a class="wpTdColor" style="color:#000000;background-color:" href="javascript:processQuickBet('WIN', '10', 12)">56</a></td><td id="plaCell12" class="tableContent1" rowspan="1" valign="middle"><input style="vertical-align:middle" class="checkbox" onclick="wpLegClick(10, 12, 'PLA');" type="checkbox"><img src="/info/include/images/spacer.gif" width="10px"><a class="wpTdColor" style="color:#000000;background-color:" href="javascript:processQuickBet('PLA', '10', 12)">12</a></td><td id="wipCell12" class="tableContent1" rowspan="1" valign="middle" align="center"><input class="checkbox" onclick="wpLegClick(10, 12, 'W-P');" type="checkbox"></td></tr><tr height="22px"><td class="tableContent2 info_cell" rowspan="1" valign="middle" align="center">13</td><td class="tableContent2 info_cell" id="wpColorCellA338" align="center"><img title="A338" id="wpTableImgA338" src="http://bet.hkjc.com/content/images/raceColor/A338.gif?CV=L302R1f" width="17" height="22"></td><td class="tableContent2 info_cell"><a href="javascript:WACommonTagging('horse');goHorseRecord2('//www.hkjc.com/chinese', 'A338');"><span class="hkscsfontfamily">孟買之星</span></a></td><td class="tableContent2 info_cell" align="center">5</td><td class="tableContent2 info_cell" align="center">115</td><td class="tableContent2 info_cell"><a href="javascript:WACommonTagging('jockey');goJockeyRecord2('//www.hkjc.com/chinese', 'YML');"><span class="hkscsfontfamily">楊明綸</span></a></td><td class="tableContent2 info_cell"><a href="javascript:WACommonTagging('trainer');goTrainerRecord2('//www.hkjc.com/chinese', 'FC');"><span class="hkscsfontfamily">方嘉柏</span></a></td><td id="winCell13" class="tableContent2" rowspan="1" valign="middle"><input style="vertical-align:middle" class="checkbox" onclick="wpLegClick(10, 13, 'WIN');" type="checkbox"><img src="/info/include/images/spacer.gif" width="10px"><a class="wpTdColor" style="color:#000000;background-color:" href="javascript:processQuickBet('WIN', '10', 13)">5.1</a></td><td id="plaCell13" class="tableContent2" rowspan="1" valign="middle"><input style="vertical-align:middle" class="checkbox" onclick="wpLegClick(10, 13, 'PLA');" type="checkbox"><img src="/info/include/images/spacer.gif" width="10px"><a class="wpTdColor" style="color:#000000;background-color:" href="javascript:processQuickBet('PLA', '10', 13)">1.7</a></td><td id="wipCell13" class="tableContent2" rowspan="1" style="" valign="middle" align="center"><input class="checkbox" onclick="wpLegClick(10, 13, 'W-P');" type="checkbox"></td></tr><tr><td class="tableContentEnd" style="BORDER-TOP:#a6a6a6 2px solid" align="center">F</td><td class="tableContentEnd" style="BORDER-TOP:#a6a6a6 2px solid" colspan="5">&nbsp;</td><td id="lblFull" class="tableContentEnd" style="BORDER-TOP:#a6a6a6 2px solid">全餐</td><td id="winCellF" class="tableContentEnd" style="BORDER-TOP:#a6a6a6 2px solid"><input class="checkbox" onclick="wpFieldClick('10', 'WIN');" type="checkbox"></td><td id="plaCellF" class="tableContentEnd" style="BORDER-TOP:#a6a6a6 2px solid"><input class="checkbox" onclick="wpFieldClick('10', 'PLA');" type="checkbox"></td><td id="wipCellF" class="tableContentEnd" style="border-top: 2px solid rgb(166, 166, 166);" align="center"><input class="checkbox" onclick="wpFieldClick('10', 'W-P');" type="checkbox"></td></tr></tbody></table></div>
+                
+<script type="text/javascript">
+</script>
+<div id="divSaveAndCancelBet" style="display:none;padding: 10px;height: 21px;" align="right">
+    <a href="javascript:;" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('editBetCtrlbtn_save','','/info/include/images/ch/btn_save_on.gif?CVL302R1f',1)"><img src="/info/include/images/ch/btn_save.gif?CV=L302R1f" id="editBetCtrlbtn_save" onclick="SaveEditingBetInfo();" title="儲存" border="0" align="absMiddle"></a>
+    <a href="javascript:;" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('editBetCtrlbtn_cancel','','/info/include/images/ch/btn_cancel_on.gif?CVL302R1f',1)"><img src="/info/include/images/ch/btn_cancel.gif?CV=L302R1f" id="editBetCtrlbtn_cancel" onclick="closeEditBetMode(true);" title="取消" border="0" align="absMiddle"></a>
+    <img style="cursor:default" src="/info/include/images/ch/icon_help.gif?CV=L302R1f" id="editBetCtrlicon_help" onclick="NewWindow('//is.hkjc.com/jcbw/ekba/faq/editbetFAQC.asp', '', '680', '440', 'yes', 'yes', 'yes');" title="幫助" border="0" align="absMiddle">
+</div>
+
+            </td>
+        </tr>
+        <tr valign="top">
+            <td width="56%">
+<table id="oddsDropLegend" width="100%" cellspacing="0" cellpadding="3" border="0" bgcolor="#F8F8F8">
+    <tbody><tr>
+        <td colspan="7"><img src="/info/include/images/spacer.gif?CV=L302R1f" width="1" height="2px"></td>
+    </tr>
+    <tr>
+        <td><img src="/info/include/images/spacer.gif?CV=L302R1f" width="1px" height="1"></td>
+        <td class="content" colspan="6">賠率走勢提示</td>
+    </tr>
+    <tr id="oddsDropDetail">
+        <td width="1px"><img src="/info/include/images/spacer.gif?CV=L302R1f" width="1" height="1"></td>
+        <td width="10"><span style="background-color:#C80000;color:#FFFFFF">00</span></td>
+        <td class="content" width="70" align="left">熱門</td>
+        <td width="10"><span style="background-color:#2AA216;color:#FFFFFF">00</span></td>
+        <td class="content" width="100">賠率下降 20%</td>
+        <td width="10"><span style="background-color:#993300;color:#FFFFFF">00</span></td>
+        <td class="content" width="100">賠率下降 50%</td>
+    </tr>
+    <tr>
+        <td colspan="7"><img src="/info/include/images/spacer.gif?CV=L302R1f" width="1px" height="2px"></td>
+    </tr>
+</tbody></table>
+</td>
+            <td width="44%" bgcolor="#f8F8F8"></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+<table style="PADDING-RIGHT:5px;PADDING-LEFT:0px;PADDING-BOTTOM:3px;PADDING-TOP:3px" width="100%" cellspacing="0" cellpadding="0" border="0">
+    <tbody><tr>
+        
+        <td align="right">
+            
+            <a href="javascript:;" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('raceInfoBottombtn_addslip','','/info/include/images/ch/btn_addslip_on.gif?CVL302R1f',1)"><img src="http://bet.hkjc.com/info/include/images/ch/btn_addslip.gif?CV=L302R1f" id="raceInfoBottombtn_addslip" onclick="processBet('betslip');xsell_event(10);" title="加入注項" border="0" align="absMiddle"></a>
+        </td>
+    </tr>
+</tbody></table>
+</td>
+        </tr>
+        <tr>
+            <td colspan="2" style="PADDING-BOTTOM:5px;PADDING-TOP:2px">
+<table style="display:" width="100%" cellspacing="0" cellpadding="0" border="0">
+    <tbody><tr>
+        <td colspan="4" class="subTitleBar" style="PADDING-RIGHT:0px; PADDING-LEFT:10px; PADDING-BOTTOM:5px; PADDING-TOP:5px">總投注額</td>
+    </tr>
+    <tr>
+        <td width="50%" valign="top">
+            <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tbody><tr><td class="tableContent1" width="60%" align="center">獨贏*</td><td class="tableContent1" style="padding-right:20px;" width="40%" align="right"><span id="poolInvPoolTotWIN">$ 2,158,775</span></td></tr><tr><td class="tableContent2" width="60%" align="center">位置</td><td class="tableContent2" style="padding-right:20px;" width="40%" align="right"><span id="poolInvPoolTotPLA">$ 1,205,010</span></td></tr><tr><td class="tableContent1" width="60%" align="center">連贏</td><td class="tableContent1" style="padding-right:20px;" width="40%" align="right"><span id="poolInvPoolTotQIN">$ 2,472,432</span></td></tr><tr><td class="tableContent2" width="60%" align="center">位置Q</td><td class="tableContent2" style="padding-right:20px;" width="40%" align="right"><span id="poolInvPoolTotQPL">$ 2,429,754</span></td></tr><tr><td class="tableContent1" width="60%" align="center">三重彩</td><td class="tableContent1" style="padding-right:20px;" width="40%" align="right"><span id="poolInvPoolTotTCE">$ 537,253</span></td></tr><tr><td class="tableContent2" width="60%" align="center">單T</td><td class="tableContent2" style="padding-right:20px;" width="40%" align="right"><span id="poolInvPoolTotTRI">$ 348,006</span></td></tr><tr><td class="tableContent1" width="60%" align="center">四重彩及四連環</td><td class="tableContent1" style="padding-right:20px;" width="40%" align="right"><span id="poolInvPoolTotF-F">$ 1,024,287</span></td></tr>
+            </tbody></table>
+        </td>
+
+        <td width="50%" valign="top">
+            <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tbody><tr><td class="tableContent1" width="60%" align="center">此場總投注額(單場賽事彩池)</td><td class="tableContent1" style="padding-right:20px;" width="40%" align="right"><span id="poolInvPoolTotSUM"><strong class="title">$ 10,175,517</strong></span></td></tr><tr><td class="tableContent2" width="60%" align="center">此場總投注額(所有彩池)</td><td class="tableContent2" style="padding-right:20px;" width="40%" align="right"><span id="poolInvPoolTotTOTALSUM"><strong class="title">$ 10,175,517</strong></span></td></tr><tr><td class="tableContent1" width="60%" align="center">截至此場之全日總投注額 #</td><td class="tableContent1" style="padding-right:20px;" width="40%" align="right"><span id="poolInvPoolTotGRANDSUM"><strong class="title">$ 743,446,021</strong></span></td></tr>
+            </tbody></table>
+        </td>
+
+    </tr>
+</tbody></table>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+    <tbody><tr>
+        <td style="border-bottom:10px solid #FFFFFF;" bgcolor="#4A8CC1"><img src="/info/include/images/spacer.gif" width="1" height="3"></td>
+    </tr>
+</tbody></table>
+<span id="remarkTxt">
+    *包括所有合併於獨贏彩池的組合獨贏投注, 例如3揀1<br>#以上資訊不包括固定賠率彩池的投注額
+</span>
+
+
+<script type="text/javascript">
+
+function poolInvPoolTotLoadDoc() {
+
+  if(isPull || !isConnectedAMS){
+    poolInvPoolTotRefreshDoc('/racing/getJSON.aspx?type=pooltot&date=2018-09-02&venue=ST&raceno=10');
+  }
+
+}
+   
+
+function poolInvPoolTotRefreshDoc(url) {
+
+    $.get(url,function(json){
+        poolInvPoolTotRefreshOddsJson(json)}
+        ).fail(function(){window.setTimeout('poolInvPoolTotRefreshDoc()', 400);});
+
+}
+function poolInvPoolTotRefreshOddsJson(json) {
+    var nodes = json.inv;
+    var singleTotal = 0;
+    var allTotal = 0;
+    var oddsTime = json.updateTime;
+    updateRefreshTime(oddsTime);
+    
+    var singlePoolList = 'WIN;PLA;QIN;QPL;IWN;CWA;CWB;CWC;TCE;TRI;F-F;QTT';
+    var pid = [];
+    for ( var i=0; i<nodes.length; i++ ) {
+        var node = nodes[i];
+        var pool = node.pool;
+        var investment = node.value;
+        try{
+            $('#poolInvPoolTot'+pool).html('$ ' + addComma(investment));
+            if (!isNaN(investment)) {
+                if (typeof (node.pid) == 'undefined') {
+                    if (singlePoolList.indexOf(pool) >= 0) {
+                        singleTotal += parseInt(investment, 10);
+                    }
+                    allTotal += parseInt(investment, 10);
+                } else if (pid.indexOf(node.pid) < 0) {
+                    if (singlePoolList.indexOf(pool) >= 0) {
+                        singleTotal += parseInt(investment, 10);
+                    }
+                    allTotal += parseInt(investment, 10);
+                    pid.push(node.pid);
+                }
+            }
+        }catch(e){
+
+        }
+    }
+    $('#poolInvPoolTotSUM').html('<strong class="title">$ ' + addComma(singleTotal.toString()) + '</strong>');
+    $('#poolInvPoolTotTOTALSUM').html('<strong class="title">$ ' + addComma(allTotal.toString()) + '</strong>');
+    $('#poolInvPoolTotGRANDSUM').html('<strong class="title">$ ' + addComma(json.totalInv) + '</strong>');
+}
+
+
+
+/**************************************************/
+/*            for odds push                       */
+/**************************************************/
+var startTotalInvRefresh = false;
+
+function poolInvPoolTotRefreshOddsOddsPush(poolTotalString) {
+  //var stringTest = "153029@@@;WIN=1804284.0;PLA=471018.0;QIN=697767.0;QPL=218408.0;TRI=332132.0;DBL=129320.0;TCE=83780.0@@@;WIN=1117447.0;PLA=857831.0;QIN=266870.0;QPL=190801.0;TRI=229233.0;DBL=373550.0;TCE=16690.0@@@;WIN=287131.0;PLA=325558.0;QIN=598205.0;QPL=739841.0;TRI=59480.0;DBL=77940.0;TCE=232503.0@@@;WIN=114419.0;PLA=99981.0;QIN=73893.0;QPL=357626.0;TRI=36844.0;DBL=52560.0;TCE=334944.0@@@;WIN=181070.0;PLA=163687.0;QIN=267015.0;QPL=45877.0;TRI=18774.0;DBL=4140.0;TCE=18785.0@@@;WIN=38400.0;PLA=20680.0;QIN=151460.0;QPL=145686.0;TRI=10888.0;DBL=116940.0;TCE=172090.0@@@;WIN=17510.0;PLA=18030.0;QIN=48330.0;QPL=37350.0;TRI=4982.0;DBL=53640.0;TCE=121228.0@@@;WIN=6902423.0;PLA=28713.0;QIN=236191.0;QPL=97913.0;TRI=42610.0;TCE=31120.0@@@";
+  var tmpArray = poolTotalString.split('@@@');
+  var singleTotal = 0;
+  var allTotal = 0;
+  var grandTotal = 0;
+  var singlePoolList = 'WIN;PLA;QIN;QPL;IWN;CWA;CWB;CWC;TCE;TRI;F-F;QTT';
+  if(tmpArray.length>0){
+      updateRefreshTime(tmpArray[0]);
+      var raceNo = parseInt('10');
+      if(tmpArray[raceNo] && tmpArray[raceNo] !=''){
+          var totalString = tmpArray[raceNo].substr(1);
+          var totalArray = totalString.split(';');
+          for ( var i=0; i<totalArray.length; i++ ) {
+            var node = totalArray[i];
+            var pool = node.split('=')[0];
+            var investment = node.split('=')[1];
+            
+            var merged = false;
+            // handle merged pool
+            // check if win / f-f / qtt is merged pool
+            if(pool=="WIN" || pool=="F-F" || pool=="QTT") {
+                var cPool = pool;
+                if(cPool=="QTT") {
+                    cPool = "F-F";
+                }
+                for(var j=0; j<mergedPoolName.length; j++) {
+                    if(mergedPoolName[j][1] == cPool) { // merged -> not show
+                        merged = true;
+                        break;
+                    }
+                }
+            } else if(parseInt(pool)==pool) {
+                // merged pool total value      
+                for(var j=0; j<mergedPoolName.length; j++) {
+                    if(mergedPoolName[j][0] == pool) { // merged -> not show
+                        pool = mergedPoolName[j][1];     
+                    }
+                }
+            }
+            
+            if(!merged) {
+                if(document.getElementById('poolInvPoolTot'+pool))
+                    document.getElementById('poolInvPoolTot'+pool).innerHTML = '$ ' + addComma(investment);    
+                if ( singlePoolList.indexOf(pool) >= 0)
+                  singleTotal += parseInt(investment, 10);
+                allTotal += parseInt(investment, 10);
+            }
+          }
+          
+          
+          if(document.getElementById('poolInvPoolTotSUM') != null)
+            document.getElementById('poolInvPoolTotSUM').innerHTML = '<strong class="title">$ ' + addComma(singleTotal.toString()) + '</strong>';
+          
+          if(document.getElementById('poolInvPoolTotTOTALSUM') != null)
+            document.getElementById('poolInvPoolTotTOTALSUM').innerHTML = '<strong class="title">$ ' + addComma(allTotal.toString()) + '</strong>';
+
+        
+            if (!startTotalInvRefresh) {
+                poolInvAutoRefreshTotalInv();
+                startTotalInvRefresh = true;
+            }
+
+      }
+  }
+}
+
+function handleOddPushForPoolTotal(poolTotalString){
+   poolInvPoolTotRefreshOddsOddsPush(poolTotalString);
+}
+
+
+
+function poolInvAutoRefreshTotalInv() {
+    poolInvTotalInvLoadDoc();
+    setTimeout("poolInvAutoRefreshTotalInv()", 30000);
+}
+
+function poolInvTotalInvLoadDoc() {
+
+    var url = '/racing/getJSON.aspx?type=pooltot&date=2018-09-02&venue=ST&raceno=10';
+    $.get(url, function (json) {
+        poolInvTotalInvRefreshOdds(json)
+    }).fail(function () { window.setTimeout('poolInvTotalInvLoadDoc()', 400); });
+
+}
+
+function poolInvTotalInvRefreshDoc(url) {
+    $.get(url, function (data) {
+        poolInvTotalInvRefreshOdds(data);
+    }).fail(
+        function(){
+            window.setTimeout('poolInvTotalInvRefreshDoc(\'' + url + '\')', 400);
+        }  
+    );
+}
+
+function poolInvTotalInvRefreshOdds(json) {
+    document.getElementById('poolInvPoolTotGRANDSUM').innerHTML = '<strong class="title">$ ' + addComma(json.totalInv) + '</strong>';
+}
+
+
+</script>
+</td>
+        </tr>
+        <tr>
+            <td colspan="2">
+<table style="BORDER-RIGHT:#999999 1px solid; BORDER-TOP:#999999 1px solid; BORDER-LEFT:#999999 1px solid; BORDER-BOTTOM:#999999 1px solid" width="100%" cellspacing="0" cellpadding="0" border="0">
+    <tbody><tr>
+        <td style="PADDING-RIGHT:5px; PADDING-LEFT:7px; PADDING-BOTTOM:4px; PADDING-TOP:5px">
+            <table style="CURSOR:pointer" width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tbody><tr>
+                    <td title="按此開關" onclick="openRow('betAmountCalBottomcal1', 'betAmountCalBottombtn_open1', '/info/include/images/');" width="15"><img src="/info/include/images/btn_open.gif?CV=L302R1f" id="betAmountCalBottombtn_open1" border="0"></td>
+                    <td title="按此開關" class="brown" style="PADDING-RIGHT:0px; PADDING-LEFT:10px; PADDING-BOTTOM:0px; PADDING-TOP:0px" onclick="openRow('betAmountCalBottomcal1', 'betAmountCalBottombtn_open1', '/info/include/images/');" width="160"><strong class="content">投注計算機</strong></td>
+                    <td style="PADDING-RIGHT:5px; PADDING-LEFT:0px; PADDING-BOTTOM:0px; PADDING-TOP:0px" align="right"><span title="每注金額方式 - 指示每注的投注金額">每注金額 $</span></td>
+                    <td style="PADDING-RIGHT:16px; PADDING-LEFT:0px; PADDING-BOTTOM:0px; PADDING-TOP:0px" align="right">
+                        <input style="padding-right:0px;" id="betAmountCalBottomUnitBetInput" name="betAmountCalBottomUnitBetInput" class="inputField1" maxlength="7" onkeyup="copyBetAmountInput('betAmountCalBottom');" type="text">
+                    </td>
+                    <td style="PADDING-LEFT:0px;" width="148" nowrap="" align="left"><span onclick="openRow('betAmountCalBottomcal1', 'betAmountCalBottombtn_open1', '/info/include/images/', true);"><a href="javascript:;" onmouseout="Mobile_MM_swapImgRestore()" onmouseover="Mobile_MM_swapImage('betAmountCalBottombtn_reset','','/info/include/images/ch/btn_reset_on.gif?CVL302R1f',1)"><img src="/info/include/images/ch/btn_reset.gif?CV=L302R1f" id="betAmountCalBottombtn_reset" onclick="betCalReset('-');" title="重設" style="display: inline;" border="0" align="absMiddle"></a> <a href="javascript:;" onmouseout="Mobile_MM_swapImgRestore()" onmouseover="Mobile_MM_swapImage('betAmountCalBottombtn_calculate','','/info/include/images/ch/btn_calculate_on.gif?CVL302R1f',1)"><img src="/info/include/images/ch/btn_calculate.gif?CV=L302R1f" id="betAmountCalBottombtn_calculate" onclick="processBet('betAmountCalBottom');" title="計算" style="display: inline;" border="0" align="absMiddle"></a></span><img style="cursor: default; display: none;" src="/info/include/images/ch/btn_reset_off.gif?CV=L302R1f" id="betAmountCalBottombtn_reset_off" onclick="" title="重設" border="0" align="absMiddle"> <img style="cursor: default; display: none;" src="/info/include/images/ch/btn_calculate_off.gif?CV=L302R1f" id="betAmountCalBottombtn_calculate_off" onclick="" title="計算" border="0" align="absMiddle"></td>
+                </tr>
+            </tbody></table>
+        </td>
+    </tr>
+    <tr>
+        <td width="100%">
+            <table id="betAmountCalBottomcal1" style="DISPLAY:none" width="100%" cellspacing="2" cellpadding="0" border="0">
+                <tbody><tr>
+                    <td class="grayBar2" style="PADDING-BOTTOM:5px; PADDING-TOP:5px" align="center">注數</td>
+                    <td id="template_ctl00_betAmountCalBottom_tdUnitBet" class="grayBar2" align="center">每注金額</td>
+
+                    <td class="grayBar2" align="center">總投注金額</td>
+                </tr>
+                <tr>
+                    <td class="content" style="PADDING-BOTTOM:5px; PADDING-TOP:5px" align="center"><span id="betAmountCalBottomNoOfBet">-</span></td>
+                    <td class="content" align="center"><span id="betAmountCalBottomUnitBet">-</span></td>
+                    <td class="content" align="center"><span id="betAmountCalBottomTotal">-</span></td>
+                </tr>
+            </tbody></table>
+        </td>
+    </tr>
+</tbody></table>
+<script type="text/javascript">
+
+  document.getElementById('betAmountCalBottomUnitBetInput').value = getBetslipSettingsBetUnit('-');
+
+  // Q308
+  selectBetMethod('unitbet');
+</script>
+</td>
+        </tr>
+        <tr>
+            <td colspan="2" style="border-bottom:10px solid #FFFFFF;" bgcolor="#4A8CC1"><img src="/info/include/images/spacer.gif" width="1" height="3"></td>
+        </tr>
+    </tbody></table>
+</div>
+
+<script type="text/javascript">
+
+
+var hfBg = '#C80000';
+var hfFg = '#FFFFFF';
+var od20Bg = '#2AA216';
+var od20Fg = '#FFFFFF';
+var od50Bg = '#993300';
+var od50Fg = '#FFFFFF';
+
+
+var txt1ByRace = ''.split('@@@');
+var txt2ByRace = ''.split('@@@');
+var infoDivideByRace = '@@@|惜多福|飛雲騅|超能量|勝利寶石|龍串鳳|快樂旅遊|精算齊同|超然|無價寶|不忘初心;;|A323|B274|B294|P310|B116|B374|B102|V255|B254|B231@@@|凱旋星光|葵涌老友|火天大有|有衝勁|日東昇|乘勝追擊|好運齊來|五陵霸|人間尋夢|大運舞台;;|T224|A012|V406|T220|V302|V369|B124|A311|V258|T256@@@|川河尊駒|勝得威|軍歌|發盈喜|真好彩|加州福星|有理共想;;|A252|A025|T103|T005|V068|A415|B180@@@|和諧繁榮|薪勇|勝利新星|萬事欣|哥哥仔|樂多福|料事如神|勝在煌|帝聖寶貝|洪荒駿駒|海明珠|勁快步|銀城福星|優秀寶;;|B233|A340|B133|T129|V074|A208|A191|S425|A059|A031|B142|A053|V088|B059@@@|快利|銀照收|愛飛一號|勁無比|醒目再臨|猴王駒|人和家富|幸運精選|盛勢|財帥|香江世億|同威|歐洲巨星;;|A006|B344|B058|B034|A314|A336|T210|B114|V243|B134|A407|A223|V313@@@|快樂寶貝|美麗日子|怪獸都市|麥芽糖|華麗再現|龍城勁將|舉世無雙|清新動力|贏馬神器|喜得福|金碧科|靚加加;;|V019|B076|A190|A231|V326|A271|A310|B067|A075|T421|B225|V323@@@|醒目勇駒|醒蹄飛|龍城猛將|彩福|金鼓齊鳴|霸勝|勁有波幅|自由旺;;|B456|T396|V225|T371|B190|A270|V081|A209@@@|將才|神龍駒|飛星凱旋|芙蓉莊|恆駿寶駒|極有利|綠勇士|一舖成名|威進駒;;|V125|B108|T352|B339|T262|B284|V126|B162|A326@@@|多多醒|英勇大師|英明勇將|勇勝神駒|按得澄|良才|話晒事|好友無敵|健康美麗|極速駿馬|一定賺;;|B306|S212|T348|B235|V266|A100|B239|A217|B384|B211|V398@@@|大籐王|龍船鼓響|喜裝寶|獅子驄|皇龍大將|協霸神駒|美麗精神|加州再豫|綫路勇駒|世界紀錄|越影|勁精神|孟買之星;;|A061|T286|B088|V290|T400|B405|B409|T406|A041|V040|T374|V181|A338'.split('@@@');
+var startersStatusByRace = '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@|||||||||||||'.split('@@@');
+
+var poolTypeValueByRace = '@@@WIN;PLA;W-P@@@WIN;PLA;W-P@@@WIN;PLA;W-P@@@WIN;PLA;W-P@@@WIN;PLA;W-P@@@WIN;PLA;W-P@@@WIN;PLA;W-P@@@WIN;PLA;W-P@@@WIN;PLA;W-P@@@WIN;PLA;W-P'.split('@@@');
+var poolTypeTextByRace = '@@@獨贏;位置;獨贏及位置@@@獨贏;位置;獨贏及位置@@@獨贏;位置;獨贏及位置@@@獨贏;位置;獨贏及位置@@@獨贏;位置;獨贏及位置@@@獨贏;位置;獨贏及位置@@@獨贏;位置;獨贏及位置@@@獨贏;位置;獨贏及位置@@@獨贏;位置;獨贏及位置@@@獨贏;位置;獨贏及位置'.split('@@@');
+var poolSellStatus = '1@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@;WIN;PLA;W-P;QIN;QPL;QQP;TRI;TCE;F-F;QTT;CWA;'.split('@@@');
+var poolSellStatus_bak = '1@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@;WIN;PLA;W-P;QIN;QPL;QQP;TRI;TCE;F-F;QTT;CWA;'.split('@@@');
+var winOddsByRace = '152241@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@WIN;1=2.8=1;2=9.2=0;3=5.7=0;4=55=0;5=12=0;6=23=0;7=22=0;8=14=0;9=27=0;10=20=0;11=44=0;12=55=0;13=5.1=0#PLA;1=1.4=1;2=2.6=0;3=2.6=0;4=10=0;5=2.7=0;6=6.2=0;7=6.4=0;8=3.9=0;9=6.5=0;10=5.1=0;11=7.9=0;12=11=0;13=1.8=0'.split('@@@');
+var multiRacePoolsStr = '@@@DBL#;1,2;2,3;3,4;4,5;5,6;6,7;7,8;8,9;9,10@@@TBL#;8,9,10@@@D-T#;3,4;6,7;9,10@@@T-T#;4,5,6@@@6UP#;5,6,7,8,9,10';
+var fieldSize = 'ST;10;10;7;14;13;12;8;9;11;13';
+var fieldSizeWithReserve = 'ST;10;10;7;14;13;12;8;9;11;13';
+var reserveList = 'ST';
+var scratchList = 'ST;8#6';
+
+
+
+ranRace = 5;
+
+var horseNames = new Array(infoDivideByRace.length);
+var horseCodes = new Array(infoDivideByRace.length);
+var horseScratchs = new Array(infoDivideByRace.length);
+
+var infoDivideByRaceOtherLang;                          
+
+if(isQRPortal) {            
+    infoDivideByRaceOtherLang = '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@|RATTAN|CITRON SPIRIT|RIVET|SHAMAL|DRAGON GENERAL|HARMONY VICTORY|BEAUTY SPIRIT|CALIFORNIA JOY|CIRCUIT HASSLER|WORLD RECORD|BLOCKER DEE|KING GENKI|BOMBAY BLITZ;;|A061|T286|B088|V290|T400|B405|B409|T406|A041|V040|T374|V181|A338'.split('@@@');
+    var horseNamesOtherLang = new Array(infoDivideByRace.length);
+}
+
+for ( var i=1; i<infoDivideByRace.length; i++ ) {
+  var tmp = infoDivideByRace[i].split(';;');
+  if(isQRPortal) { 
+    var tmpOtherLang = infoDivideByRaceOtherLang[i].split(';;');
+  }
+  if ( tmp.length > 1 ) {
+    horseNames[i] = tmp[0].split('|');
+    horseCodes[i] = tmp[1].split('|');
+    if(isQRPortal) { 
+        horseNamesOtherLang[i] = tmpOtherLang[0].split('|');
+    }
+  }
+  horseScratchs[i] = new Array(15);
+}
+
+var horseStats = new Array(startersStatusByRace.length);
+for ( var i=1; i<startersStatusByRace.length; i++ ) {
+  horseStats[i] = startersStatusByRace[i].split('|');
+}
+
+refreshScratchHorse(scratchList);
+
+function createTable(i, divId, subId) {
+  if ( subId==null )
+    subId=0;
+
+  var tb1 = new RacingWPTable(i);
+
+
+  tb1.id = 'wpTable' + (i+subId);
+  tb1.tableId = (i+subId);
+
+  tb1.lblChoosePool = '彩池&nbsp;:&nbsp;';
+  tb1.lblHorseNum = '馬號';
+  tb1.lblBanker = '膽';
+  tb1.lblLeg = '腳';
+  tb1.lblSel = '選擇';
+  tb1.lblHorseName = '馬名';
+  tb1.lblWin = '獨贏';
+  tb1.lblPla = '位置';
+  tb1.lblField = '全餐';
+  
+  tb1.lblComposite = '組合';
+  tb1.lblStartersInclude = '包括馬匹';
+  tb1.lblOdds = '賠率';
+  tb1.lblScr = '退';       
+  tb1.lblCompSel = '組合選擇';
+
+  tb1.fieldSize = horseNames[i].length-1;
+
+  tb1.box1 = (txt1ByRace[i]!=null) ? txt1ByRace[i] : '';
+  tb1.box2 = (txt2ByRace[i]!=null) ? txt2ByRace[i] : '';
+
+  setRacingTableObj1(tb1);
+  //setCwinTableObj(tb1);
+
+  return tb1;
+}
+
+
+
+function setRacingTableObj1(tb){
+  for ( var i=1; i<startersStatusByRace.length; i++ ) {
+    horseStats[i] = startersStatusByRace[i].split('|');
+  }
+  for ( var i=1; i<horseNames[tb.raceNo].length; i++ ) {
+    var hNameSub = horseNames[tb.raceNo][i].split('/');
+    var hCodeSub = horseCodes[tb.raceNo][i].split('/');
+    var hStatSub = null;
+    try{
+        hStatSub = horseStats[tb.raceNo][i].split('/');
+    }catch(e){}
+    
+    tb.tableObj[i] = new Array(hNameSub.length);
+    for ( var j=0; j<hNameSub.length; j++ ) {
+      tb.tableObj[i][j] = new RacingTableObj();
+      tb.tableObj[i][j].num = i;
+      tb.tableObj[i][j].hName = hNameSub[j];
+      tb.tableObj[i][j].hCode = hCodeSub[j];
+      if(hStatSub != null){
+        tb.tableObj[i][j].hStat = hStatSub[j];
+      }
+      tb.tableObj[i][j].hScr = horseScratchs[tb.raceNo][i];
+    }
+  }
+}
+
+function loadPoolNames() {
+  var longNames = new Array();
+  var pools =  'WIN###獨贏;;;WIN###獨贏;;;PLA###位置;;;W-P###獨贏及位置'.split(';;;');
+  for ( var i=0; i<pools.length; i++ ) {
+    var tmp = pools[i].split('###');
+    longNames[tmp[0]] = tmp[1];
+  }
+  return longNames;
+}
+
+function loadLongPoolNames() {
+  var longNames = new Array();
+  var pools =  'WIN###獨贏;;;WIN###獨贏;;;PLA###位置;;;W-P###獨贏及位置'.split(';;;');
+  for ( var i=0; i<pools.length; i++ ) {
+    var tmp = pools[i].split('###');
+    longNames[tmp[0]] = tmp[1];
+  }
+  return longNames;
+}
+
+    function loadLongPoolNamesOtherLang() {
+        var longNames = new Array();
+        var pools =  'WIN###Win;;;WIN###Win;;;PLA###Place;;;W-P###Win & Place'.split(';;;');
+  for ( var i=0; i<pools.length; i++ ) {
+      var tmp = pools[i].split('###');
+      longNames[tmp[0]] = tmp[1];
+  }
+  return longNames;
+}
+
+function checkSCR(odd) {
+    if(odd=="SCR" || odd=="---") 
+        return true;
+    else
+        return false;
+}
+
+</script>
+
+<script type="text/javascript">
+// function available in racingCommon.js
+
+var labelField = '全餐';
+var dayShort = 'SUN';
+var venueShort = 'ST';
+var dayLong = '星期日';
+var venueLong = '沙田';
+var raceNoLong = '第#場';
+var withBanker = '拖';
+var alupShort = '過關';
+var alupLong = '賽馬過關';
+var randNum = '(運財號碼)';
+var shortPoolNames = loadPoolNames();
+var longPoolNames = loadLongPoolNames();
+var longPoolNamesOtherLang = loadLongPoolNamesOtherLang();
+
+var cwinName = '組合獨贏';
+var raceLeg = '10'.split(',');
+
+var singleRacePoolList = 'WIN;PLA;W-P;QIN;QPL;QQP;TCE S;TCE M;TCE B;TCE MB;TCE BM;TRI;F-F;QTT S;QTT M;QTT B;QTT MB;QTT BM;CWA;CWB;CWC;IWN';
+
+// Get Terms of other Lang         
+var dayLongOtherLang = 'Sunday';       
+var venueLongOtherLang = 'Sha Tin';        
+var raceNoLongOtherLang = 'Race #';
+var longPoolNamesOtherLang = loadLongPoolNamesOtherLang();      
+var withBankerOtherLang = 'Banker with'; 
+var labelFieldOtherLang = 'Field'; 
+var cwinNameOtherLang = 'Composite Win'; 
+var alupLongOtherLang = 'Racing All Up';
+
+var addBetDebug = false;
+var tooManyBLbl = '第#場所選馬膽數目過多。';
+var insuffSLbl = '第#場所選馬匹數目不足。';
+var calInvAmtLbl = '投注金額錯誤或尚未儲入，請先儲入正確金額。';
+
+</script>
+<script type="text/javascript">
+///////////////////////////////////////////////
+// UI Related
+///////////////////////////////////////////////
+function switchAllUpPage() {
+  var betObj1 = wpTableList[10].createBetObject('WIN');
+  var betObj2 = wpTableList[10].createBetObject('PLA');
+  var betObj3 = wpTableList[10].createBetObject('W-P');
+  var allUpPool = '';
+  var allUpSel = '';
+  var selectPoolCnt = 0;
+  
+  if ( betObj1.legNo > 0 ) {
+    allUpPool = 'WIN';
+    allUpSel = betObj1.toBetSel();
+    selectPoolCnt++;
+  }
+  if ( betObj2.legNo > 0 ) {
+    allUpPool = 'PLA';
+    allUpSel = betObj2.toBetSel();
+    selectPoolCnt++;
+  }
+  if ( betObj3.legNo > 0 ) {
+    allUpPool = 'W-P';
+    allUpSel = betObj3.toBetSel();
+    selectPoolCnt++;
+  }
+
+  if ( selectPoolCnt > 1 ) {
+    alert('過關請只選擇一種投注種類。');
+    document.getElementById('allupCheckbox').checked = false;
+    return;
+  }
+  else if ( selectPoolCnt == 1 ) {
+    if ( window.localStorage )
+      window.localStorage.setItem('alupSel', allUpPool + ' ' + allUpSel);
+    else
+      window.name = allUpPool + ' ' + allUpSel;
+  }
+
+    location.href = '/racing/pages/odds_wp_alup.aspx?lang=ch&date=2018-09-02&venue=ST&raceno=10';
+}
+
+function initOddsTable() {
+    var tb1 = new WinPlaceCheckBoxObj(10);
+    wpTableList[10] = tb1;  
+    tb1.id = 'wpTable' + 10;
+    tb1.tableId = 'detailWPTable';
+    tb1.tableSize = horseNames[10].length-1;
+    tb1.startSell = (poolSellStatus[0]=='1') ? 1 : 0;
+    tb1.sellStatus = poolSellStatus[10];
+    initWPTableDetails(tb1);
+    setRacingTableObj1(tb1);
+    setRacingTableObj2(tb1);
+
+  if ( winOddsByRace.length > 0 ) {
+    var wtmp = winOddsByRace[10];
+      if(wtmp)
+      {
+          var tmp = wtmp.split('#');
+          updateRefreshTime(winOddsByRace[0]);
+
+          if(tmp[0])
+          {
+              var tmpOdds = tmp[0].split(';');
+              for ( var j=1; j<tmpOdds.length; j++ ) {
+                  var tmpStr = tmpOdds[j].split('=');
+                  tb1.winOdds[parseInt(tmpStr[0], 10)] = tmpStr[1];
+                  tb1.winColorInd[parseInt(tmpStr[0], 10)] = tmpStr[2];
+              }
+          }
+          
+          if(tmp[1])
+          {
+              tmpOdds = tmp[1].split(';');
+              for ( var j=1; j<tmpOdds.length; j++ ) {
+                  var tmpStr = tmpOdds[j].split('=');
+                  tb1.plaOdds[parseInt(tmpStr[0], 10)] = tmpStr[1];
+                  tb1.plaColorInd[parseInt(tmpStr[0], 10)] = tmpStr[2];
+              }
+          }
+          
+      }
+  }
+  tb1.generateTable();
+  tb1.setInnerTableHtml();
+  //setTimeout("",1000);
+  
+  /*
+   The following function defined in WPTableDetails.Ctrl.ascx, it can't be attached to window's onload event.
+  */
+  loadRaceColor();
+  
+  if (isEditBetMode && 
+        typeof editBetSplitBetLine == 'function' &&
+        typeof openEditOddsContent == 'function' &&
+        typeof editBetSelectCheckbox == 'function') {
+        editBetSplitBetLine()
+        if(isEditBetMode){
+            editBetSelectCheckbox(false);
+            openEditOddsContent();
+        }
+  }
+}
+
+// odds push
+function updateStarter_Status(statusStr,raceNo,labelText){
+      var tmp = drawWgtByRace[raceNo].split(';;');
+      if ( tmp.length > 2 ) {
+        var brandList = tmp[0].split('|');
+        var status = statusStr.split('|');
+        for(var i=1;i<brandList.length;i++){
+            if(document.getElementById("wpTableImg"+brandList[i]) && status[i]){
+                if(status[i] == 'R'){
+                    document.getElementById("wpTableImg"+brandList[i]).parentNode.innerHTML = '('+labelText+')';
+                }
+            }            
+        }
+      }
+}
+
+///////////////////////////////////////////////
+// Add to betslip related
+///////////////////////////////////////////////
+var ret = 1;
+function processBet(toComponent) {
+  var noOfBetTypeSelected = 0;
+  if(isQRPortal) {
+      if($.inArray(1, wpTableList[10].selectLeg['WIN'])>-1 || wpTableList[10].selectField['WIN'] != 0)
+        noOfBetTypeSelected++;
+      if($.inArray(1, wpTableList[10].selectLeg['PLA'])>-1 || wpTableList[10].selectField['PLA'] != 0)
+        noOfBetTypeSelected++;
+      if($.inArray(1, wpTableList[10].selectLeg['W-P'])>-1 || wpTableList[10].selectField['W-P'] != 0)
+        noOfBetTypeSelected++;
+      if(noOfBetTypeSelected>1) {
+        alert('Only one betline is allowed');  
+        return false;
+      }
+  }
+  var isSuccess = false;
+  var betObj1 = processSinglePoolBet(toComponent, 'WIN');
+  var betstatus1 = ret;
+  var betObj2 = processSinglePoolBet(toComponent, 'PLA');
+  var betstatus2 = ret;
+  var betObj3 = processSinglePoolBet(toComponent, 'W-P');
+  var betstatus3 = ret;
+  var betCnt = getNumberOfBet('WIN', betObj1.toBetSel(), '', 10)
+             + getNumberOfBet('PLA', betObj2.toBetSel(), '', 10)
+             + getNumberOfBet('W-P', betObj3.toBetSel(), '', 10);
+
+  isSuccess = true;
+  if ( betCnt > 0 ) {
+    if ( toComponent!='betslip' ){
+      updateBetCalDisplay(toComponent, betCnt);
+      
+    }  
+  }
+  else {
+    alert('第#場所選馬匹數目不足。'.replace('#', '10'));  
+    isSuccess = false;
+  }
+  
+  if(betstatus1 != 1 || betstatus2 != 1 || betstatus3 != 1){
+    isSuccess = false;
+  }
+  
+  return isSuccess;
+}
+
+function processSinglePoolBet(toComponent, poolS) {
+  var betObj = wpTableList[10].createBetObject(poolS);
+  ret = 1;
+  if ( toComponent=='betslip' && betObj.legNo>0 ) {
+    ret = addToBetslip(poolS, '', '10', betObj.toBetSel(), 1);
+    if ( ret==1 ) {
+      wpTableList[10].clearCheckBox(poolS);
+      wpTableList[10].setInnerTableHtml();
+    }
+  }
+  return betObj;
+}
+
+///////////////////////////////////////////////
+// Odds Auto Refresh Related
+///////////////////////////////////////////////
+var dataType = '';
+
+function refreshAllDoc() {
+    if(isPull || !isConnectedAMS){
+          scratchLoadDoc('/racing/getJSON.aspx', '2018-09-02', 'ST');
+          //sellStatLoadDoc('/racing/getJSON.aspx', '2018-09-02', 'ST');
+          poolInvPoolTotLoadDoc();
+    }
+}
+
+function refreshOddsDoc() {
+    if(isPull || !isConnectedAMS || !isCurrentOdds()){
+        wpOddsLoadDoc('/racing/getJSON.aspx', '2018-09-02', 'ST', '10', '10', dataType);
+    }
+}
+
+function refreshOddsDocOddsPush(matchArray) {
+    if(matchArray["WINPLA"]){
+        wpRefreshOddsPush(matchArray["WINPLA"]);
+    }
+}
+
+//function refreshOddsDocFF() {
+//  wpOddsLoadDocFF('/racing/getJSON.aspx', '2018-09-02', 'ST', '10', '10', dataType);
+//}
+
+function changeDataType(type) {
+  if(dataType != type){
+    document.getElementById('oddsRefreshTime').innerHTML = '';
+  }
+  
+  dataType = type;
+  /*
+  if ( !isIE )
+    refreshOddsDocFF();
+  else
+    refreshOddsDoc();
+    */
+    if(isPull || dataType!='' || !isConnectedAMS){
+        refreshOddsDoc();
+    }
+    else{
+        autoRefreshByPush();
+    }
+}
+
+xsell_event(7);
+
+//********************This is the EditBet function********************
+var tableSize;
+var currentBetline;
+var editBetVenue;
+var editBetDayOfWeek;
+var editBetPoolName;
+var editBetLine;
+var editBetRace;
+var editBetLegNum;
+var editBetCurrentUnit;
+var editBetIsFlexiBet;
+
+function editBetSplitBetLine(){
+    tableSize = horseNames[10].length-1;
+    
+    //currentBetline = "ST SAT WIN 2*1+2+10".split(" ");
+    //editBetCurrentUnit = 10;
+    //editBetIsFlexiBet = true;
+    currentBetline = top.betSlipFrame.curEditingBetline.split(" ");
+    editBetCurrentUnit = top.betSlipFrame.curEditingUnitBet;
+    editBetIsFlexiBet = top.betSlipFrame.curEditingIsFlexiBet;
+    editBetVenue = (typeof currentBetline[0] == undefined ? '' : currentBetline[0]);
+    editBetDayOfWeek = (typeof currentBetline[1] == undefined ? '' : currentBetline[1]);
+    editBetPoolName = (typeof currentBetline[2] == undefined ? '' : currentBetline[2]);
+    editBetLine = (typeof currentBetline[3] == undefined ? '' : currentBetline[3].split("\*"));
+    if(editBetLine != ''){
+        editBetRace = editBetLine[0];
+        editBetLegNum = editBetLine[1].split("+");
+    }
+    
+    if(!isEditBetAlerted && 
+        (editBetVenue != venueShort || editBetDayOfWeek != dayShort 
+        || (typeof poolSellStatus[0] != undefined && poolSellStatus[0] == "0")
+        || (typeof poolSellStatus[editBetRace] != undefined && poolSellStatus[editBetRace].indexOf(editBetPoolName) == -1))){
+        $(document).ready(function() {
+            alert('本注項已截止投注。');
+            closeEditBetMode();
+            isEditBetAlerted = true;
+            isEditBetMode = false;
+        });
+    }
+}
+
+function editBetSelectCheckbox(checkOnly){
+    if(!checkOnly){
+        $("#betAmountCalTopUnitBetInput").val(editBetCurrentUnit);
+        $("#betAmountCalBottomUnitBetInput").val(editBetCurrentUnit);
+        if(editBetIsFlexiBet){
+            selectBetMethod('flexibet');
+        }else{
+            selectBetMethod('unitbet');
+        }
+    }
+    
+    var currentStarter = (typeof startersStatusByRace[editBetRace] == undefined ? '' : startersStatusByRace[editBetRace].split('|'));
+    var checkboxNotAvailable = false;
+    for(var i = 0 ; i < editBetLegNum.length ; i++){
+        if(editBetLegNum[i] == "F"){
+            if(!checkOnly){
+                wpFieldClick(editBetRace, editBetPoolName);
+            }
+            break;
+        }
+        
+        if (typeof currentStarter[editBetLegNum[i]] != undefined) {
+            var isNotAllScratchOrReserve = false;
+            var curStarter = currentStarter[editBetLegNum[i]].split("/");
+            for (var k = 0; k < curStarter.length; k++) {
+                if (curStarter[k].trim() == "") {
+                    isNotAllScratchOrReserve = true;
+                    break;
+                }
+            }
+
+            if (isNotAllScratchOrReserve) {
+                if(!checkOnly){
+                    wpLegClick(editBetRace, editBetLegNum[i], editBetPoolName);
+                }
+            } else {
+                checkboxNotAvailable = true;
+            }
+        } 
+        
+        /*if (typeof currentStarter[editBetLegNum[i]] != undefined &&
+            (currentStarter[editBetLegNum[i]].indexOf("S") > -1 || 
+            currentStarter[editBetLegNum[i]].indexOf("R") > -1)) {
+            checkboxNotAvailable = true;
+        }else if(!checkOnly){        
+            wpLegClick(editBetRace, editBetLegNum[i], editBetPoolName);
+        }*/
+    }
+    
+    if(!isEditBetAlerted && checkboxNotAvailable){
+        $(document).ready(function() {
+          alert('已加入的選項已不適用，請重新儲入。');
+          isEditBetAlerted = true;
+        });
+    }
+}
+
+function openEditOddsContent(){
+    $("#wp_bet_cal_top").addClass("editBetHightlightItem");
+    $("#wp_bet_cal_top").addClass("editBetBG");
+        
+    $(".tableContentHead").addClass("editBetHightlightItem");
+    $(".info_cell").addClass("editBetHightlightItem");
+    
+    if(editBetPoolName == 'WIN'){
+        $("#lblPla").removeClass("editBetHightlightItem");
+        $("#lblWip").removeClass("editBetHightlightItem");
+    
+        $("#lblWin").addClass("editBetHightlightItem");
+        for ( var i=1; i<=tableSize; i++ ) {
+            $("#winCell" + i).addClass("editBetHightlightItem");
+        }
+        $("#winCellF").addClass("editBetHightlightItem");
+        
+    }else if(editBetPoolName == 'PLA'){
+        $("#lblWin").removeClass("editBetHightlightItem");
+        $("#lblWip").removeClass("editBetHightlightItem");
+    
+        $("#lblPla").addClass("editBetHightlightItem");
+        for ( var i=1; i<=tableSize; i++ ) {
+            $("#plaCell" + i).addClass("editBetHightlightItem");
+        }
+        $("#plaCellF").addClass("editBetHightlightItem");
+        
+    }if(editBetPoolName == 'W-P'){
+        $("#lblWin").removeClass("editBetHightlightItem");
+        $("#lblPla").removeClass("editBetHightlightItem");
+    
+        $("#lblWip").addClass("editBetHightlightItem");
+        for ( var i=1; i<=tableSize; i++ ) {
+            $("#wipCell" + i).addClass("editBetHightlightItem");
+        }
+        $("#wipCellF").addClass("editBetHightlightItem");
+        
+    }
+    
+    $("#lblFull").addClass("editBetHightlightItem");
+    
+    // bugs in ie7 and ie8
+    $('.tableContent1').append(" ");
+    
+    $("#raceInfobtn_addslip").hide();
+    $("#raceInfoBottombtn_addslip").hide();
+    
+    //disable link
+    $(".wpTdColor").addClass("linkDisabled");
+    $(".wpTdColor").click(function (e){return false;});
+}
+
+function closeEditOddsContent(){
+    betCalReset('" + poolList + "');
+
+    $("#wp_bet_cal_top").removeClass("editBetHightlightItem");
+    $("#wp_bet_cal_top").removeClass("editBetBG");
+    
+    $(".tableContentHead").removeClass("editBetHightlightItem");
+    $(".info_cell").removeClass("editBetHightlightItem");
+    
+    $("#lblWin").removeClass("editBetHightlightItem");
+    $("#lblPla").removeClass("editBetHightlightItem");
+    $("#lblWip").removeClass("editBetHightlightItem");
+    $("#lblFull").removeClass("editBetHightlightItem");
+    for ( var i=1; i<=tableSize; i++ ) {
+        $("#winCell" + i).removeClass("editBetHightlightItem");
+        $("#plaCell" + i).removeClass("editBetHightlightItem");
+        $("#wipCell" + i).removeClass("editBetHightlightItem");
+    }
+    
+    $(".tableContentEnd").removeClass("editBetHightlightItem");
+    $("#winCellF").removeClass("editBetHightlightItem");
+    $("#plaCellF").removeClass("editBetHightlightItem");
+    $("#wipCellF").removeClass("editBetHightlightItem");
+    
+    $("#raceInfobtn_addslip").show();
+    $("#raceInfoBottombtn_addslip").show();
+    
+    // bugs in ie7 and ie8
+    $('.tableContent1').each(function() { 
+        $(this).html($.trim($(this).html()));
+    });
+    
+    //enable link
+    $(".wpTdColor").removeClass("linkDisabled");
+    $(".wpTdColor").unbind("click");
+    
+    try{
+        wpTableList[10].clearCheckBox(editBetPoolName);
+        wpTableList[10].setInnerTableHtml();
+    }catch(e){}
+}
+
+//********************End EditBet function********************
+
+</script>
+
+
+
+
+<script type="text/javascript">
+var drawWgtByRace = '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@|A061|T286|B088|V290|T400|B405|B409|T406|A041|V040|T374|V181|A338;;|13|7|2|11|3|4|6|1|8|10|9|12|5;;|133|130|127|122|121|120|119|119|117|117|116|116|115'.split('@@@');
+var jockeysByRace = '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@|郭能|史卓豐|田泰安|吳嘉晉|梁家俊|李寶利|潘頓|潘明輝|何澤堯|利敬國|蔡明紹|黃皓楠|楊明綸;;|CAN|SCC|TEK|NGA|LDE|RU|PZ|PMF|HCY|VNG|CML|WJH|YML'.split('@@@');
+var trainersByRace = '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@|高伯新|姚本輝|約翰摩亞|徐雨石|徐雨石|沈集成|告東尼|告東尼|告東尼|苗禮德|方嘉柏|告東尼|方嘉柏;;|GR|YPF|JM|TYS|TYS|SCS|CAS|CAS|CAS|MA|FC|CAS|FC'.split('@@@');
+
+function initWPTableDetails(tb) {
+  tb.horseNumLbl = '馬號';
+  tb.horseColorLbl = '綵衣';
+  tb.horseNameLbl = '馬名';
+  tb.barDrawLbl = '檔位 ';
+  tb.handicapLbl = '負磅';
+  tb.jockeyLbl = '騎師';
+  tb.trainerLbl = '練馬師';
+  tb.winLbl = '獨贏';
+  tb.plaLbl = '位置';
+  tb.wipLbl = '獨贏及位置';
+  tb.fieldLbl = '全餐';
+}
+function setRacingTableObj2(tb) {
+    
+  var tmp = drawWgtByRace[tb.raceNo].split(';;');
+  if ( tmp.length > 2 ) {
+      var brandList = tmp[0].split('|');
+      var drawList = tmp[1].split('|');
+      var handicapList = tmp[2].split('|');
+
+    for ( var i=1; i<brandList.length; i++ ) {
+        var brandSub = brandList[i].split('/');
+        var drawSub = drawList[i].split('/');
+        var handicapSub = handicapList[i].split('/');
+        for ( var j=0; j<brandSub.length; j++ ) {
+            tb.tableObj[i][j].brand = brandSub[j];
+            tb.tableObj[i][j].draw = drawSub[j];
+            tb.tableObj[i][j].handicap = handicapSub[j];
+        }
+    }
+  }
+  tmp = jockeysByRace[tb.raceNo].split(';;');
+  if ( tmp.length > 1 ) {
+    var jockeyNameList = tmp[0].split('|');
+    var jockeyCodeList = tmp[1].split('|');
+    for ( var i=1; i<jockeyNameList.length; i++ ) {
+      var jNameSub = jockeyNameList[i].split('/');
+      var jCodeSub = jockeyCodeList[i].split('/');
+      for ( var j=0; j<jNameSub.length; j++ ) {
+        tb.tableObj[i][j].jName = jNameSub[j];
+        tb.tableObj[i][j].jCode = jCodeSub[j];
+      }
+    }
+  }
+  tmp = trainersByRace[tb.raceNo].split(';;');
+  if ( tmp.length > 1 ) {
+    var trainerNameList = tmp[0].split('|');
+    var trainerCodeList = tmp[1].split('|');
+    for ( var i=1; i<trainerNameList.length; i++ ) {
+      var tNameSub = trainerNameList[i].split('/');
+      var tCodeSub = trainerCodeList[i].split('/');
+      for ( var j=0; j<tNameSub.length; j++ ) {
+        tb.tableObj[i][j].tName = tNameSub[j];
+        tb.tableObj[i][j].tCode = tCodeSub[j];
+      }
+    }
+  }
+}
+
+function loadRaceColor() {
+  for ( var i=1; i<=wpTableList[10].tableSize; i++ ) {
+    var tbObj =  wpTableList[10].tableObj[i];
+    for ( var j=0; j<tbObj.length; j++ ) {
+      LoadRaceColorImage(tbObj[j].brand);
+    }
+  }
+}
+
+function LoadRaceColorImage(brand) {
+    var img = new Image();
+    var tmp = document.getElementById('wpTableImg' + brand);            
+    img.src = '/content/images/raceColor/' + brand + (isOverseaMeeting ? '' : '.gif?CV=L302R1f');
+    img.title = brand;
+    img.heigth = 22;
+    width = 17;
+    if (img.complete) {
+      if ( tmp!=null )
+        tmp.src = img.src;
+    }
+    img.onload = function() {
+      if ( tmp!=null) {
+        tmp.src = img.src;
+      }
+    }
+    img.onerror = function() {
+      if ( tmp!=null)
+        tmp.src = '/info/include/images/spacer.gif';
+    }
+}
+
+</script>
+
+
+
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                        <td class="shadowRight" width="6">
+                            <img src="/info/include/images/spacer.gif" width="6" height="1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="/info/include/images/spacer.gif" width="1" height="1">
+                        </td>
+                        <td bgcolor="#ffffff">
+                            <img src="/info/include/images/spacer.gif" width="1" height="10">
+                        </td>
+                        <td>
+                            <img src="/info/include/images/spacer.gif" width="1" height="1">
+                        </td>
+                    </tr>
+                </tbody></table>
+                    <div id="footerTop" class="bottomMenu"><iframe scrolling="no" id="hr_promo_bottom" name="hr_promo_bottom" src="" width="100%" height="1" frameborder="0"></iframe></div>
+
+                    <div id="footerBottom" class="rgpBlock"><iframe scrolling="no" id="hr_promo_rgp" name="hr_promo_rgp" src="/info/include/rgp/ch/hr_info_bottom_rgp.html?CV=L302R1f" width="100%" height="149" frameborder="0"></iframe></div>
+  <script>
+  try{
+    if(isMobile()) { $('#footerBottom').css('margin-bottom', '25px');}
+  } catch(ex) {}
+  </script>
+
+            </td>
+        </tr>
+    </tbody></table>
+    
+    <!-- This is the EditBet function  -->
+    <div id="editBetShadow"></div>
+    <script type="text/javascript">
+        if (isEditBetMode) {
+            var isLogined = checkIsLogin();
+            $("#editBetShadow").css("height", $(document).height());
+            setInterval(function() {
+                $("#editBetShadow").css("height", $(document).height());
+                $("#editBetShadow").css("width", $(document).width());
+            }, 500);
+            setInterval(function() {
+                if (top.status == "poll" && isLogined && !checkIsLogin()) {
+                    window.location.href = window.location.href;
+                }
+            }, 1000);
+            openEditBetMode();
+        }
+    </script>
+   <!-- End EditBet function  -->
+    
+    <!-- START Nielsen Online SiteCensus -->
+
+    <script type="text/javascript">
+        function WATrackClickEvent(eventID) {
+            window.frames["hr_promo_rgp"].WATracker.trackClickEvent('betmenu-menu-' + eventID.replace(/^(\s*(&nbsp;)*(<br>)*)+|(\s*(&nbsp;)*(<br>)*)+$/gi, '').replace(/(<br>)+/gi, '-').replace(/(\s|(&nbsp;))*\/(\s|(&nbsp;))*/g, '/').replace(/(\s|(&nbsp;))*-(\s|(&nbsp;))*/g, '-').replace(/\s+/g, '-'));
+        }
+
+        $("[name='racing']").click(function() {
+            window.frames["hr_promo_rgp"].WATracker.trackClickEvent('betracing-hr-topbutton-d');
+        });
+
+        $("[name='football']").click(function() {
+            window.frames["hr_promo_rgp"].WATracker.trackClickEvent('betracing-fb-topbutton-02');
+        });
+
+        $("[name='marksix']").click(function() {
+            window.frames["hr_promo_rgp"].WATracker.trackClickEvent('betracing-m6-topbutton-03');
+        });
+
+        $("[name='ewin']").click(function() {
+            window.frames["hr_promo_rgp"].WATracker.trackClickEvent('betracing-ewin-topbutton-04');
+        });
+
+        $.each($(".toolbarLine a"), function() {
+            $(this).click(function() {
+                window.frames["hr_promo_rgp"].WATracker.trackClickEvent('betracing-hr-' + $(this).text().trim().replace(/\s*\/\s*/g, '/').replace(/\s*-\s*/g, '-').replace(/\s/g, '-'));
+            });
+        });
+
+        function WACommonTagging(type) {
+            switch (type) {
+                case 'horse':
+                    window.frames["hr_promo_rgp"].WATracker.trackClickEvent('hrcommon-hr-horse-01');
+                    break;
+                case 'jockey':
+                    window.frames["hr_promo_rgp"].WATracker.trackClickEvent('hrcommon-hr-jockey-02');
+                    break;
+                case 'trainer':
+                    window.frames["hr_promo_rgp"].WATracker.trackClickEvent('hrcommon-hr-trainer-03');
+                    break;
+                default:
+                    break;
+            }
+        }
+    </script>
+
+    <!-- END Nielsen Online SiteCensus -->
+
+
+
+<script type="text/javascript">
+
+    if (window.addEventListener) {
+        window.addEventListener("load", initRacing, false);
+    } else if (window.attachEvent) {
+        window.attachEvent("onload", initRacing);
+    }
+    
+    function toggleCombinationVisibility(eid, iconid) {
+        if ($("#" + eid).is(":visible")) {
+            $("#" + eid).hide();
+            $("#" + iconid).html("<img src=\"/info/include/images/btn_open.gif\">");
+        } else {
+            $("#" + eid).show();
+            $("#" + iconid).html("<img src=\"/info/include/images/btn_close.gif\">");
+        }
+    }
+
+    $('.combination').css({ "display": "none", "color": "#948a54" });
+</script>   
+<!-- START Nielsen Online SiteCensus -->
+<script type="text/javascript">
+$("#allupCheckbox").click(function() {
+    window.frames["hr_promo_rgp"].WATracker.trackClickEvent('betwinplace-hr-allup-04');
+}); 
+</script>
+<!-- END Nielsen Online SiteCensus --></body>

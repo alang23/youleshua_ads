@@ -877,10 +877,12 @@ class Trade extends Zrjoboa
 		$end_time = $this->input->get('end_time');
 
         $p_sn = isset($_GET['p_sn']) ? $_GET['p_sn'] : '';
+        $user_id = isset($_GET['user_id']) ? $_GET['user_id']: 0;
 
         $data['p_sn'] = $p_sn;
         $data['show_time'] = $show_time;
         $data['end_time'] = $end_time;	
+        $data['user_id'] = $user_id;
 
         $countwhere = array();
         $where = array();
@@ -903,6 +905,11 @@ class Trade extends Zrjoboa
         	}
         }
 
+        if(!empty($user_id)){
+        	$countwhere['uid'] = $user_id;
+        	$where['where']['uid'] = $user_id;
+        }
+
         $limit = 20;
         $offset = ($page - 1) * $limit;
         $pagination = '';
@@ -911,7 +918,86 @@ class Trade extends Zrjoboa
         $count = $this->trade_xiaoer->get_count($countwhere);
         $data['count'] = $count;
 
-        $pageconfig['base_url'] = base_url('/home/trade/shaixuan?show_time='.$show_time.'&end_time='.$end_time.'&p_sn='.$p_sn);
+        $pageconfig['base_url'] = base_url('/home/trade/shaixuan?show_time='.$show_time.'&end_time='.$end_time.'&p_sn='.$p_sn.'&user_id='.$user_id);
+        $pageconfig['count'] = $count;
+        $pageconfig['limit'] = $limit;
+        $data['page'] = home_page($pageconfig);
+
+		$list = array();
+		$where['page'] = true;
+        $where['limit'] = $limit;
+        $where['offset'] = $offset;
+        $where['order'] = array('key'=>'id','value'=>'desc');
+
+
+		$list = $this->trade_xiaoer->getList($where);	
+		$data['list'] = $list;
+
+		//账户
+		$admin = array();
+		$admin = $this->admin->getList();
+		$data['admin'] = $admin;
+
+
+		$this->tpl('home/trade_shaixuan_tpl',$data);
+
+	}
+
+	public function shaixuan_user()
+	{
+
+		$userinfo = $this->userinfo;
+		$page = isset($_GET['page']) ? $_GET['page'] : 0;
+        $page = ($page && is_numeric($page)) ? intval($page) : 1;
+        $show_time = $this->input->get('show_time');		
+		$end_time = $this->input->get('end_time');
+
+        $p_sn = isset($_GET['p_sn']) ? $_GET['p_sn'] : '';
+        $user_id = isset($_GET['user_id']) ? $_GET['user_id']: 0;
+
+        $data['p_sn'] = $p_sn;
+        $data['show_time'] = $show_time;
+        $data['end_time'] = $end_time;	
+        $data['user_id'] = $user_id;
+
+        $countwhere = array();
+        $where = array();
+
+        if(!empty($p_sn)){
+        	$countwhere['p_sn'] = $p_sn;
+        	$where['where']['p_sn'] = $p_sn;
+
+        }
+
+         //搜索条件
+        if(!empty($show_time)){
+        	$s_time = strtotime($show_time);
+        	$where['where']['trade_time >'] = $s_time;
+        	$countwhere['trade_time >'] = $s_time;
+        	if (!empty($end_time)) {
+        		$e_time = strtotime($end_time);
+        		$where['where']['trade_time <'] = $e_time;
+        		$countwhere['trade_time <'] = $e_time;
+        	}
+        }
+
+        if(!empty($user_id)){
+        	$countwhere['uid'] = $user_id;
+        	$where['where']['uid'] = $user_id;
+        }
+
+        $countwhere['uid'] = $userinfo['id'];
+        $where['where']['uid'] = $userinfo['id'];
+
+        $limit = 20;
+        $offset = ($page - 1) * $limit;
+        $pagination = '';
+
+                
+        $count = $this->trade_xiaoer->get_count($countwhere);
+        $data['count'] = $count;
+
+        $pageconfig['base_url'] = base_url('/home/trade/shaixuan?show_time='.$show_time.'&end_time='.$end_time.'&p_sn='.$p_sn.'&user_id='.$user_id);
         $pageconfig['count'] = $count;
         $pageconfig['limit'] = $limit;
         $data['page'] = home_page($pageconfig);
@@ -927,7 +1013,7 @@ class Trade extends Zrjoboa
 		$data['list'] = $list;
 
 
-		$this->tpl('home/trade_shaixuan_tpl',$data);
+		$this->tpl('home/trade_shaixuan_user_tpl',$data);
 
 	}
 
