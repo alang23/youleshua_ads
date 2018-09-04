@@ -341,8 +341,7 @@ class Business extends Zrjoboa
         $pageconfig['count'] = $count;
         $pageconfig['limit'] = $limit;
         $data['page'] = home_page($pageconfig);
-        //print_r($where);
-		//$list = $this->business->get_list_by_join($where);
+  
 		$list = $this->business->get_list_by_join($where);
 		$data['list'] = $list;
 
@@ -631,6 +630,16 @@ class Business extends Zrjoboa
 		}
 	}
 
+	public function del_h()
+	{
+		$id = $this->input->get('id');
+		$config = array('id'=>$id,'merchant_id'=>'4');
+		$update_data['isdel'] = 1;
+		if($this->business->update($config,$update_data)){
+			redirect('/home/business/shoukuanhe');
+		}
+	}
+
 	public function edit()
 	{
 		if(!empty($_POST)){
@@ -685,6 +694,61 @@ class Business extends Zrjoboa
 			$data['users'] = $users;
 
 			$this->tpl('home/business_edit_tpl',$data);
+		}
+	}
+
+	public function edith()
+	{
+		if(!empty($_POST)){
+			$ad_name = $this->input->post('ad_name');
+			$realname = $this->input->post('realname');
+			$phone = $this->input->post('phone');
+			$card_no = $this->input->post('card_no');
+			$access = $this->input->post('access');
+			$street = $this->input->post('street');
+			$factor = $this->input->post('factor');
+			$addtime = $this->input->post('addtime');
+			$user_id = $this->input->post('user_id');
+			$address = $this->input->post('address');
+			
+			$a_time = strtotime($addtime);
+			$id = $this->input->get('id');
+
+			$update['ad_name']     = $ad_name;
+			$update['realname']    = $realname;
+			$update['phone']       = $phone;
+			$update['card_no']     = $card_no;
+			$update['access']      = $access;
+			$update['street']      = $street;
+			$update['factor']      = $factor;
+			$update['addtime']     = $a_time;
+			$update['user_id']     = $user_id;
+			$update['address']     = $address;
+
+			$update_config = array('id'=>$id);
+
+			if($this->business->update($update_config,$update)){
+					$msg['title'] = '修改成功';
+					$msg['msg'] = '<a href="'.base_url().'home/business/shoukuanhe?">返回列表</a> ';
+					$this->tpl('msg/msg_success',$msg);				
+			}else{
+				$msg['title'] = '修改失败';
+				$msg['msg'] = '<a href="'.base_url().'home/business/shoukuanhe?">返回列表</a>';
+				$this->tpl('msg/msg_errors',$msg);
+
+			}
+		}else{
+
+			$id = $this->input->get('id');
+			$where['where'] = array('id'=>$id);
+			$info = $this->business->get_one_by_where($where);
+			$data['info'] = $info;
+			
+			$users = array();
+			$users = $this->admin->getList();
+			$data['users'] = $users;
+
+			$this->tpl('home/business_edith_tpl',$data);
 		}
 	}
 
@@ -762,6 +826,76 @@ class Business extends Zrjoboa
 
 	}
 
+		//跟进记录的添加-盒子
+	public function add_record_h(){
+
+		$userinfo = $this->userinfo;
+		$data['userinfo'] = $userinfo;
+		
+		if(!empty($_POST)){
+
+			$sever_id = $this->input->post('sever_id');
+			$intro = $this->input->post('intro');
+			$flw_status = $this->input->post('flw_status');
+			$addtime = $this->input->post('addtime');
+			$a_time = strtotime($addtime);
+			$id = $this->input->post('id');
+
+			$add['re_type'] = 0;
+			$add['sever_id'] = $sever_id;
+			$add['intro'] = $intro;
+			
+			$add['uid'] = $id;
+			$add['flw_status'] = $flw_status;
+			$add['addtime'] = $a_time;
+			$update['status'] = $flw_status;
+			$update_config = array('id'=>$id);
+	
+			if($this->record->add($add)){
+				$this->business->update($update_config,$update);
+				$business_where['where'] = array('id'=>$id);
+				$business_info = $this->business->get_one_by_where($business_where);
+				$update_data['phone'] = $business_info['phone'];
+				$update_data['status'] = $flw_status;
+
+				$this->common_mdl->change_status($update_data);
+
+				$msg = array(
+					'code'=>'0',
+					'msg'=>'添加成功'
+				);
+			
+			}else{
+
+				$msg = array(
+				'code'=>'1',
+				'msg'=>'添加失败'
+				);
+			
+			}
+			echo json_encode($msg);
+			
+		}else{
+
+			$id = $this->input->get('id');
+			$where['where'] = array('uid'=>$id);
+			$where['order'] = array('key'=>'id','value'=>'DESC');
+			$list = $this->record->get_list_join_customer($where);
+			$data['id'] = $id;
+			$data['list'] = $list;
+
+			$info = array();
+			$info_where['where'] = array('id'=>$id);
+			$info = $this->business->get_one_by_where($info_where);
+			$data['info'] = $info;
+
+			
+
+			$this->tpl('home/business_add_record_h_tpl',$data);
+		}
+
+	}
+
 	//修改跟进记录
 	public function edit_record()
 	{	
@@ -824,13 +958,9 @@ class Business extends Zrjoboa
 	{
 		$id = $this->input->get('id');
 		$del_config = array('id'=>$id);
-		// $update['record'] = 0;
-		// $update_config = array('id'=>$id);
+	
 		if($this->record->del($del_config)){
-			//$this->business->update($update_config,$update);
-			// $msg['title'] = '删除成功';
-			// $msg['msg'] = '<a href="'.base_url().'home/business/add_record?">返回列表</a> ';
-			// 		$this->tpl('msg/msg_success',$msg);	
+
 			echo '<script type="text/javascript"> history.back();</script >';			
 			}else{
 				$msg['title'] = '删除失败';

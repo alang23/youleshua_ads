@@ -78,6 +78,11 @@
                                         <option value="647147" <?php if($jigou_no == '647147'){ ?> selected <?php } ?>>广州逸骅装饰设计公司</option>
                                         <option value="672368" <?php if($jigou_no == '672368'){ ?> selected <?php } ?>>吉林奥森信息技术</option>
                                         <option value="722343" <?php if($jigou_no == '722343'){ ?> selected <?php } ?>>桦甸市小叶文体用品店</option>
+                                        <option value="676749" <?php if($jigou_no == '676749'){ ?> selected <?php } ?>>磐石锦上添园艺生活馆</option>
+                                        <option value="555227" <?php if($jigou_no == '555227'){ ?> selected <?php } ?>>宏泰创展</option>
+                                        <option value="402878" <?php if($jigou_no == '402878'){ ?> selected <?php } ?>>力活科技</option>
+                                        
+
                                     </select>
                                </div>                            
                             </div>

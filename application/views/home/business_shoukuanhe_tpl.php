@@ -120,7 +120,7 @@
                                 <div class="input-group">
                                    <!--  <input type="text" placeholder="姓名" class="input-sm form-control" name="realname">  -->
                                     <span class="input-group-btn">
-                                        <button class="btn btn-sm btn-primary" onclick="form.action='<?=base_url()?>home/business/index';form.submit();"> 搜索</button> 
+                                        <button class="btn btn-sm btn-primary" onclick="form.action='<?=base_url()?>home/business/shoukuanhe';form.submit();"> 搜索</button> 
                                     </span>
                                 </div>
                             </div>
@@ -206,21 +206,15 @@
                                     <td><?=flw_status($v['status'])?></td>
                                     <td><?=$v['admin_name']?></td>
                                     <td>
-                          <!--           <a href="javascript:void(0);" onclick="location='<?=base_url()?>home/business/add_record?id=<?=$v['id']?>';"></i>添加记录</a> 
-                                     |
-                                     <a href="javascript:void(0);" onclick="location='<?=base_url()?>home/business/edit?id=<?=$v['id']?>';"><i class="fa fa-check text-navy"></i>编辑</a> 
-                                     |
-                                    <a href="javascript:void(0);" onclick="alert_detail('<?=base_url()?>home/business/detail?id=<?=$v['id']?>');"><i class="fa fa-check text-navy"></i> 查看</a> 
-                                    |                              
-                                     <a href="javascript:void(0);" onclick="flush('确定删除吗?','<?=base_url()?>home/business/del?id=<?=$v['id']?>')"><i class="fa fa-check text-navy"></i> 查看</a>  -->
+                  
 
                                             <div class="dropdown">
                                                 <a data-toggle = "dropdown" href="#">操作<b class="caret"></b></a>
                                                 <ul class="dropdown-menu" role = "menu">
-                                                    <li><a href="<?=base_url()?>home/business/add_record?id=<?=$v['id']?>">添加记录</a></li>             
-                                                    <li><a href="<?=base_url()?>home/business/edit?id=<?=$v['id']?>">编辑</a></li>
+                                                    <li><a href="<?=base_url()?>home/business/add_record_h?id=<?=$v['id']?>">添加记录</a></li>             
+                                                    <li><a href="<?=base_url()?>home/business/edith?id=<?=$v['id']?>">编辑</a></li>
                                                     <li><a href="javascript:void(0);" onclick="alert_detail('<?=base_url()?>home/business/detail?id=<?=$v['id']?>');">查看</a></li>
-                                                    <li><a href="javascript:void(0);" onclick="flush('确定删除吗?','<?=base_url()?>home/business/del?id=<?=$v['id']?>')">删除</a></li>
+                                                    <li><a href="javascript:void(0);" onclick="flush('确定删除吗?','<?=base_url()?>home/business/del_h?id=<?=$v['id']?>')">删除</a></li>
                                                     
                                                 </ul>
                                             </div>

@@ -206,6 +206,7 @@ class Machines extends Zrjoboa
 				        $columnName = PHPExcel_Cell::stringFromColumnIndex($column);
 				        $arr[$column] = $sheet->getCellByColumnAndRow($column, $row)->getValue();
 				    }
+				    /*
 					$add['m_mode'] = $arr[1];
 					$add['dev_sn'] = $arr[6];
 					$add['zd_no'] = $arr[7];
@@ -214,10 +215,19 @@ class Machines extends Zrjoboa
 					$add['agent_id'] = $agent_id;
 					$add['logis'] = $arr[12];
 					$add['logis_no'] = $arr[11];
+					*/
+					$add['m_mode'] = 'ME30-RF';
+					$add['dev_sn'] = $arr[0];
+					$add['zd_no'] = $arr[1];
+					$add['riqi_int'] = time();
+					$add['types'] = intval($types);
+					$add['agent_id'] = $agent_id;
+					$add['logis'] = '韵达';
+					$add['logis_no'] = '455117794749';
 					if($this->machines->add($add)){
 						$add_count +=1;
 					}
-
+					
 				}
 				
 		        $msg['title'] = '成功导入:<font color="red">'.$add_count.'</font>条数据,更新：<font color="red">'.$update_count.'</font>条数据';

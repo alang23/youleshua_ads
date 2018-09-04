@@ -99,7 +99,7 @@
                     ?>
                     <li>
                         <a href="mailbox.html">
-                        <i class="fa fa-envelope"></i> 
+                        <i class="fa fa-delicious"></i> 
                         <span class="nav-label">申请管理 </span>
                         <span class="fa arrow"></span>
                         </a>
@@ -155,7 +155,7 @@
                     ?>
                      <li>
                         <a href="mailbox.html">
-                        <i class="fa fa-envelope"></i> 
+                        <i class="fa fa-qq"></i> 
                         <span class="nav-label">电销跟进</span>
                         <span class="fa arrow"></span>
                         </a>
@@ -224,7 +224,7 @@
                     ?>
                     <li>
                         <a href="javascript:void(0);">
-                        <i class="fa fa-envelope"></i> 
+                        <i class="fa fa-truck"></i> 
                         <span class="nav-label">物流管理</span>
                         <span class="fa arrow"></span>
                         </a>
@@ -248,7 +248,7 @@
 
                     <li>
                         <a href="javascript:void(0);">
-                        <i class="fa fa-envelope"></i> 
+                        <i class="fa fa-database"></i> 
                         <span class="nav-label">运营数据</span>
                         <span class="fa arrow"></span>
                         </a>
@@ -287,7 +287,7 @@
 
                     <li>
                         <a href="#">
-                        <i class="fa fa-cutlery"></i> 
+                        <i class="fa fa-male"></i> 
                         <span class="nav-label">代理商管理 </span>
                         <span class="fa arrow"></span>
                         </a>
