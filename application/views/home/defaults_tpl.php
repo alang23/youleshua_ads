@@ -208,6 +208,8 @@
                             </li>
                          <?php } ?>
                          
+                         <li><a class="J_menuItem" href="<?=base_url()?>home/trade/do_search">交易查询</a>
+                            </li>
                         <?php 
                             if(!empty(in_array('standard_do_search', $list))){
                         ?>

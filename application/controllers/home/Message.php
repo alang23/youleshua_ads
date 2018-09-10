@@ -29,6 +29,7 @@ class Message extends Zrjoboa
 		$phone = $this->input->post('phone');
 		$msg = $this->input->post('msg');
 
+
     	if(!empty($phone)){
 
     		$data['phone'] = $phone;

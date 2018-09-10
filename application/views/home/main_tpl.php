@@ -164,7 +164,7 @@
                                     <thead>
                                         <tr>
                                             <th>代理</th>
-                                            <th>数量</th>
+                                            <th>数量（总/当日）</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -173,7 +173,11 @@
                                     ?>
                                         <tr>
                                             <td><?=$agent[$amv['channel_id']]['title']?></td>
-                                            <td style="font-size: 20px;"><span class="label label-primary"><?=$amv['total']?></span></td>
+                                            <td style="font-size: 20px;"><span class="label label-primary"><?=$amv['total']?>
+                                            /
+                                            <?=isset($agent_msg_day[$amv['channel_id']]) ? $agent_msg_day[$amv['channel_id']]   : 0;?>
+                                                
+                                            </span></td>
                                         </tr>
                                     <?php
                                         }

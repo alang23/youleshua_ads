@@ -57,6 +57,14 @@ class Main extends Zrjoboa
 		//短信
 		$agent_msg = $this->common->get_agent_msg();
 		$data['agent_msg'] = $agent_msg;
+		//当日短信
+		$_agent_msg_day = array();
+		$agent_msg_day = $this->common->get_agent_msg_day();
+		foreach($agent_msg_day as $amdk => $amdv){
+			$_agent_msg_day[$amdv['channel_id']] = $amdv['total'];
+		}
+		$data['agent_msg_day'] = $_agent_msg_day;
+
 
 		$user_msg_where['channel_id'] = '10003';
 		$users_msg = $this->common->get_users_msg($user_msg_where);

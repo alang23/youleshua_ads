@@ -39,6 +39,21 @@ class Common_mdl extends Zroa_Model
 		return $list;
 
 	}
+	//获取当日发送量
+	public function get_agent_msg_day()
+	{
+		$theday = date("Y-m-d");
+		$tomorrow = mktime(0,0,0,date("m"),date("d")+1,date("Y"));
+		$thedaytime = strtotime($theday);
+
+		$sql = "select count(channel_id) as total,channel_id from ls_message_log where addtime >".$thedaytime." and addtime < ".$tomorrow." group by channel_id";
+		$query = $this->db->query($sql);
+		$list = $query->result_array();
+
+		return $list;
+
+	}
+
 
 	//获取客服发送短信
 	public function get_users_msg($data)

@@ -72,11 +72,26 @@ class Dclick extends BaseController
 			}
 		}
 
+		// if($pos_id == '15'){
+		// 	$url = 'http://app.1chuanqi.com/shoukuanhe/index';
+		// 	$url = $url.'?frm='.$aid.'&pos_id='.$pos_id.'&b_no=10003&pid='.$pid.$param_str;
+		// 	redirect($url);
+		// 	exit;
+		// }
+
 		if($pos_id == '15'){
-			$url = 'http://app.1chuanqi.com/shoukuanhe/index';
-			$url = $url.'?frm='.$aid.'&pos_id='.$pos_id.'&b_no=10003&pid='.$pid.$param_str;
+			/*
+			if($aid == '124'){
+				$url = 'http://app.1chuanqi.com/shoukuanhe/index2?frm='.$aid.'&pos_id='.$pos_id.'&b_no=10003&pid='.$pid.$param_str;
+			}else{
+				$url = 'http://app.1chuanqi.com/shoukuanhe/index?frm='.$aid.'&pos_id='.$pos_id.'&b_no=10003&pid='.$pid.$param_str;
+			}
+			*/
+			$url = 'http://app.1chuanqi.com/shoukuanhe/index2?frm='.$aid.'&pos_id='.$pos_id.'&b_no=10003&pid='.$pid.$param_str;
+
 			redirect($url);
 			exit;
+			
 		}
 
 		if($aid == '73'){
@@ -301,9 +316,15 @@ class Dclick extends BaseController
 		}
 
 		if($pos_id == '15'){
-			$url = 'http://app.1chuanqi.com/shoukuanhe/index?frm='.$aid.'&pos_id='.$pos_id.'&b_no=10003&pid='.$pid.$param_str;
+
+			if($aid == '124'){
+				$url = 'http://app.1chuanqi.com/shoukuanhe/index2?frm='.$aid.'&pos_id='.$pos_id.'&b_no=10003&pid='.$pid.$param_str;
+			}else{
+				$url = 'http://app.1chuanqi.com/shoukuanhe/index?frm='.$aid.'&pos_id='.$pos_id.'&b_no=10003&pid='.$pid.$param_str;
+			}
 			redirect($url);
 			exit;
+
 		}
 
 

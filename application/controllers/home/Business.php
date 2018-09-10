@@ -24,7 +24,6 @@ class Business extends Zrjoboa
 	public function index()
 	{
 		$userinfo = $this->userinfo;
-		//print_r($userinfo);
 
 		$check_role = $this->userlib->check_role('search_business');
 
@@ -130,8 +129,6 @@ class Business extends Zrjoboa
 
         if(!empty($realname)){
         	$where['like'] = array('key'=>'n.ad_name','value'=>$realname);
-        	//$where['or_like'] = array('key'=>'n.ad_name','value'=>$realname);
-
         	$where_count['realname'] = $realname;
         }
 

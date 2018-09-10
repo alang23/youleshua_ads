@@ -57,11 +57,11 @@ class Logistics extends Zrjoboa
         if(!empty($show_time)){
         	$s_time = strtotime($show_time);
         	//$where_str .= " and logis.addtime > '$s_time'";
-        	$where['where']['addtime >'] = $s_time;
+        	$where['where']['addtime >='] = $s_time;
         	if(!empty($end_time)){
         		$e_time = strtotime($end_time);
         		//$where_str .= " and logis.addtime < '$e_time'";
-        		$where['where']['addtime <'] = $e_time;
+        		$where['where']['addtime <='] = $e_time;
         	}
         }
 

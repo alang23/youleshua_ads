@@ -490,6 +490,136 @@ class Trade extends Zrjoboa
 		} 
 	}
 
+	public function imports_xe()
+	{
+		$files = dirname().'uploads'.'/trade';
+			if(!is_dir($files)){
+					mkdir($files);					
+		}
+					
+		if(!empty($_FILES['excel']['name'])){
+
+            $config['upload_path'] = FCPATH.'/uploads/trade/';
+            
+            $config['allowed_types'] = '*';
+            $config['file_name']  =date("YmdHis").'_xe';
+
+            $this->load->library('upload', $config);
+            $m_type = $this->input->post('m_type');
+
+            if ( ! $this->upload->do_upload('excel')){
+
+                $error = array('error' => $this->upload->display_errors());
+                echo json_encode($error);
+
+            }else{
+
+                $data = array('upload_data' => $this->upload->data());
+                $picname = $data['upload_data']['orig_name'];
+                $dir = FCPATH.$files.'/'.$picname;
+
+                require_once FCPATH.'/application/libraries/phpexcel/PHPExcel.php';
+
+				if (!file_exists($dir)) {
+				    die('no file!');
+				}
+				$extension = strtolower( pathinfo($dir, PATHINFO_EXTENSION) );
+
+				if ($extension =='xlsx') {
+				    $objReader = new PHPExcel_Reader_Excel2007();
+				    $objExcel = $objReader ->load($dir);
+				} else if ($extension =='xls') {
+				    $objReader = new PHPExcel_Reader_Excel5();
+				    $objExcel = $objReader ->load($dir);
+				} else if ($extension=='csv') {
+				    $PHPReader = new PHPExcel_Reader_CSV();
+
+				    //默认输入字符集
+				    $PHPReader->setInputEncoding('GBK');
+
+				    //默认的分隔符
+				    $PHPReader->setDelimiter(',');
+
+				    //载入文件
+				    $objExcel = $PHPReader->load($dir);
+				}
+				
+				$sheet = $objExcel->getSheet(0); // 读取第一個工作表
+				$highestRow = $sheet->getHighestRow(); // 取得总行数
+				$colsNum = $sheet->getHighestColumn(); // 取得总列数
+				$highestColumm= PHPExcel_Cell::columnIndexFromString($colsNum); //字母列转换为数字列 
+
+				$arr = array();
+				$tmp = array();
+				$result = array();
+				$add_count = 0;
+				for ($row = 2; $row <= $highestRow; $row++){//行数是以第1行开始
+				    for ($column = 0; $column < $highestColumm; $column++) {//列数是以第0列开始
+				        $columnName = PHPExcel_Cell::stringFromColumnIndex($column);
+				        $arr[$column] = $sheet->getCellByColumnAndRow($column, $row)->getValue();
+				    }
+
+						$add['order_sn'] = $arr[1];
+						$add['jigou'] = $arr[2];
+						$add['jigou_no'] = $arr[3];
+						$add['mer_no'] = $arr[4];
+						$add['mer_name'] = $arr[5];
+						$add['dev_no'] = $arr[6];
+						$add['trade_date'] = $arr[13];
+						$add['trade_time'] = strtotime($arr[13]);
+						$add['amount'] = $arr[8];
+						$add['pay_fee'] = $arr[9];
+						$add['pay_type'] = $arr[10];
+						$add['card_type'] = $arr[14];
+						$add['p_sn'] = $arr[15];
+						$add['addtime'] = time();
+						$add['m_type'] = $m_type;
+						if(!empty($arr[1]) && !empty($arr[15])){
+
+							try {
+
+								// if($this->trade->add($add)){
+								// 	$add_count +=1;
+								// }
+
+								//小额
+								if($add['amount'] < 14){
+									$logis_info = array();
+									$logis_info = $this->get_logis($add['p_sn']);
+									$add['realname'] = isset($logis_info['realname']) ? $logis_info['realname'] : '未知';
+									$add['phone'] = isset($logis_info['phone']) ? $logis_info['phone'] : '未知';
+									$add['address'] = isset($logis_info['address']) ? $logis_info['address'] : '未知';
+									$add['uid'] = isset($logis_info['uid']) ? $logis_info['uid'] : '0';
+									$add['admin_name'] = isset($logis_info['admin_name']) ? $logis_info['admin_name'] : '未知';
+									if($this->trade_xiaoer->add($add))
+									{
+										$add_count +=1;
+									}
+								}
+								
+							}catch(Exception $e){
+								print $e->getMessage();
+								exit();
+							}
+							
+						}
+
+
+
+						
+				}
+				
+				$update_count = 0;
+		        $msg['title'] = '成功导入:<font color="red">'.$add_count.'</font>条数据,更新：<font color="red">'.$update_count.'</font>条数据';
+				$msg['msg'] = '<a href="'.base_url().'home/trade/index?">返回列表</a> ';
+				$this->tpl('msg/msg_success',$msg);
+		    }
+
+		}else{    
+			$this->tpl('/home/imports_trade_xe_tpl');
+		} 
+	}
+
 	//添加订单
 	public function add()
 	{
@@ -1053,6 +1183,7 @@ class Trade extends Zrjoboa
 	public function get_logis($dev_sn)
 	{
 		$where['where']['dev_sn'] = $dev_sn;
+		$where['where']['status<>'] = '6';
 		$info = array();
 		$info = $this->logis->get_one_by_where($where);
 

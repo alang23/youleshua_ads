@@ -48,34 +48,34 @@ class Standard extends Zrjoboa
        if($s_type == '1'){  //开通时间
 	        if(!empty($show_time)){
 	        	$s_time = strtotime($show_time);
-	        	$where['where']['open_time_int >'] = $s_time;
-	        	$countwhere['open_time_int >'] = $s_time;
+	        	$where['where']['open_time_int >='] = $s_time;
+	        	$countwhere['open_time_int >='] = $s_time;
 	        	if(!empty($end_time)){
 	        		$e_time = strtotime($end_time);
-	        		$where['where']['open_time_int <'] = $e_time;
-	        		$countwhere['open_time_int <'] = $e_time;
+	        		$where['where']['open_time_int <='] = $e_time;
+	        		$countwhere['open_time_int <='] = $e_time;
 	        	}
 	        }
        }elseif($s_type == '2'){
        	     if(!empty($show_time)){
 	        	$s_time = strtotime($show_time);
-	        	$where['where']['dabiao_time_int >'] = $s_time;
-	        	$countwhere['dabiao_time_int >'] = $s_time;
+	        	$where['where']['dabiao_time_int >='] = $s_time;
+	        	$countwhere['dabiao_time_int >='] = $s_time;
 	        	if(!empty($end_time)){
 	        		$e_time = strtotime($end_time);
-	        		$where['where']['dabiao_time_int <'] = $e_time;
-	        		$countwhere['dabiao_time_int <'] = $e_time;
+	        		$where['where']['dabiao_time_int <='] = $e_time;
+	        		$countwhere['dabiao_time_int <='] = $e_time;
 	        	}
 	        }
        }else{
        	    if(!empty($show_time)){
 	        	$s_time = strtotime($show_time);
-	        	$where['where']['addtime >'] = $s_time;
-	        	$countwhere['addtime >'] = $s_time;
+	        	$where['where']['addtime >='] = $s_time;
+	        	$countwhere['addtime >='] = $s_time;
 	        	if(!empty($end_time)){
 	        		$e_time = strtotime($end_time);
-	        		$where['where']['addtime <'] = $e_time;
-	        		$countwhere['addtime <'] = $e_time;
+	        		$where['where']['addtime <='] = $e_time;
+	        		$countwhere['addtime <='] = $e_time;
 	        	}
 	        }
        }
